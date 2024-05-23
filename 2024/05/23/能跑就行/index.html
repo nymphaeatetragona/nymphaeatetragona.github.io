@@ -19,7 +19,7 @@
   <meta name="keywords" content="生活杂谈，技术">
 
 
-<title>目录: 杂谈 | ooops的小站</title>
+<title>能跑就行 | ooops的小站</title>
 
 
 
@@ -158,7 +158,7 @@
         </h2>
       </a>
       <div id="header-title" class="opacity-0 md:ml-2 md:mt-[0.1rem] text-xs font-medium whitespace-nowrap overflow-hidden overflow-ellipsis">
-        
+        能跑就行
       </div>
       <div class="flex-1"></div>
       <div class="flex items-center gap-3">
@@ -212,69 +212,204 @@
 </div>
 
   <main class="pt-14">
-    
+    <!-- css -->
+
+<link rel="stylesheet" href="/lib/fancybox/fancybox.min.css">
 
 
-<div class="">
-  <h2>Categories-杂谈</h2>
-</div>
-<section class="px-6 max-w-prose mx-auto gap-12 grid grid-cols-1">
-  <div class="flex flex-col h-48 items-center justify-center">
-    <h1 class="site-title text-4xl leading-relaxed">
-      ooops的小站
-    </h1>
-    <p class="text-gray-500 mt-2">
-      無限進步！
-    </p>
-  </div>
-  
-  
-    
-    
-      <div class="relative pointer-events-none">
-        <span class="text-9xl opacity-10 absolute -left-11 -top-6 font-bold">2024</span>
+<link rel="stylesheet" href="/lib/tocbot/tocbot.min.css">
+
+<!-- toc -->
+
+  <!-- tocbot -->
+<nav class="post-toc toc text-sm w-48 relative top-32 right-0 opacity-70 hidden lg:block" style="position: fixed !important;"></nav>
+
+
+<section class="px-6 max-w-prose mx-auto md:px-0">
+  <!-- header -->
+  <header class="overflow-hidden pt-6 pb-6 md:pt-12">
+    <div class="pt-4 md:pt-6">
+      <h1 id="article-title" class="text-[2rem] font-bold leading-snug mb-4 md:mb-6 md:text-[2.6rem]">
+        能跑就行
+      </h1>
+      <div>
+        <section class="flex items-center gap-3 text-sm">
+          <span class="flex items-center gap-1">
+            <iconify-icon width="18" icon="carbon-calendar" ></iconify-icon>
+            <time>2024-05-23</time>
+          </span>
+          <span class="text-gray-400">·</span>
+          <span class="flex items-center gap-1">
+            <iconify-icon width="18" icon="ic:round-access-alarm" ></iconify-icon>
+            <span>1 min</span>
+          </span>
+          <span class="text-gray-400">·</span>
+          <span class="flex items-center gap-1">
+            <iconify-icon width="18" icon="icon-park-outline:font-search" ></iconify-icon>
+            <span>439 words</span>
+          </span>
+          
+            <span class="text-gray-400">·</span>
+            <span class="flex items-center gap-1">
+              <iconify-icon width="16" icon="icon-park-outline:box" class="mr-2"></iconify-icon>
+              <a class="article-category-link" href="/categories/%E6%9D%82%E8%B0%88/">杂谈</a>
+            </span>
+          
+        </section>
       </div>
-    
-    <a style="--stagger:0" href="/2024/05/23/%E8%83%BD%E8%B7%91%E5%B0%B1%E8%A1%8C/" data-animate>
-      <header>
-        <h2 class="font-bold text-xl">
-          能跑就行
-        </h2>
-      </header>
-      <section class="text-gray-400 my-2 text-sm time">
-        <p class="line-clamp-4">
-          
-        </p>
-        <p class="line-clamp-4">
-          5月 23
-          ·
-          1 min
-        </p>
-      </section>
-    </a>
-  
-    
-    
-    <a style="--stagger:1" href="/2024/05/20/hello_world/" data-animate>
-      <header>
-        <h2 class="font-bold text-xl">
-          你好，世界！
-        </h2>
-      </header>
-      <section class="text-gray-400 my-2 text-sm time">
-        <p class="line-clamp-4">
-          
-        </p>
-        <p class="line-clamp-4">
-          5月 20
-          ·
-          1 min
-        </p>
-      </section>
-    </a>
-  
-</section>
+    </div>
+  </header>
+  <!-- content -->
+  <article class="post-content prose m-auto slide-enter-content dark:prose-invert">
+    <h1 id="记一次沉痛的教训"><a href="#记一次沉痛的教训" class="headerlink" title="记一次沉痛的教训"></a>记一次沉痛的教训</h1><p>昨天写下了第一篇正式的博客，本地运行非常完美。但是看到文章没法使用脚注，代码块显示也不太好看，于是一番折腾下来成功使博文显示异常😅。故记此篇，以警后人<del>的同时也警示自己。</del></p>
+<h2 id="脚注疑案"><a href="#脚注疑案" class="headerlink" title="脚注疑案"></a>脚注疑案</h2><p>在上一篇关于香橙派的文章里，我想通过引用他人的教程的方式让文章更简洁，于是想到了脚注。根据网上的资料，下载了hexo-reference-plus，部署好并使用后，看起来（只是看起来）一切正常，大喜🤪！</p>
+<h2 id="代码高亮之谜"><a href="#代码高亮之谜" class="headerlink" title="代码高亮之谜"></a>代码高亮之谜</h2><p>跟着网上安装了hexo-prism-plugin，npm安装时提示</p>
+<pre><code> 13 vulnerability  #大概这样，意思是有些包有问题
+</code></pre>
+<p>不管，运行看看。</p>
+<h3 id="寄"><a href="#寄" class="headerlink" title="寄"></a>寄</h3><p>运行<code>hexo g</code>的时候报错😓</p>
+<p>网上搜了一下，看不懂，于是卸载</p>
+<h3 id="大事不妙"><a href="#大事不妙" class="headerlink" title="大事不妙"></a>大事不妙</h3><p>卸载后看了看博文，发现第一个代码块后面的markdown语言全部原样显示出来🤯</p>
+<p>看起来是hexo-prism-plugin的问题。疲惫了，那晚悲愤地滚去睡觉了🤡。这就是没备份的恶果！</p>
+<h2 id="破案"><a href="#破案" class="headerlink" title="破案"></a>破案</h2><p>结论：<br>Markdown原样显示是hexo-reference-plus（脚注插件）的问题，卸载后就恢复了。目前仍未解决脚注问题</p>
+<p>hexo-prism-plugin（代码高亮）报错修复</p>
+<pre><code>npm config set registry https://registry.npmmirror.com   #换源，官方源可能导致 XX vulnerability，进而导致奇怪的bug
+npm install -g npm  #更新npm版本
+</code></pre>
+<p>目前未解决无法更换代码高亮的主题，不显示代码行数的bug</p>
+<h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p>虽然这次我成功修好了bug，下次说不定就崩坏了(⋟﹏⋞)。能跑就应该备份啊啊啊啊啊啊</p>
 
+  </article>
+  <!-- tag -->
+  <div class="mt-12 pt-6 border-t border-gray-200">
+    
+      
+        <span class="bg-gray-100 dark:bg-gray-700 px-2 py-1 m-1 text-sm rounded-md transition-colors hover:bg-gray-200">
+          <a href="/tags/%E6%97%A5%E5%B8%B8/">日常</a>
+        </span>
+      
+        <span class="bg-gray-100 dark:bg-gray-700 px-2 py-1 m-1 text-sm rounded-md transition-colors hover:bg-gray-200">
+          <a href="/tags/%E6%8A%80%E6%9C%AF/">技术</a>
+        </span>
+      
+    
+  </div>
+  <!-- prev and next -->
+  <div class="flex justify-between mt-12 pt-6 border-t border-gray-200">
+    <div>
+      
+    </div>
+    <div>
+      
+        <a href="/2024/05/22/orangepi-config/" class="text-sm text-gray-400 hover:text-gray-500 flex justify-center">
+          香橙派的使用配置
+          <iconify-icon width="20" icon="ri:arrow-right-s-line" data-inline="false"></iconify-icon>
+        </a>
+      
+    </div>
+  </div>
+  <!-- comment -->
+  <div class="article-comments mt-12">
+    
+
+  </div>
+</section>
+<!-- js inspect -->
+
+<script src="/lib/clipboard.min.js"></script>
+
+
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    "HTML-CSS": {
+        preferredFont: "TeX",
+        availableFonts: ["STIX","TeX"],
+        linebreaks: { automatic:true },
+        EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+        inlineMath: [ ["$", "$"], ["\\(","\\)"] ],
+        processEscapes: true,
+        ignoreClass: "tex2jax_ignore|dno",
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+        equationNumbers: { autoNumber: "AMS" },
+        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+        Macros: { href: "{}" }
+    },
+    messageStyle: "none"
+  });
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<script>
+  $(document).ready(() => {
+    const maraidConfig = {
+      theme: "default",
+      logLevel: 3,
+      flowchart: { curve: "linear" },
+      gantt: { axisFormat: "%m/%d/%Y" },
+      sequence: { actorMargin: 50 },
+    };
+    mermaid.initialize(maraidConfig);
+  });
+</script>
+
+
+
+<script src="/lib/fancybox/fancybox.umd.min.js"></script>
+
+<script>
+  $(document).ready(() => {
+    $('.post-content').each(function(i){
+      $(this).find('img').each(function(){
+        if ($(this).parent().hasClass('fancybox') || $(this).parent().is('a')) return;
+        var alt = this.alt;
+        if (alt) $(this).after('<span class="fancybox-alt">' + alt + '</span>');
+        $(this).wrap('<a class="fancybox-img" href="' + this.src + '" data-fancybox=\"gallery\" data-caption="' + alt + '"></a>')
+      });
+      $(this).find('.fancybox').each(function(){
+        $(this).attr('rel', 'article' + i);
+      });
+    });
+
+    Fancybox.bind('[data-fancybox="gallery"]', {
+        // options
+    })
+  })
+</script>
+
+<!-- tocbot begin -->
+
+<script src="/lib/tocbot/tocbot.min.js"></script>
+
+<script>
+  $(document).ready(() => {
+      tocbot.init({
+        // Where to render the table of contents.
+        tocSelector: '.post-toc',
+        // Where to grab the headings to build the table of contents.
+        contentSelector: '.post-content',
+        // Which headings to grab inside of the contentSelector element.
+        headingSelector: 'h1, h2, h3',
+        // For headings inside relative or absolute positioned containers within content.
+        hasInnerContainers: true,
+    });
+  })
+</script>
+<!-- tocbot end -->
 
 
   </main>
