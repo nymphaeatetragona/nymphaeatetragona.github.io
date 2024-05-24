@@ -1,56 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>你好，世界！</title>
-    <url>/2024/05/20/hello_world/</url>
-    <content><![CDATA[<p>这是博客建站的第一篇文章，用以测试博客是否正常运行，如果你看到了这篇文章，那这个博客已经可以正常工作啦！这个博客或许主要用于分享我的生活<del>（因为vx朋友圈有各种各样的原因使我不能愉快的畅谈）</del>。我偶尔会写一些我的折腾历程，让大家看看我踩过的坑，帮大家排排雷。</p>
-<p>因为本人目前财力不足，没有购买域名，大概没人会访问我的博客？</p>
-]]></content>
-      <categories>
-        <category>杂谈</category>
-      </categories>
-      <tags>
-        <tag>日常</tag>
-        <tag>技术</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>香橙派的使用配置</title>
     <url>/2024/05/22/orangepi-config/</url>
     <content><![CDATA[<p>前些天购入了一个香橙派Zero3，但是时不时系统崩坏，（或许是sd卡不是香橙派官方店铺买的？）现在来捋一遍安装过程以便日后崩坏时重装系统。</p>
-<h1 id="硬件准备"><a href="#硬件准备" class="headerlink" title="硬件准备"></a>硬件准备</h1><p>输出功率5V 2000mA以上适配器、USB Type-C数据线、USB 转 TTL 模块（串口模块）、读卡器、TF卡（Micro SD 卡）、杜邦线<br><a href="https://www.wch.cn/download/CH341SER_EXE.html">串口驱动安装</a><br>接线：<br>TX——RX<br>RX——TX<br>GND——GND</p>
-<h1 id="系统固件"><a href="#系统固件" class="headerlink" title="系统固件"></a>系统固件</h1><p>先<a href="http://www.orangepi.cn/html/serviceAndSupport/index.html">下载官方的固件</a></p>
-<h1 id="烧录系统"><a href="#烧录系统" class="headerlink" title="烧录系统"></a>烧录系统</h1><p>新SD卡要先格式化，我用了<a href="https://www.sdcardformatter.com/download/">SD Card Formatter</a></p>
+<h1 id="ying-jian-zhun-bei">硬件准备</h1>
+<p>输出功率5V 2000mA以上适配器、USB Type-C数据线、USB 转 TTL 模块（串口模块）、读卡器、TF卡（Micro SD 卡）、杜邦线<br>
+<a href="https://www.wch.cn/download/CH341SER_EXE.html">串口驱动安装</a><br>
+接线：<br>
+TX——RX<br>
+RX——TX<br>
+GND——GND</p>
+<h1 id="xi-tong-gu-jian">系统固件</h1>
+<p>先<a href="http://www.orangepi.cn/html/serviceAndSupport/index.html">下载官方的固件</a></p>
+<h1 id="shao-lu-xi-tong">烧录系统</h1>
+<p>新SD卡要先格式化，我用了<a href="https://www.sdcardformatter.com/download/">SD Card Formatter</a></p>
 <p>用<a href="https://rufus.ie/zh/">refus</a>烧录进SD卡即可</p>
-<h1 id="远程管理工具"><a href="#远程管理工具" class="headerlink" title="远程管理工具"></a>远程管理工具</h1><p>可以在cmd或powershell里面输入命令来连接ssh[1]</p>
+<h1 id="yuan-cheng-guan-li-gong-ju">远程管理工具</h1>
+<p>可以在cmd或powershell里面输入命令来连接ssh<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></p>
 <pre><code>ssh –p端口号 用户名@IP地址  #例如：ssh –p22 root@127.0.0.1
 </code></pre>
 <p>我使用了<a href="https://mobaxterm.mobatek.net/download.html">MobaXterm</a>来连接ssh</p>
-<h1 id="密码"><a href="#密码" class="headerlink" title="密码"></a>密码</h1><h3 id="默认账户：orangepi"><a href="#默认账户：orangepi" class="headerlink" title="默认账户：orangepi"></a>默认账户：orangepi</h3><h3 id="默认root账户：root"><a href="#默认root账户：root" class="headerlink" title="默认root账户：root"></a>默认root账户：root</h3><h3 id="默认密码：orangepi"><a href="#默认密码：orangepi" class="headerlink" title="默认密码：orangepi"></a>默认密码：orangepi</h3><pre><code>#修改密码
+<h1 id="mi-ma">密码</h1>
+<h3 id="mo-ren-zhang-hu-orangepi" id="默认账户：orangepi">默认账户：orangepi</h3>
+<h3 id="mo-ren-root-zhang-hu-root" id="默认root账户：root">默认root账户：root</h3>
+<h3 id="mo-ren-mi-ma-orangepi" id="默认密码：orangepi">默认密码：orangepi</h3>
+<pre><code>#修改密码
 sudo passwd orangepi #orangepi为要修改的用户的名字，按提示修改即可
 </code></pre>
-<h1 id="配置网络"><a href="#配置网络" class="headerlink" title="配置网络"></a>配置网络</h1><pre><code>nmtui #图形界面配置网络
+<h1 id="pei-zhi-wang-luo">配置网络</h1>
+<pre><code>nmtui #图形界面配置网络
 </code></pre>
 <p>其他网络信息</p>
 <pre><code>sudo ifconfig #查看ip信息
 route -n #查看网关信息
 </code></pre>
 <p>ip地址可能会跳动，ssh连接会不方便，要进入nmtui设置静态ip</p>
-<h1 id="软件源"><a href="#软件源" class="headerlink" title="软件源"></a>软件源</h1><p>香橙派官方系统已经配置好国内源了，国产派大法好，一般不用改软件源</p>
+<h1 id="ruan-jian-yuan">软件源</h1>
+<p>香橙派官方系统已经配置好国内源了，国产派大法好，一般不用改软件源</p>
 <pre><code>sudo cp /etc/apt/sources.list /etc/apt/sources.list.save #备份好习惯
 sudo cp /etc/apt/sources.list.save /etc/apt/sources.list #搞炸了用这条命令恢复
 nano /etc/apt/sources.list #编辑源
 </code></pre>
-<h1 id="更新系统"><a href="#更新系统" class="headerlink" title="更新系统"></a>更新系统</h1><p>不更新，后期装软件会有各种奇怪的问题</p>
+<h1 id="geng-xin-xi-tong">更新系统</h1>
+<p>不更新，后期装软件会有各种奇怪的问题</p>
 <pre><code>sudo apt update
 sudo apt upgrade -y
 </code></pre>
-<h1 id="时区"><a href="#时区" class="headerlink" title="时区"></a>时区</h1><p>香橙派连软件源都想好了，居然没调好时区（悲）<br>时间错误会导致某些网站证书验证问题</p>
+<h1 id="shi-qu">时区</h1>
+<p>香橙派连软件源都想好了，居然没调好时区（悲）<br>
+时间错误会导致某些网站证书验证问题</p>
 <pre><code>date #查看当前时间
 sudo tzselect #调整时区，看着按就行
 </code></pre>
-<h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1]  Windows 下 cmd 窗口使用 ssh 命令(<a href="https://blog.csdn.net/wm609972715/article/details/83759114">https://blog.csdn.net/wm609972715/article/details/83759114</a>)</p>
-<p>[2]  OrangePi ZERO 2 新手配置教程(<a href="https://zhuanlan.zhihu.com/p/658960791">https://zhuanlan.zhihu.com/p/658960791</a>)</p>
+<h1 id="can-kao-wen-xian">参考文献</h1>
+<p><a href="https://zhuanlan.zhihu.com/p/658960791">OrangePi ZERO 2 新手配置教程</a></p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p><a href="https://blog.csdn.net/wm609972715/article/details/83759114">Windows 下 cmd 窗口使用 ssh 命令</a> <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
 ]]></content>
       <categories>
         <category>技术</category>
@@ -62,25 +73,46 @@ sudo tzselect #调整时区，看着按就行
       </tags>
   </entry>
   <entry>
+    <title>你好，世界！</title>
+    <url>/2024/05/20/hello_world/</url>
+    <content><![CDATA[<p>这是博客建站的第一篇文章，用以测试博客是否正常运行，如果你看到了这篇文章，那这个博客已经可以正常工作啦！这个博客或许主要用于分享我的生活~~（因为vx朋友圈有各种各样的原因使我不能愉快的畅谈）~~。我偶尔会写一些我的折腾历程，让大家看看我踩过的坑，帮大家排排雷。</p>
+]]></content>
+      <categories>
+        <category>杂谈</category>
+      </categories>
+      <tags>
+        <tag>日常</tag>
+        <tag>技术</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>“能跑就行”</title>
     <url>/2024/05/23/%E8%83%BD%E8%B7%91%E5%B0%B1%E8%A1%8C/</url>
-    <content><![CDATA[<h1 id="记一次沉痛的教训"><a href="#记一次沉痛的教训" class="headerlink" title="记一次沉痛的教训"></a>记一次沉痛的教训</h1><p>昨天写下了第一篇正式的博客，本地运行非常完美。但是看到文章没法使用脚注，代码块显示也不太好看，于是一番折腾下来成功使博文显示异常😅。故记此篇，以警后人<del>的同时也警示自己。</del></p>
-<h2 id="脚注疑案"><a href="#脚注疑案" class="headerlink" title="脚注疑案"></a>脚注疑案</h2><p>在上一篇关于香橙派的文章里，我想通过引用他人的教程的方式让文章更简洁，于是想到了脚注。根据网上的资料，下载了hexo-reference-plus，部署好并使用后，看起来（只是看起来）一切正常，大喜🤪！</p>
-<h2 id="代码高亮之谜"><a href="#代码高亮之谜" class="headerlink" title="代码高亮之谜"></a>代码高亮之谜</h2><p>跟着网上安装了hexo-prism-plugin，npm安装时提示</p>
+    <content><![CDATA[<h1 id="ji-yi-ci-chen-tong-de-jiao-xun">记一次沉痛的教训</h1>
+<p>昨天写下了第一篇正式的博客，本地运行非常完美。但是看到文章没法使用脚注，代码块显示也不太好看，于是一番折腾下来成功使博文显示异常😅。故记此篇，以警后人<s>的同时也警示自己。</s></p>
+<h2 id="jiao-zhu-yi-an" id="脚注疑案">脚注疑案</h2>
+<p>在上一篇关于香橙派的文章里，我想通过引用他人的教程的方式让文章更简洁，于是想到了脚注。根据网上的资料，下载了hexo-reference-plus，部署好并使用后，看起来（只是看起来）一切正常，大喜🤪！</p>
+<h2 id="dai-ma-gao-liang-zhi-mi" id="代码高亮之谜">代码高亮之谜</h2>
+<p>跟着网上安装了hexo-prism-plugin，npm安装时提示</p>
 <pre><code> 13 vulnerability  #大概这样，意思是有些包有问题
 </code></pre>
 <p>不管，运行看看。</p>
-<h3 id="寄"><a href="#寄" class="headerlink" title="寄"></a>寄</h3><p>运行<code>hexo g</code>的时候报错😓</p>
+<h3 id="ji" id="寄">寄</h3>
+<p>运行<code>hexo g</code>的时候报错😓</p>
 <p>网上搜了一下，看不懂，于是卸载</p>
-<h3 id="大事不妙"><a href="#大事不妙" class="headerlink" title="大事不妙"></a>大事不妙</h3><p>卸载后看了看博文，发现第一个代码块后面的markdown语言全部原样显示出来🤯</p>
+<h3 id="da-shi-bu-miao" id="大事不妙">大事不妙</h3>
+<p>卸载后看了看博文，发现第一个代码块后面的markdown语言全部原样显示出来🤯</p>
 <p>看起来是hexo-prism-plugin的问题。疲惫了，那晚悲愤地滚去睡觉了🤡。这就是没备份的恶果！</p>
-<h2 id="破案"><a href="#破案" class="headerlink" title="破案"></a>破案</h2><p>结论：<br>Markdown原样显示是hexo-reference-plus（脚注插件）的问题，卸载后就恢复了。目前仍未解决脚注问题</p>
+<h2 id="po-an" id="破案">破案</h2>
+<p>结论：<br>
+Markdown原样显示是hexo-reference-plus（脚注插件）的问题，卸载后就恢复了。目前仍未解决脚注问题</p>
 <p>hexo-prism-plugin（代码高亮）报错修复</p>
 <pre><code>npm config set registry https://registry.npmmirror.com   #换源，官方源可能导致 XX vulnerability，进而导致奇怪的bug
 npm install -g npm  #更新npm版本
 </code></pre>
 <p>目前未解决无法更换代码高亮的主题，不显示代码行数的bug</p>
-<h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p>虽然这次我成功修好了bug，下次说不定就崩坏了(⋟﹏⋞)。能跑就应该备份啊啊啊啊啊啊</p>
+<h2 id="xie-zai-zui-hou" id="写在最后">写在最后</h2>
+<p>虽然这次我成功修好了bug，下次说不定就崩坏了(⋟﹏⋞)。能跑就应该备份啊啊啊啊啊啊</p>
 ]]></content>
       <categories>
         <category>杂谈</category>
