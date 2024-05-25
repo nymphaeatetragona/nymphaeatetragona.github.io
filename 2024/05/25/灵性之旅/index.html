@@ -19,7 +19,7 @@
   <meta name="keywords" content="生活杂谈，技术">
 
 
-<title>ooops的小站</title>
+<title>灵性之旅 | ooops的小站</title>
 
 
 
@@ -146,7 +146,7 @@
 
 
 
-<meta name="generator" content="Hexo 7.2.0"></head>
+<meta name="generator" content="Hexo 7.2.0"><link rel="stylesheet" href="/css/prism.css" type="text/css"></head>
 <body class="font-sans bg-white dark:bg-zinc-900 text-gray-700 dark:text-gray-200 relative">
   <header class="fixed w-full px-5 py-1 z-10 backdrop-blur-xl backdrop-saturate-150 border-b border-black/5">
   <div class="max-auto">
@@ -158,7 +158,7 @@
         </h2>
       </a>
       <div id="header-title" class="opacity-0 md:ml-2 md:mt-[0.1rem] text-xs font-medium whitespace-nowrap overflow-hidden overflow-ellipsis">
-        
+        灵性之旅
       </div>
       <div class="flex-1"></div>
       <div class="flex items-center gap-3">
@@ -227,29 +227,39 @@
 
 <!-- toc -->
 
+  <!-- tocbot -->
+<nav class="post-toc toc text-sm w-48 relative top-32 right-0 opacity-70 hidden lg:block" style="position: fixed !important;"></nav>
+
+
 <section class="px-6 max-w-prose mx-auto md:px-0">
   <!-- header -->
   <header class="overflow-hidden pt-6 pb-6 md:pt-12">
     <div class="pt-4 md:pt-6">
       <h1 id="article-title" class="text-[2rem] font-bold leading-snug mb-4 md:mb-6 md:text-[2.6rem]">
-        
+        灵性之旅
       </h1>
       <div>
         <section class="flex items-center gap-3 text-sm">
           <span class="flex items-center gap-1">
             <iconify-icon width="18" icon="carbon-calendar" ></iconify-icon>
-            <time>2024-05-23</time>
+            <time>2024-05-25</time>
           </span>
           <span class="text-gray-400">·</span>
           <span class="flex items-center gap-1">
             <iconify-icon width="18" icon="ic:round-access-alarm" ></iconify-icon>
-            <span>1 min</span>
+            <span>2 min</span>
           </span>
           <span class="text-gray-400">·</span>
           <span class="flex items-center gap-1">
             <iconify-icon width="18" icon="icon-park-outline:font-search" ></iconify-icon>
-            <span>2 words</span>
+            <span>822 words</span>
           </span>
+          
+            <span class="text-gray-400">·</span>
+            <span class="flex items-center gap-1">
+              <iconify-icon width="16" icon="icon-park-outline:box" class="mr-2"></iconify-icon>
+              <a class="article-category-link" href="/categories/%E6%9D%82%E8%B0%88/">杂谈</a>
+            </span>
           
         </section>
       </div>
@@ -257,10 +267,37 @@
   </header>
   <!-- content -->
   <article class="post-content prose m-auto slide-enter-content dark:prose-invert">
-    <p>测试</p>
+    <h1 id="ling-xing-zhi-lu">灵性之旅</h1>
+<p>最近在阅读《未来简史》，看到书上有“灵性之旅”这个概念</p>
+<blockquote>
+<p>它（灵性之旅）通常是以神秘的方式把人带向未知的目的地。旅程一开始，通常都是一些大问题，例如：我是谁？生命的意义是什么？什么是善？在大多数人欣然接受由当权者提供的现成答案时，灵性的追随者却不那么容易满足。他们会下定决心，追寻着这些大问题，不论这些问题将他们引向何方，也不管前往之地是否熟悉或他们是否愿意。因此，对大多数人来说，做学术研究也是一份契约，而不是一次灵性之旅，因为学术研究就是把我们带往前人、政府和银行所认同的预定目的地罢了，就如同“我要再读三年书，通过所有考试，拿到大学毕业证，找份薪水好的工作”。但如果你在半路碰上某些大问题，将你引向某个意料之外、起初丝毫没想过的目的地，学术研究也可能忽然变成一次灵性之旅。例如，某个学生可能一开始主修经济学，想在华尔街找份工作，但学着学着，却不知为什么，最后进了印度教的修行所，或是到了津巴布韦去帮助那些艾滋病患者，我们就可以说这是一次灵性之旅了。</p>
+</blockquote>
+<p>回想起来，建立这个博客也是我的一次灵性之旅。在我购置了香橙派后，几乎一直在学校里吃灰（我没有续费校园网，整不出什么花活）。之前折腾CasaOS时，想到可以用香橙派建网站呀！</p>
+<p>香橙派作为网站服务器也要依赖校园网，其实不如CasaOS实用。但前几天非常的闲，就是想<s>没事找事</s>折腾一番，于是在docker里安装了宝塔面板（放不下CasaOS😅）。</p>
+<p>装好后，浏览器打不开宝塔面板😓</p>
+<p>寻找原因时，看到了“hexo”这个东西。</p>
+<p>第二天启动香橙派时，docker容器都启动失败了😡。当机立断，弃用宝塔，改用hexo。</p>
+<p>跟着网上无脑抄，弄好了hexo，成功看到了我的第一个博客网站（喜）。略微思考一下原理，发现我的香橙派根本不用一直开机，网站是托管在github上的。我的香橙派其实不太稳定，并不适合作为网页服务器，静态网页托管反而更满足博客的需求。</p>
+<p>既然已经搭建好博客了，那就写几篇文章吧！顺便<s>编造</s>想出了一些理由来支持我写下去：保留生活的点点滴滴，帮人避坑……</p>
+<p>既然是灵性之旅，这个博客未必就是终点。我会前往未知的目的地，这个博客也许就会中道崩殂？目前，导致博客中道崩殂的唯一原因就是我懒得更新🤨</p>
+<p>我相信，文字是有力量的。写下一点文章能保持思维的连续性，免得被碎片化裹挟。</p>
+<blockquote>
+<p>不妨不妨，来日方长                      ————《白蛇：缘起》</p>
+</blockquote>
+
   </article>
   <!-- tag -->
   <div class="mt-12 pt-6 border-t border-gray-200">
+    
+      
+        <span class="bg-gray-100 dark:bg-gray-700 px-2 py-1 m-1 text-sm rounded-md transition-colors hover:bg-gray-200">
+          <a href="/tags/%E6%97%A5%E5%B8%B8/">日常</a>
+        </span>
+      
+        <span class="bg-gray-100 dark:bg-gray-700 px-2 py-1 m-1 text-sm rounded-md transition-colors hover:bg-gray-200">
+          <a href="/tags/%E8%AF%BB%E4%B9%A6/">读书</a>
+        </span>
+      
     
   </div>
   <!-- prev and next -->
@@ -269,6 +306,11 @@
       
     </div>
     <div>
+      
+        <a href="/2024/05/23/%E8%83%BD%E8%B7%91%E5%B0%B1%E8%A1%8C/" class="text-sm text-gray-400 hover:text-gray-500 flex justify-center">
+          “能跑就行”
+          <iconify-icon width="20" icon="ri:arrow-right-s-line" data-inline="false"></iconify-icon>
+        </a>
       
     </div>
   </div>
