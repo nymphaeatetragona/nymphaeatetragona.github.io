@@ -1,6 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>“能跑就行”</title>
+    <url>/2024/05/23/%E8%83%BD%E8%B7%91%E5%B0%B1%E8%A1%8C/</url>
+    <content><![CDATA[<h1 id="ji-yi-ci-chen-tong-de-jiao-xun">记一次沉痛的教训</h1>
+<p>昨天写下了第一篇正式的博客，本地运行非常完美。但是看到文章没法使用脚注，代码块显示也不太好看，于是一番折腾下来成功使博文显示异常😅。故记此篇，以警后人<s>的同时也警示自己。</s></p>
+<h2 id="jiao-zhu-yi-an" id="脚注疑案">脚注疑案</h2>
+<p>在上一篇关于香橙派的文章里，我想通过引用他人的教程的方式让文章更简洁，于是想到了脚注。根据网上的资料，下载了hexo-reference-plus，部署好并使用后，看起来（只是看起来）一切正常，大喜🤪！</p>
+<h2 id="dai-ma-gao-liang-zhi-mi" id="代码高亮之谜">代码高亮之谜</h2>
+<p>跟着网上安装了hexo-prism-plugin，npm安装时提示</p>
+<pre><code> 13 vulnerability  #大概这样，意思是有些包有问题
+</code></pre>
+<p>不管，运行看看。</p>
+<h3 id="ji" id="寄">寄</h3>
+<p>运行<code>hexo g</code>的时候报错😓</p>
+<p>网上搜了一下，看不懂，于是卸载</p>
+<h3 id="da-shi-bu-miao" id="大事不妙">大事不妙</h3>
+<p>卸载后看了看博文，发现第一个代码块后面的markdown语言全部原样显示出来🤯</p>
+<p>看起来是hexo-prism-plugin的问题。疲惫了，那晚悲愤地滚去睡觉了🤡。这就是没备份的恶果！</p>
+<h2 id="po-an" id="破案">破案</h2>
+<p>结论：<br>
+Markdown原样显示是hexo-reference-plus（脚注插件）的问题，卸载后就恢复了。<s>目前仍未解决脚注问题</s>使用hexo-renderer-markdown-it插件解决了脚注问题。</p>
+<p>hexo-prism-plugin（代码高亮）报错修复</p>
+<pre><code>npm config set registry https://registry.npmmirror.com   #换源，官方源可能导致 XX vulnerability，进而导致奇怪的bug
+npm install -g npm  #更新npm版本
+</code></pre>
+<p>目前未解决无法更换代码高亮的主题，不显示代码行数的bug</p>
+<h2 id="xie-zai-zui-hou" id="写在最后">写在最后</h2>
+<p>虽然这次我成功修好了bug，下次说不定就崩坏了(⋟﹏⋞)。能跑就应该备份啊啊啊啊啊啊</p>
+]]></content>
+      <categories>
+        <category>杂谈</category>
+      </categories>
+      <tags>
+        <tag>日常</tag>
+        <tag>技术</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>你好，世界！</title>
     <url>/2024/05/20/hello_world/</url>
     <content><![CDATA[<p>这是博客建站的第一篇文章，用以测试博客是否正常运行，如果你看到了这篇文章，那这个博客已经可以正常工作啦！这个博客应该主要用于分享我的生活（因为vx朋友圈有各种各样的原因使我不能愉快的畅谈）。我偶尔会写一些我的折腾历程，让大家看看我踩过的坑，帮大家排排雷。</p>
@@ -85,43 +122,6 @@ sudo tzselect #调整时区，看着按就行
         <tag>香橙派</tag>
         <tag>单板机</tag>
         <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>“能跑就行”</title>
-    <url>/2024/05/23/%E8%83%BD%E8%B7%91%E5%B0%B1%E8%A1%8C/</url>
-    <content><![CDATA[<h1 id="ji-yi-ci-chen-tong-de-jiao-xun">记一次沉痛的教训</h1>
-<p>昨天写下了第一篇正式的博客，本地运行非常完美。但是看到文章没法使用脚注，代码块显示也不太好看，于是一番折腾下来成功使博文显示异常😅。故记此篇，以警后人<s>的同时也警示自己。</s></p>
-<h2 id="jiao-zhu-yi-an" id="脚注疑案">脚注疑案</h2>
-<p>在上一篇关于香橙派的文章里，我想通过引用他人的教程的方式让文章更简洁，于是想到了脚注。根据网上的资料，下载了hexo-reference-plus，部署好并使用后，看起来（只是看起来）一切正常，大喜🤪！</p>
-<h2 id="dai-ma-gao-liang-zhi-mi" id="代码高亮之谜">代码高亮之谜</h2>
-<p>跟着网上安装了hexo-prism-plugin，npm安装时提示</p>
-<pre><code> 13 vulnerability  #大概这样，意思是有些包有问题
-</code></pre>
-<p>不管，运行看看。</p>
-<h3 id="ji" id="寄">寄</h3>
-<p>运行<code>hexo g</code>的时候报错😓</p>
-<p>网上搜了一下，看不懂，于是卸载</p>
-<h3 id="da-shi-bu-miao" id="大事不妙">大事不妙</h3>
-<p>卸载后看了看博文，发现第一个代码块后面的markdown语言全部原样显示出来🤯</p>
-<p>看起来是hexo-prism-plugin的问题。疲惫了，那晚悲愤地滚去睡觉了🤡。这就是没备份的恶果！</p>
-<h2 id="po-an" id="破案">破案</h2>
-<p>结论：<br>
-Markdown原样显示是hexo-reference-plus（脚注插件）的问题，卸载后就恢复了。目前仍未解决脚注问题</p>
-<p>hexo-prism-plugin（代码高亮）报错修复</p>
-<pre><code>npm config set registry https://registry.npmmirror.com   #换源，官方源可能导致 XX vulnerability，进而导致奇怪的bug
-npm install -g npm  #更新npm版本
-</code></pre>
-<p>目前未解决无法更换代码高亮的主题，不显示代码行数的bug</p>
-<h2 id="xie-zai-zui-hou" id="写在最后">写在最后</h2>
-<p>虽然这次我成功修好了bug，下次说不定就崩坏了(⋟﹏⋞)。能跑就应该备份啊啊啊啊啊啊</p>
-]]></content>
-      <categories>
-        <category>杂谈</category>
-      </categories>
-      <tags>
-        <tag>日常</tag>
-        <tag>技术</tag>
       </tags>
   </entry>
 </search>
