@@ -1,6 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>香橙派的使用配置</title>
+    <url>/2024/05/22/orangepi-config/</url>
+    <content><![CDATA[<p>前些天购入了一个香橙派Zero3，但是时不时系统崩坏，（或许是sd卡不是香橙派官方店铺买的？）现在来捋一遍安装过程以便日后崩坏时重装系统。</p>
+<h1 id="ying-jian-zhun-bei">硬件准备</h1>
+<p>输出功率5V 2000mA以上适配器、USB Type-C数据线、USB 转 TTL 模块（串口模块）、读卡器、TF卡（Micro SD 卡）、杜邦线<br>
+<a href="https://www.wch.cn/download/CH341SER_EXE.html">串口驱动安装</a><br>
+接线：<br>
+TX——RX<br>
+RX——TX<br>
+GND——GND</p>
+<h1 id="xi-tong-gu-jian">系统固件</h1>
+<p>先<a href="http://www.orangepi.cn/html/serviceAndSupport/index.html">下载官方的固件</a></p>
+<h1 id="shao-lu-xi-tong">烧录系统</h1>
+<p>新SD卡要先格式化，我用了<a href="https://www.sdcardformatter.com/download/">SD Card Formatter</a></p>
+<p>用<a href="https://rufus.ie/zh/">refus</a>烧录进SD卡即可</p>
+<h1 id="yuan-cheng-guan-li-gong-ju">远程管理工具</h1>
+<p>可以在cmd或powershell里面输入命令来连接ssh<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></p>
+<pre><code>ssh –p端口号 用户名@IP地址  #例如：ssh –p22 root@127.0.0.1
+</code></pre>
+<p>我使用了<a href="https://mobaxterm.mobatek.net/download.html">MobaXterm</a>来连接ssh</p>
+<h1 id="mi-ma">密码</h1>
+<h3 id="mo-ren-zhang-hu-orangepi" id="默认账户：orangepi">默认账户：orangepi</h3>
+<h3 id="mo-ren-root-zhang-hu-root" id="默认root账户：root">默认root账户：root</h3>
+<h3 id="mo-ren-mi-ma-orangepi" id="默认密码：orangepi">默认密码：orangepi</h3>
+<pre><code>#修改密码
+sudo passwd orangepi #orangepi为要修改的用户的名字，按提示修改即可
+</code></pre>
+<h1 id="pei-zhi-wang-luo">配置网络</h1>
+<pre><code>nmtui #图形界面配置网络
+</code></pre>
+<p>其他网络信息</p>
+<pre><code>sudo ifconfig #查看ip信息
+route -n #查看网关信息
+</code></pre>
+<p>ip地址可能会跳动，ssh连接会不方便，要进入nmtui设置静态ip</p>
+<h1 id="ruan-jian-yuan">软件源</h1>
+<p>香橙派官方系统已经配置好国内源了，国产派大法好，一般不用改软件源</p>
+<pre><code>sudo cp /etc/apt/sources.list /etc/apt/sources.list.save #备份好习惯
+sudo cp /etc/apt/sources.list.save /etc/apt/sources.list #搞炸了用这条命令恢复
+nano /etc/apt/sources.list #编辑源
+</code></pre>
+<h1 id="geng-xin-xi-tong">更新系统</h1>
+<p>不更新，后期装软件会有各种奇怪的问题</p>
+<pre><code>sudo apt update
+sudo apt upgrade -y
+</code></pre>
+<h1 id="shi-qu">时区</h1>
+<p>香橙派连软件源都想好了，居然没调好时区（悲）<br>
+时间错误会导致某些网站证书验证问题</p>
+<pre><code>date #查看当前时间
+sudo tzselect #调整时区，看着按就行
+</code></pre>
+<h1 id="can-kao-wen-xian">参考文献</h1>
+<p><a href="https://zhuanlan.zhihu.com/p/658960791">OrangePi ZERO 2 新手配置教程</a></p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p><a href="https://blog.csdn.net/wm609972715/article/details/83759114">Windows 下 cmd 窗口使用 ssh 命令</a> <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>香橙派</tag>
+        <tag>单板机</tag>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>你好，世界！</title>
     <url>/2024/05/20/hello_world/</url>
     <content><![CDATA[<p>这是博客建站的第一篇文章，用以测试博客是否正常运行，如果你看到了这篇文章，那这个博客已经可以正常工作啦！这个博客应该主要用于分享我的生活（因为vx朋友圈有各种各样的原因使我不能愉快的畅谈）。我偶尔会写一些我的折腾历程，让大家看看我踩过的坑，帮大家排排雷。</p>
@@ -124,75 +196,58 @@
       </tags>
   </entry>
   <entry>
-    <title>香橙派的使用配置</title>
-    <url>/2024/05/22/orangepi-config/</url>
-    <content><![CDATA[<p>前些天购入了一个香橙派Zero3，但是时不时系统崩坏，（或许是sd卡不是香橙派官方店铺买的？）现在来捋一遍安装过程以便日后崩坏时重装系统。</p>
-<h1 id="ying-jian-zhun-bei">硬件准备</h1>
-<p>输出功率5V 2000mA以上适配器、USB Type-C数据线、USB 转 TTL 模块（串口模块）、读卡器、TF卡（Micro SD 卡）、杜邦线<br>
-<a href="https://www.wch.cn/download/CH341SER_EXE.html">串口驱动安装</a><br>
-接线：<br>
-TX——RX<br>
-RX——TX<br>
-GND——GND</p>
-<h1 id="xi-tong-gu-jian">系统固件</h1>
-<p>先<a href="http://www.orangepi.cn/html/serviceAndSupport/index.html">下载官方的固件</a></p>
-<h1 id="shao-lu-xi-tong">烧录系统</h1>
-<p>新SD卡要先格式化，我用了<a href="https://www.sdcardformatter.com/download/">SD Card Formatter</a></p>
-<p>用<a href="https://rufus.ie/zh/">refus</a>烧录进SD卡即可</p>
-<h1 id="yuan-cheng-guan-li-gong-ju">远程管理工具</h1>
-<p>可以在cmd或powershell里面输入命令来连接ssh<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></p>
-<pre><code>ssh –p端口号 用户名@IP地址  #例如：ssh –p22 root@127.0.0.1
-</code></pre>
-<p>我使用了<a href="https://mobaxterm.mobatek.net/download.html">MobaXterm</a>来连接ssh</p>
-<h1 id="mi-ma">密码</h1>
-<h3 id="mo-ren-zhang-hu-orangepi" id="默认账户：orangepi">默认账户：orangepi</h3>
-<h3 id="mo-ren-root-zhang-hu-root" id="默认root账户：root">默认root账户：root</h3>
-<h3 id="mo-ren-mi-ma-orangepi" id="默认密码：orangepi">默认密码：orangepi</h3>
-<pre><code>#修改密码
-sudo passwd orangepi #orangepi为要修改的用户的名字，按提示修改即可
-</code></pre>
-<h1 id="pei-zhi-wang-luo">配置网络</h1>
-<pre><code>nmtui #图形界面配置网络
-</code></pre>
-<p>其他网络信息</p>
-<pre><code>sudo ifconfig #查看ip信息
-route -n #查看网关信息
-</code></pre>
-<p>ip地址可能会跳动，ssh连接会不方便，要进入nmtui设置静态ip</p>
-<h1 id="ruan-jian-yuan">软件源</h1>
-<p>香橙派官方系统已经配置好国内源了，国产派大法好，一般不用改软件源</p>
-<pre><code>sudo cp /etc/apt/sources.list /etc/apt/sources.list.save #备份好习惯
-sudo cp /etc/apt/sources.list.save /etc/apt/sources.list #搞炸了用这条命令恢复
-nano /etc/apt/sources.list #编辑源
-</code></pre>
-<h1 id="geng-xin-xi-tong">更新系统</h1>
-<p>不更新，后期装软件会有各种奇怪的问题</p>
-<pre><code>sudo apt update
-sudo apt upgrade -y
-</code></pre>
-<h1 id="shi-qu">时区</h1>
-<p>香橙派连软件源都想好了，居然没调好时区（悲）<br>
-时间错误会导致某些网站证书验证问题</p>
-<pre><code>date #查看当前时间
-sudo tzselect #调整时区，看着按就行
-</code></pre>
-<h1 id="can-kao-wen-xian">参考文献</h1>
-<p><a href="https://zhuanlan.zhihu.com/p/658960791">OrangePi ZERO 2 新手配置教程</a></p>
+    <title>听歌难题</title>
+    <url>/2024/06/26/%E5%90%AC%E6%AD%8C%E9%9A%BE%E9%A2%98/</url>
+    <content><![CDATA[<h1 id="ting-ge-nan-ti">听歌难题</h1>
+<p>什么样的音乐平台最好？有很多版权，简洁美观的UI，较低的会员费。在我体验了好几家平台后发现，想集三点于一身就是在做梦😅。</p>
+<p>目前已体验过QQ音乐，网易云音乐，Spotify，Apple Music。当前正在使用Apple Music。</p>
+<p>由于QQ音乐，酷狗音乐，酷我音乐版权共享，故下文以QQ音乐为代表，不再作区分。</p>
+<h1 id="ban-quan-dui-bi">版权对比</h1>
+<p>版权由多到少排序<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></p>
+<ul>
+<li>Spotify</li>
+<li>Apple Music外区，QQ音乐</li>
+<li>Apple Music国区</li>
+<li>网易云音乐</li>
+</ul>
+<h1 id="hui-yuan-fei">会员费</h1>
+<p>费用由多到少排序</p>
+<ul>
+<li>Spotify，Apple Music外区</li>
+<li>QQ音乐，网易云音乐</li>
+<li>Apple Music国区（大学生认证，闲鱼轻松拿下）</li>
+</ul>
+<p>PS：Apple Music家庭拼车会更加便宜，但是有卖家销号跑路的情况。目前我正在尝试拼车，希望不会遇到骗子🤨。</p>
+<hr>
+<h1 id="yi-xia-shi-fa-lao-sao-shi-jian">以下是发牢骚时间</h1>
+<h2 id="q-yin-shi-dai" id="Q音时代">Q音时代</h2>
+<p>在我小学的时候，身边朋友在用QQ音乐（或许是因为能和腾讯系产品联动？），酷我音乐比较小众，而酷狗音乐经常在电脑上被“高速下崽器”下崽，不喜欢。在初中的时候，决定听歌。刚好我妈的手机上安装了QQ音乐，直接QQ登录，非常方便。</p>
+<p>后来，看一些游戏主播直播的时候，发现他们大多都用网易云。嗯，为什么都用网易云呢？莫非关键之处在于“云”字？想起一些视频平台，没版权的影视就给你一个外链，可以跳转看。难道网易云也可以实现类似操作，故称“网易云”？又或者网易云本身版权多，主播才用？</p>
+<p>后来发生了“五五断更节”事件，使我彻底下定决心，非必要不使用腾讯系产品，<s>万恶的资本家</s>。于是转移网易云。</p>
+<h2 id="wang-yi-yun-shi-dai" id="网易云时代">网易云时代</h2>
+<p>转到网易云后发现，它才是版权最少的😅。经常出现之前点收藏的歌曲突然没版权，或者变成VIP专享。QQ音乐也会出现，但是网易云频率更高。当然，网易云也是有好处的，小的音乐人比较多，一些小众音乐是在网易云独占的。</p>
+<h2 id="spotify-shi-dai" id="Spotify时代">Spotify时代</h2>
+<p>刚知道这个平台的时候就下载来体验了一下，发现不开会员不能自己点歌！搜索一首想听的歌，只能播放歌曲所在的专辑，而且顺序随机。有些歌的歌词还加载不出来。垃圾软件！！！</p>
+<p>后来，发现吾爱大神的破解版，解除了点歌限制，再加上可以裸连，歌词什么的可以容忍。重要的是没有单曲购买这种东西，什么歌都可以播。于是背叛网易云，润到Spotify了。</p>
+<h2 id="apple-music" id="Apple-Music">Apple Music</h2>
+<p>Spotify的歌词</p>
+<p>听同学说Apple Music不错，刚好又在闲鱼上看到1元的Apple Music会员，号称到期了可以重复拍。好奇试了试，反正被骗了也才一块钱。听第一耳时，居然顿感音质比Spotify好。~~我可是木耳。~~Apple Music的歌词动画应该是全网最好的了，非常的好看。而且绝大多数歌都有歌词，不像Spotify的垃圾歌词支持。国区的版权并没有很少，至少我听的歌都有版权。Apple Music一直被人诟病的一点是日语歌曲名字混乱，罗马音、英文、假名都有。</p>
+<p>既然可以一直1元购，那为何不转Apple Music呢？于是，它成了我的主力软件，背叛了Spotify😜。</p>
+<p>后来，在闲鱼看到有些卖家描述：“账号已达试用上限的勿拍”，貌似不能一直一元购下去？于是选择家庭拼车，一个月也就3块多~~，如果不被骗的话。~~</p>
 <hr class="footnotes-sep">
 <section class="footnotes">
 <ol class="footnotes-list">
-<li id="fn1" class="footnote-item"><p><a href="https://blog.csdn.net/wm609972715/article/details/83759114">Windows 下 cmd 窗口使用 ssh 命令</a> <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+<li id="fn1" class="footnote-item"><p><a href="https://sspai.com/post/64477#">https://sspai.com/post/64477#</a>! <a href="#fnref1" class="footnote-backref">↩︎</a></p>
 </li>
 </ol>
 </section>
 ]]></content>
       <categories>
-        <category>技术</category>
+        <category>杂谈</category>
       </categories>
       <tags>
-        <tag>香橙派</tag>
-        <tag>单板机</tag>
-        <tag>Linux</tag>
+        <tag>音乐</tag>
+        <tag>杂谈</tag>
       </tags>
   </entry>
   <entry>
