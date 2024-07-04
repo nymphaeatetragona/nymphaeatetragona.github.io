@@ -18,7 +18,7 @@
   <entry>
     <title>git连接GitHub-ssh异常</title>
     <url>/2024/07/04/git%E8%BF%9E%E6%8E%A5GitHub-ssh%E5%BC%82%E5%B8%B8/</url>
-    <content><![CDATA[<p>事情是这样的，今天突然出现这样的情况</p>
+    <content><![CDATA[<p>事情是这样的，今天提交文章时，突然出现这样的情况</p>
 <p><img src="1.webp" alt=""><br>
 <img src="2.webp" alt=""></p>
 <p>以前也会出现这种情况，不过是连了steam++加速GitHub才会出现ssh密钥验证失败，可是今天裸连都出现这种情况了。</p>
