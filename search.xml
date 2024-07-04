@@ -1,31 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>git连接GitHub-ssh异常</title>
-    <url>/2024/07/04/git%E8%BF%9E%E6%8E%A5GitHub-ssh%E5%BC%82%E5%B8%B8/</url>
-    <content><![CDATA[<p>事情是这样的，今天突然出现这样的情况</p>
-<p><img src="1.webp" alt=""><br>
-<img src="2.webp" alt=""></p>
-<p>以前也会出现这种情况，不过是连了steam++加速GitHub才会出现ssh密钥验证失败，可是今天裸连都出现这种情况了。</p>
-<p>于是采用最原始的方法：重新添加sshkey到GitHub上，顺便改一下域名。</p>
-<p>反正平时都要开steam++才能打开GitHub，干脆就开着它直接生成ssh公钥吧。</p>
-<p>hexo部署，生成，一气呵成，然后要我输入密码</p>
-<hr>
-<p>git@github’s password:</p>
-<p>permission denied please try again.</p>
-<hr>
-<p>输半天都输不对，特意改了GitHub密码，依然输不对🤬</p>
-<p>关闭steam++生成公钥试试，然后…就成功了？？？ <code>hexo d</code> 的时候根本不要求我输入密码</p>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>ssh</tag>
-        <tag>git</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>你好，世界！</title>
     <url>/2024/05/20/hello_world/</url>
     <content><![CDATA[<p>这是博客建站的第一篇文章，用以测试博客是否正常运行，如果你看到了这篇文章，那这个博客已经可以正常工作啦！这个博客应该主要用于分享我的生活（因为vx朋友圈有各种各样的原因使我不能愉快的畅谈）。我偶尔会写一些我的折腾历程，让大家看看我踩过的坑，帮大家排排雷。</p>
@@ -38,6 +13,31 @@
       <tags>
         <tag>日常</tag>
         <tag>技术</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>git连接GitHub-ssh异常</title>
+    <url>/2024/07/04/git%E8%BF%9E%E6%8E%A5GitHub-ssh%E5%BC%82%E5%B8%B8/</url>
+    <content><![CDATA[<p>事情是这样的，今天突然出现这样的情况</p>
+<p><img src="1.webp" alt=""><br>
+<img src="2.webp" alt=""></p>
+<p>以前也会出现这种情况，不过是连了steam++加速GitHub才会出现ssh密钥验证失败，可是今天裸连都出现这种情况了。</p>
+<p>于是采用最原始的方法：重新添加sshkey到GitHub上，顺便改一下域名。</p>
+<p>反正平时都要开steam++才能打开GitHub，干脆就开着它直接生成ssh公钥吧。</p>
+<p>hexo部署，生成，一气呵成，然后要我输入密码</p>
+<pre><code>git@github's password:
+
+permission denied please try again.
+</code></pre>
+<p>输半天都输不对，特意改了GitHub密码，依然输不对🤬</p>
+<p>关闭steam++生成公钥试试，然后…就成功了？？？ <code>hexo d</code> 的时候根本不要求我输入密码</p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>ssh</tag>
+        <tag>git</tag>
       </tags>
   </entry>
   <entry>
