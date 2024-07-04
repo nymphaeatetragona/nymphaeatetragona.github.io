@@ -19,7 +19,7 @@
   <meta name="keywords" content="生活杂谈，技术">
 
 
-<title>归档: 2024/7 | 涷雨洒尘的心情驿站</title>
+<title>git连接GitHub-ssh异常 | 涷雨洒尘的心情驿站</title>
 
 
 
@@ -159,7 +159,7 @@
         </h2>
       </a>
       <div id="header-title" class="opacity-0 md:ml-2 md:mt-[0.1rem] text-xs font-medium whitespace-nowrap overflow-hidden overflow-ellipsis">
-        
+        git连接GitHub-ssh异常
       </div>
       <div class="flex-1"></div>
       <div class="flex items-center gap-3">
@@ -219,62 +219,196 @@
 </div>
 
   <main class="pt-14">
-    <section class="px-6 max-w-prose mx-auto gap-12 grid grid-cols-1">
-  <div class="flex flex-col h-48 items-center justify-center">
-    <h1 class="site-title text-4xl leading-relaxed">
-      涷雨洒尘的心情驿站
-    </h1>
-    <p class="text-gray-500 mt-2">
-      令飘风兮先驱，使涷雨兮洒尘————《楚辞·九歌·大司命》
-    </p>
-  </div>
-  
-  
-    
-    
-      <div class="relative pointer-events-none">
-        <span class="text-9xl opacity-10 absolute -left-11 -top-6 font-bold">2024</span>
+    <!-- css -->
+
+<link rel="stylesheet" href="/lib/fancybox/fancybox.min.css">
+
+
+<link rel="stylesheet" href="/lib/tocbot/tocbot.min.css">
+
+<!-- toc -->
+
+<section class="px-6 max-w-prose mx-auto md:px-0">
+  <!-- header -->
+  <header class="overflow-hidden pt-6 pb-6 md:pt-12">
+    <div class="pt-4 md:pt-6">
+      <h1 id="article-title" class="text-[2rem] font-bold leading-snug mb-4 md:mb-6 md:text-[2.6rem]">
+        git连接GitHub-ssh异常
+      </h1>
+      <div>
+        <section class="flex items-center gap-3 text-sm">
+          <span class="flex items-center gap-1">
+            <iconify-icon width="18" icon="carbon-calendar" ></iconify-icon>
+            <time>2024-07-04</time>
+          </span>
+          <span class="text-gray-400">·</span>
+          <span class="flex items-center gap-1">
+            <iconify-icon width="18" icon="ic:round-access-alarm" ></iconify-icon>
+            <span>1 min</span>
+          </span>
+          <span class="text-gray-400">·</span>
+          <span class="flex items-center gap-1">
+            <iconify-icon width="18" icon="icon-park-outline:font-search" ></iconify-icon>
+            <span>186 words</span>
+          </span>
+          
+            <span class="text-gray-400">·</span>
+            <span class="flex items-center gap-1">
+              <iconify-icon width="16" icon="icon-park-outline:box" class="mr-2"></iconify-icon>
+              <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+            </span>
+          
+        </section>
       </div>
+    </div>
+  </header>
+  <!-- content -->
+  <article class="post-content prose m-auto slide-enter-content dark:prose-invert">
+    <p>事情是这样的，今天突然出现这样的情况</p>
+<p><img src="" alt=""></p>
+<p>以前也会出现这种情况，不过是连了steam++加速GitHub才会出现ssh密钥验证失败，可是今天裸连都出现这种情况了。</p>
+<p>于是采用最原始的方法：重新添加sshkey到GitHub上，顺便改一下域名。</p>
+<p>反正平时都要开steam++才能打开GitHub，干脆就开着它直接生成ssh公钥吧。</p>
+<p>hexo部署，生成，一气呵成，然后要我输入密码</p>
+<hr>
+<p>git@github’s password:</p>
+<p>permission denied please try again.</p>
+<hr>
+<p>输半天都输不对，特意改了GitHub密码，依然输不对🤬</p>
+<p>关闭steam++生成公钥试试，然后…就成功了？？？ <code>hexo d</code> 的时候根本不要求我输入密码</p>
+
+  </article>
+  <!-- tag -->
+  <div class="mt-12 pt-6 border-t border-gray-200">
     
-    <a style="--stagger:0" href="/2024/07/04/git%E8%BF%9E%E6%8E%A5GitHub-ssh%E5%BC%82%E5%B8%B8/" data-animate>
-      <header>
-        <h2 class="font-bold text-xl">
-          git连接GitHub-ssh异常
-        </h2>
-      </header>
-      <section class="text-gray-400 my-2 text-sm time">
-        <p class="line-clamp-4">
-          
-        </p>
-        <p class="line-clamp-4">
-          7月 04
-          ·
-          1 min
-        </p>
-      </section>
-    </a>
-  
+      
+        <span class="bg-gray-100 dark:bg-gray-700 px-2 py-1 m-1 text-sm rounded-md transition-colors hover:bg-gray-200">
+          <a href="/tags/ssh/">ssh</a>
+        </span>
+      
+        <span class="bg-gray-100 dark:bg-gray-700 px-2 py-1 m-1 text-sm rounded-md transition-colors hover:bg-gray-200">
+          <a href="/tags/git/">git</a>
+        </span>
+      
     
+  </div>
+  <!-- prev and next -->
+  <div class="flex justify-between mt-12 pt-6 border-t border-gray-200">
+    <div>
+      
+    </div>
+    <div>
+      
+        <a href="/2024/06/26/%E5%90%AC%E6%AD%8C%E9%9A%BE%E9%A2%98/" class="text-sm text-gray-400 hover:text-gray-500 flex justify-center">
+          听歌难题
+          <iconify-icon width="20" icon="ri:arrow-right-s-line" data-inline="false"></iconify-icon>
+        </a>
+      
+    </div>
+  </div>
+  <!-- comment -->
+  <div class="article-comments mt-12">
     
-    <a style="--stagger:1" href="/2024/07/04/%E6%B2%B3%E8%BE%B9%E7%9A%84%E9%94%99%E8%AF%AF/" data-animate>
-      <header>
-        <h2 class="font-bold text-xl">
-          河边的错误
-        </h2>
-      </header>
-      <section class="text-gray-400 my-2 text-sm time">
-        <p class="line-clamp-4">
-          
-        </p>
-        <p class="line-clamp-4">
-          7月 04
-          ·
-          1 min
-        </p>
-      </section>
-    </a>
-  
+
+  </div>
 </section>
+<!-- js inspect -->
+
+<script src="/lib/clipboard.min.js"></script>
+
+
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    "HTML-CSS": {
+        preferredFont: "TeX",
+        availableFonts: ["STIX","TeX"],
+        linebreaks: { automatic:true },
+        EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+        inlineMath: [ ["$", "$"], ["\\(","\\)"] ],
+        processEscapes: true,
+        ignoreClass: "tex2jax_ignore|dno",
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+        equationNumbers: { autoNumber: "AMS" },
+        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+        Macros: { href: "{}" }
+    },
+    messageStyle: "none"
+  });
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<script>
+  $(document).ready(() => {
+    const maraidConfig = {
+      theme: "default",
+      logLevel: 3,
+      flowchart: { curve: "linear" },
+      gantt: { axisFormat: "%m/%d/%Y" },
+      sequence: { actorMargin: 50 },
+    };
+    mermaid.initialize(maraidConfig);
+  });
+</script>
+
+
+
+<script src="/lib/fancybox/fancybox.umd.min.js"></script>
+
+<script>
+  $(document).ready(() => {
+    $('.post-content').each(function(i){
+      $(this).find('img').each(function(){
+        if ($(this).parent().hasClass('fancybox') || $(this).parent().is('a')) return;
+        var alt = this.alt;
+        if (alt) $(this).after('<span class="fancybox-alt">' + alt + '</span>');
+        $(this).wrap('<a class="fancybox-img" href="' + this.src + '" data-fancybox=\"gallery\" data-caption="' + alt + '"></a>')
+      });
+      $(this).find('.fancybox').each(function(){
+        $(this).attr('rel', 'article' + i);
+      });
+    });
+
+    Fancybox.bind('[data-fancybox="gallery"]', {
+        // options
+    })
+  })
+</script>
+
+<!-- tocbot begin -->
+
+<script src="/lib/tocbot/tocbot.min.js"></script>
+
+<script>
+  $(document).ready(() => {
+      tocbot.init({
+        // Where to render the table of contents.
+        tocSelector: '.post-toc',
+        // Where to grab the headings to build the table of contents.
+        contentSelector: '.post-content',
+        // Which headings to grab inside of the contentSelector element.
+        headingSelector: 'h1, h2, h3',
+        // For headings inside relative or absolute positioned containers within content.
+        hasInnerContainers: true,
+    });
+  })
+</script>
+<!-- tocbot end -->
+
 
   </main>
   <footer class="flex flex-col h-40 items-center justify-center text-gray-400 text-sm">
