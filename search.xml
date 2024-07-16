@@ -1,31 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>git连接GitHub-ssh异常</title>
-    <url>/2024/07/04/git%E8%BF%9E%E6%8E%A5GitHub-ssh%E5%BC%82%E5%B8%B8/</url>
-    <content><![CDATA[<p>事情是这样的，今天提交文章时，突然出现这样的情况</p>
-<p><img src="1.webp" alt=""><br>
-<img src="2.webp" alt=""></p>
-<p>以前也会出现这种情况，不过是连了steam++加速GitHub才会出现ssh密钥验证失败，可是今天裸连都出现这种情况了。</p>
-<p>于是采用最原始的方法：重新添加sshkey到GitHub上，顺便改一下域名。</p>
-<p>反正平时都要开steam++才能打开GitHub，干脆就开着它直接生成ssh公钥吧。</p>
-<p>hexo部署，生成，一气呵成，然后要我输入密码</p>
-<pre><code>git@github's password:
-
-permission denied please try again.
-</code></pre>
-<p>输半天都输不对，特意改了GitHub密码，依然输不对🤬</p>
-<p>关闭steam++生成公钥试试，然后…就成功了？？？ <code>hexo d</code> 的时候根本不要求我输入密码</p>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>ssh</tag>
-        <tag>git</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>你好，世界！</title>
     <url>/2024/05/20/hello_world/</url>
     <content><![CDATA[<p>这是博客建站的第一篇文章，用以测试博客是否正常运行，如果你看到了这篇文章，那这个博客已经可以正常工作啦！这个博客应该主要用于分享我的生活（因为vx朋友圈有各种各样的原因使我不能愉快的畅谈）。我偶尔会写一些我的折腾历程，让大家看看我踩过的坑，帮大家排排雷。</p>
@@ -38,78 +13,6 @@ permission denied please try again.
       <tags>
         <tag>杂谈</tag>
         <tag>技术</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>香橙派的使用配置</title>
-    <url>/2024/05/22/orangepi-config/</url>
-    <content><![CDATA[<p>前些天购入了一个香橙派Zero3，但是时不时系统崩坏，（或许是sd卡不是香橙派官方店铺买的？）现在来捋一遍安装过程以便日后崩坏时重装系统。</p>
-<h1 id="ying-jian-zhun-bei">硬件准备</h1>
-<p>输出功率5V 2000mA以上适配器、USB Type-C数据线、USB 转 TTL 模块（串口模块）、读卡器、TF卡（Micro SD 卡）、杜邦线<br>
-<a href="https://www.wch.cn/download/CH341SER_EXE.html">串口驱动安装</a><br>
-接线：<br>
-TX——RX<br>
-RX——TX<br>
-GND——GND</p>
-<h1 id="xi-tong-gu-jian">系统固件</h1>
-<p>先<a href="http://www.orangepi.cn/html/serviceAndSupport/index.html">下载官方的固件</a></p>
-<h1 id="shao-lu-xi-tong">烧录系统</h1>
-<p>新SD卡要先格式化，我用了<a href="https://www.sdcardformatter.com/download/">SD Card Formatter</a></p>
-<p>用<a href="https://rufus.ie/zh/">refus</a>烧录进SD卡即可</p>
-<h1 id="yuan-cheng-guan-li-gong-ju">远程管理工具</h1>
-<p>可以在cmd或powershell里面输入命令来连接ssh<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></p>
-<pre><code>ssh –p端口号 用户名@IP地址  #例如：ssh –p22 root@127.0.0.1
-</code></pre>
-<p>我使用了<a href="https://mobaxterm.mobatek.net/download.html">MobaXterm</a>来连接ssh</p>
-<h1 id="mi-ma">密码</h1>
-<h3 id="mo-ren-zhang-hu-orangepi" id="默认账户：orangepi">默认账户：orangepi</h3>
-<h3 id="mo-ren-root-zhang-hu-root" id="默认root账户：root">默认root账户：root</h3>
-<h3 id="mo-ren-mi-ma-orangepi" id="默认密码：orangepi">默认密码：orangepi</h3>
-<pre><code>#修改密码
-sudo passwd orangepi #orangepi为要修改的用户的名字，按提示修改即可
-</code></pre>
-<h1 id="pei-zhi-wang-luo">配置网络</h1>
-<pre><code>nmtui #图形界面配置网络
-</code></pre>
-<p>其他网络信息</p>
-<pre><code>sudo ifconfig #查看ip信息
-route -n #查看网关信息
-</code></pre>
-<p>ip地址可能会跳动，ssh连接会不方便，要进入nmtui设置静态ip</p>
-<h1 id="ruan-jian-yuan">软件源</h1>
-<p>香橙派官方系统已经配置好国内源了，国产派大法好，一般不用改软件源</p>
-<pre><code>sudo cp /etc/apt/sources.list /etc/apt/sources.list.save #备份好习惯
-sudo cp /etc/apt/sources.list.save /etc/apt/sources.list #搞炸了用这条命令恢复
-nano /etc/apt/sources.list #编辑源
-</code></pre>
-<h1 id="geng-xin-xi-tong">更新系统</h1>
-<p>不更新，后期装软件会有各种奇怪的问题</p>
-<pre><code>sudo apt update
-sudo apt upgrade -y
-</code></pre>
-<h1 id="shi-qu">时区</h1>
-<p>香橙派连软件源都想好了，居然没调好时区（悲）<br>
-时间错误会导致某些网站证书验证问题</p>
-<pre><code>date #查看当前时间
-sudo tzselect #调整时区，看着按就行
-</code></pre>
-<h1 id="can-kao-wen-xian">参考文献</h1>
-<p><a href="https://zhuanlan.zhihu.com/p/658960791">OrangePi ZERO 2 新手配置教程</a></p>
-<hr class="footnotes-sep">
-<section class="footnotes">
-<ol class="footnotes-list">
-<li id="fn1" class="footnote-item"><p><a href="https://blog.csdn.net/wm609972715/article/details/83759114">Windows 下 cmd 窗口使用 ssh 命令</a> <a href="#fnref1" class="footnote-backref">↩︎</a></p>
-</li>
-</ol>
-</section>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>香橙派</tag>
-        <tag>单板机</tag>
-        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -220,6 +123,103 @@ sudo tzselect #调整时区，看着按就行
       </categories>
       <tags>
         <tag>游戏</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>git连接GitHub-ssh异常</title>
+    <url>/2024/07/04/git%E8%BF%9E%E6%8E%A5GitHub-ssh%E5%BC%82%E5%B8%B8/</url>
+    <content><![CDATA[<p>事情是这样的，今天提交文章时，突然出现这样的情况</p>
+<p><img src="1.webp" alt=""><br>
+<img src="2.webp" alt=""></p>
+<p>以前也会出现这种情况，不过是连了steam++加速GitHub才会出现ssh密钥验证失败，可是今天裸连都出现这种情况了。</p>
+<p>于是采用最原始的方法：重新添加sshkey到GitHub上，顺便改一下域名。</p>
+<p>反正平时都要开steam++才能打开GitHub，干脆就开着它直接生成ssh公钥吧。</p>
+<p>hexo部署，生成，一气呵成，然后要我输入密码</p>
+<pre><code>git@github's password:
+
+permission denied please try again.
+</code></pre>
+<p>输半天都输不对，特意改了GitHub密码，依然输不对🤬</p>
+<p>关闭steam++生成公钥试试，然后…就成功了？？？ <code>hexo d</code> 的时候根本不要求我输入密码</p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>ssh</tag>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>香橙派的使用配置</title>
+    <url>/2024/05/22/orangepi-config/</url>
+    <content><![CDATA[<p>前些天购入了一个香橙派Zero3，但是时不时系统崩坏，（或许是sd卡不是香橙派官方店铺买的？）现在来捋一遍安装过程以便日后崩坏时重装系统。</p>
+<h1 id="ying-jian-zhun-bei">硬件准备</h1>
+<p>输出功率5V 2000mA以上适配器、USB Type-C数据线、USB 转 TTL 模块（串口模块）、读卡器、TF卡（Micro SD 卡）、杜邦线<br>
+<a href="https://www.wch.cn/download/CH341SER_EXE.html">串口驱动安装</a><br>
+接线：<br>
+TX——RX<br>
+RX——TX<br>
+GND——GND</p>
+<h1 id="xi-tong-gu-jian">系统固件</h1>
+<p>先<a href="http://www.orangepi.cn/html/serviceAndSupport/index.html">下载官方的固件</a></p>
+<h1 id="shao-lu-xi-tong">烧录系统</h1>
+<p>新SD卡要先格式化，我用了<a href="https://www.sdcardformatter.com/download/">SD Card Formatter</a></p>
+<p>用<a href="https://rufus.ie/zh/">refus</a>烧录进SD卡即可</p>
+<h1 id="yuan-cheng-guan-li-gong-ju">远程管理工具</h1>
+<p>可以在cmd或powershell里面输入命令来连接ssh<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></p>
+<pre><code>ssh –p端口号 用户名@IP地址  #例如：ssh –p22 root@127.0.0.1
+</code></pre>
+<p>我使用了<a href="https://mobaxterm.mobatek.net/download.html">MobaXterm</a>来连接ssh</p>
+<h1 id="mi-ma">密码</h1>
+<h3 id="mo-ren-zhang-hu-orangepi" id="默认账户：orangepi">默认账户：orangepi</h3>
+<h3 id="mo-ren-root-zhang-hu-root" id="默认root账户：root">默认root账户：root</h3>
+<h3 id="mo-ren-mi-ma-orangepi" id="默认密码：orangepi">默认密码：orangepi</h3>
+<pre><code>#修改密码
+sudo passwd orangepi #orangepi为要修改的用户的名字，按提示修改即可
+</code></pre>
+<h1 id="pei-zhi-wang-luo">配置网络</h1>
+<pre><code>nmtui #图形界面配置网络
+</code></pre>
+<p>其他网络信息</p>
+<pre><code>sudo ifconfig #查看ip信息
+route -n #查看网关信息
+</code></pre>
+<p>ip地址可能会跳动，ssh连接会不方便，要进入nmtui设置静态ip</p>
+<h1 id="ruan-jian-yuan">软件源</h1>
+<p>香橙派官方系统已经配置好国内源了，国产派大法好，一般不用改软件源</p>
+<pre><code>sudo cp /etc/apt/sources.list /etc/apt/sources.list.save #备份好习惯
+sudo cp /etc/apt/sources.list.save /etc/apt/sources.list #搞炸了用这条命令恢复
+nano /etc/apt/sources.list #编辑源
+</code></pre>
+<h1 id="geng-xin-xi-tong">更新系统</h1>
+<p>不更新，后期装软件会有各种奇怪的问题</p>
+<pre><code>sudo apt update
+sudo apt upgrade -y
+</code></pre>
+<h1 id="shi-qu">时区</h1>
+<p>香橙派连软件源都想好了，居然没调好时区（悲）<br>
+时间错误会导致某些网站证书验证问题</p>
+<pre><code>date #查看当前时间
+sudo tzselect #调整时区，看着按就行
+</code></pre>
+<h1 id="can-kao-wen-xian">参考文献</h1>
+<p><a href="https://zhuanlan.zhihu.com/p/658960791">OrangePi ZERO 2 新手配置教程</a></p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p><a href="https://blog.csdn.net/wm609972715/article/details/83759114">Windows 下 cmd 窗口使用 ssh 命令</a> <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>香橙派</tag>
+        <tag>单板机</tag>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
