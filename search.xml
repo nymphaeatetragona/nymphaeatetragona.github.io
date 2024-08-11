@@ -1,21 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>你好，世界！</title>
-    <url>/2024/05/20/hello_world/</url>
-    <content><![CDATA[<p>这是博客建站的第一篇文章，用以测试博客是否正常运行，如果你看到了这篇文章，那这个博客已经可以正常工作啦！这个博客应该主要用于分享我的生活（因为vx朋友圈有各种各样的原因使我不能愉快的畅谈）。我偶尔会写一些我的折腾历程，让大家看看我踩过的坑，帮大家排排雷。</p>
-<hr>
-<p>感谢友人<a href="https://yuuu.org/">竹月</a>，他在我建站时不费余力地解答我的疑惑。</p>
-]]></content>
-      <categories>
-        <category>杂谈</category>
-      </categories>
-      <tags>
-        <tag>杂谈</tag>
-        <tag>技术</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>git连接GitHub-ssh异常</title>
     <url>/2024/07/04/git%E8%BF%9E%E6%8E%A5GitHub-ssh%E5%BC%82%E5%B8%B8/</url>
     <content><![CDATA[<p>事情是这样的，今天提交文章时，突然出现这样的情况</p>
@@ -38,6 +23,21 @@ permission denied please try again.
       <tags>
         <tag>ssh</tag>
         <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>你好，世界！</title>
+    <url>/2024/05/20/hello_world/</url>
+    <content><![CDATA[<p>这是博客建站的第一篇文章，用以测试博客是否正常运行，如果你看到了这篇文章，那这个博客已经可以正常工作啦！这个博客应该主要用于分享我的生活（因为vx朋友圈有各种各样的原因使我不能愉快的畅谈）。我偶尔会写一些我的折腾历程，让大家看看我踩过的坑，帮大家排排雷。</p>
+<hr>
+<p>感谢友人<a href="https://yuuu.org/">竹月</a>，他在我建站时不费余力地解答我的疑惑。</p>
+]]></content>
+      <categories>
+        <category>杂谈</category>
+      </categories>
+      <tags>
+        <tag>杂谈</tag>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -334,7 +334,7 @@ sudo tzselect #调整时区，看着按就行
 😨😭🤡<br>
 （安全员开车一骑绝尘）</p>
 <p>MD，浪费老子打车费。<br>
-拿出存放的手机，唉，下次还要来补考，交的押金就不退了吧。（记住这句话）</p>
+拿出存放的手机，唉，下次还要来补考，交的押金就不退了吧。（请记住这句话）</p>
 <h1 id="er-zhan">二战</h1>
 <p>暑假，<s>我胡汉三又回来了</s></p>
 <p>问了下身边考过驾照的人，他们的科目三都氪金练了模拟车，貌似就我很勇不去练(～￣▽￣)～</p>
@@ -401,7 +401,7 @@ CaO，不管了，考不过就下次再来，360￥也不算什么钱。<br>
 ohhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</p>
 <p><img src="1.jpg" alt=""></p>
 <p>签名，拿手机，赶紧run。</p>
-<p><s>SB储物柜，上次交的押金没及时点退款就没了啊啊啊啊啊啊啊</s></p>
+<p>SB储物柜，上次交的押金没及时点退款就没了啊啊啊啊啊啊啊</p>
 <hr>
 <p>我根据当时的回忆写成了这篇文章，对话部分略有艺术加工，不过事件都是真实发生的。</p>
 ]]></content>
