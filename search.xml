@@ -1,21 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>你好，世界！</title>
-    <url>/2024/05/20/hello_world/</url>
-    <content><![CDATA[<p>这是博客建站的第一篇文章，用以测试博客是否正常运行，如果你看到了这篇文章，那这个博客已经可以正常工作啦！这个博客应该主要用于分享我的生活（因为vx朋友圈有各种各样的原因使我不能愉快的畅谈）。我偶尔会写一些我的折腾历程，让大家看看我踩过的坑，帮大家排排雷。</p>
-<hr>
-<p>感谢友人<a href="https://yuuu.org/">竹月</a>，他在我建站时不费余力地解答我的疑惑。</p>
-]]></content>
-      <categories>
-        <category>杂谈</category>
-      </categories>
-      <tags>
-        <tag>杂谈</tag>
-        <tag>技术</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>git连接GitHub-ssh异常</title>
     <url>/2024/07/04/git%E8%BF%9E%E6%8E%A5GitHub-ssh%E5%BC%82%E5%B8%B8/</url>
     <content><![CDATA[<p>事情是这样的，今天提交文章时，突然出现这样的情况</p>
@@ -151,6 +136,75 @@ permission denied please try again.
       </tags>
   </entry>
   <entry>
+    <title>你好，世界！</title>
+    <url>/2024/05/20/hello_world/</url>
+    <content><![CDATA[<p>这是博客建站的第一篇文章，用以测试博客是否正常运行，如果你看到了这篇文章，那这个博客已经可以正常工作啦！这个博客应该主要用于分享我的生活（因为vx朋友圈有各种各样的原因使我不能愉快的畅谈）。我偶尔会写一些我的折腾历程，让大家看看我踩过的坑，帮大家排排雷。</p>
+<hr>
+<p>感谢友人<a href="https://yuuu.org/">竹月</a>，他在我建站时不费余力地解答我的疑惑。</p>
+]]></content>
+      <categories>
+        <category>杂谈</category>
+      </categories>
+      <tags>
+        <tag>杂谈</tag>
+        <tag>技术</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>听歌难题</title>
+    <url>/2024/06/26/%E5%90%AC%E6%AD%8C%E9%9A%BE%E9%A2%98/</url>
+    <content><![CDATA[<h1 id="ting-ge-nan-ti">听歌难题</h1>
+<p>什么样的音乐平台最好？有很多版权，简洁美观的UI，较低的会员费。在我体验了好几家平台后发现，想集三点于一身就是在做梦😅。</p>
+<p>目前已体验过QQ音乐，网易云音乐，Spotify，Apple Music。当前正在使用Apple Music。</p>
+<p>由于QQ音乐，酷狗音乐，酷我音乐版权共享，故下文以QQ音乐为代表，不再作区分。</p>
+<h1 id="ban-quan-dui-bi">版权对比</h1>
+<p>版权由多到少排序<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></p>
+<ul>
+<li>Spotify</li>
+<li>Apple Music外区，QQ音乐</li>
+<li>Apple Music国区</li>
+<li>网易云音乐</li>
+</ul>
+<h1 id="hui-yuan-fei">会员费</h1>
+<p>费用由多到少排序</p>
+<ul>
+<li>Spotify，Apple Music外区</li>
+<li>QQ音乐，网易云音乐</li>
+<li>Apple Music国区（大学生认证，闲鱼轻松拿下）</li>
+</ul>
+<p>PS：Apple Music家庭拼车会更加便宜，但是有卖家销号跑路的情况。目前我正在尝试拼车，希望不会遇到骗子🤨。</p>
+<hr>
+<h1 id="yi-xia-shi-fa-lao-sao-shi-jian">以下是发牢骚时间</h1>
+<h2 id="q-yin-shi-dai" id="Q音时代">Q音时代</h2>
+<p>在我小学的时候，身边朋友在用QQ音乐（或许是因为能和腾讯系产品联动？），酷我音乐比较小众，而酷狗音乐经常在电脑上被“高速下崽器”下崽，不喜欢。在初中的时候，决定听歌。刚好我妈的手机上安装了QQ音乐，直接QQ登录，非常方便。</p>
+<p>后来，看一些游戏主播直播的时候，发现他们大多都用网易云。嗯，为什么都用网易云呢？莫非关键之处在于“云”字？想起一些视频平台，没版权的影视就给你一个外链，可以跳转看。难道网易云也可以实现类似操作，故称“网易云”？又或者网易云本身版权多，主播才用？</p>
+<p>后来发生了“五五断更节”事件，使我彻底下定决心，非必要不使用腾讯系产品，<s>万恶的资本家</s>。于是转移网易云。</p>
+<h2 id="wang-yi-yun-shi-dai" id="网易云时代">网易云时代</h2>
+<p>转到网易云后发现，它才是版权最少的😅。经常出现之前点收藏的歌曲突然没版权，或者变成VIP专享。QQ音乐也会出现，但是网易云频率更高。当然，网易云也是有好处的，小的音乐人比较多，一些小众音乐是在网易云独占的。</p>
+<h2 id="spotify-shi-dai" id="Spotify时代">Spotify时代</h2>
+<p>刚知道这个平台的时候就下载来体验了一下，发现不开会员不能自己点歌！搜索一首想听的歌，只能播放歌曲所在的专辑，而且顺序随机。有些歌的歌词还加载不出来。垃圾软件！！！</p>
+<p>后来，发现吾爱大神的破解版，解除了点歌限制，再加上可以裸连，歌词什么的可以容忍。重要的是没有单曲购买这种东西，什么歌都可以播。于是背叛网易云，润到Spotify了。</p>
+<h2 id="apple-music" id="Apple-Music">Apple Music</h2>
+<p>听同学说Apple Music不错，刚好又在闲鱼上看到1元的Apple Music会员，号称到期了可以重复拍。好奇试了试，反正被骗了也才一块钱。听第一耳时，居然顿感音质比Spotify好。 <s>我可是木耳。</s> Apple Music的歌词动画应该是全网最好的了，非常的好看。而且绝大多数歌都有歌词，不像Spotify的垃圾歌词支持。国区的版权并没有很少，至少我听的歌都有版权。Apple Music一直被人诟病的一点是日语歌曲名字混乱，罗马音、英文、假名都有。</p>
+<p>既然可以一直1元购，那为何不转Apple Music呢？于是，它成了我的主力软件，背叛了Spotify😜。</p>
+<p>后来，在闲鱼看到有些卖家描述：“账号已达试用上限的勿拍”，貌似不能一直一元购下去？于是选择家庭拼车，一个月也就3块多（如果不被骗的话）</p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p><a href="https://sspai.com/post/64477#">https://sspai.com/post/64477#</a>! <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+]]></content>
+      <categories>
+        <category>杂谈</category>
+      </categories>
+      <tags>
+        <tag>杂谈</tag>
+        <tag>音乐</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>香橙派的使用配置</title>
     <url>/2024/05/22/orangepi-config/</url>
     <content><![CDATA[<p>前些天购入了一个香橙派Zero3，但是时不时系统崩坏，（或许是sd卡不是香橙派官方店铺买的？）现在来捋一遍安装过程以便日后崩坏时重装系统。</p>
@@ -220,106 +274,6 @@ sudo tzselect #调整时区，看着按就行
         <tag>香橙派</tag>
         <tag>单板机</tag>
         <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>听歌难题</title>
-    <url>/2024/06/26/%E5%90%AC%E6%AD%8C%E9%9A%BE%E9%A2%98/</url>
-    <content><![CDATA[<h1 id="ting-ge-nan-ti">听歌难题</h1>
-<p>什么样的音乐平台最好？有很多版权，简洁美观的UI，较低的会员费。在我体验了好几家平台后发现，想集三点于一身就是在做梦😅。</p>
-<p>目前已体验过QQ音乐，网易云音乐，Spotify，Apple Music。当前正在使用Apple Music。</p>
-<p>由于QQ音乐，酷狗音乐，酷我音乐版权共享，故下文以QQ音乐为代表，不再作区分。</p>
-<h1 id="ban-quan-dui-bi">版权对比</h1>
-<p>版权由多到少排序<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></p>
-<ul>
-<li>Spotify</li>
-<li>Apple Music外区，QQ音乐</li>
-<li>Apple Music国区</li>
-<li>网易云音乐</li>
-</ul>
-<h1 id="hui-yuan-fei">会员费</h1>
-<p>费用由多到少排序</p>
-<ul>
-<li>Spotify，Apple Music外区</li>
-<li>QQ音乐，网易云音乐</li>
-<li>Apple Music国区（大学生认证，闲鱼轻松拿下）</li>
-</ul>
-<p>PS：Apple Music家庭拼车会更加便宜，但是有卖家销号跑路的情况。目前我正在尝试拼车，希望不会遇到骗子🤨。</p>
-<hr>
-<h1 id="yi-xia-shi-fa-lao-sao-shi-jian">以下是发牢骚时间</h1>
-<h2 id="q-yin-shi-dai" id="Q音时代">Q音时代</h2>
-<p>在我小学的时候，身边朋友在用QQ音乐（或许是因为能和腾讯系产品联动？），酷我音乐比较小众，而酷狗音乐经常在电脑上被“高速下崽器”下崽，不喜欢。在初中的时候，决定听歌。刚好我妈的手机上安装了QQ音乐，直接QQ登录，非常方便。</p>
-<p>后来，看一些游戏主播直播的时候，发现他们大多都用网易云。嗯，为什么都用网易云呢？莫非关键之处在于“云”字？想起一些视频平台，没版权的影视就给你一个外链，可以跳转看。难道网易云也可以实现类似操作，故称“网易云”？又或者网易云本身版权多，主播才用？</p>
-<p>后来发生了“五五断更节”事件，使我彻底下定决心，非必要不使用腾讯系产品，<s>万恶的资本家</s>。于是转移网易云。</p>
-<h2 id="wang-yi-yun-shi-dai" id="网易云时代">网易云时代</h2>
-<p>转到网易云后发现，它才是版权最少的😅。经常出现之前点收藏的歌曲突然没版权，或者变成VIP专享。QQ音乐也会出现，但是网易云频率更高。当然，网易云也是有好处的，小的音乐人比较多，一些小众音乐是在网易云独占的。</p>
-<h2 id="spotify-shi-dai" id="Spotify时代">Spotify时代</h2>
-<p>刚知道这个平台的时候就下载来体验了一下，发现不开会员不能自己点歌！搜索一首想听的歌，只能播放歌曲所在的专辑，而且顺序随机。有些歌的歌词还加载不出来。垃圾软件！！！</p>
-<p>后来，发现吾爱大神的破解版，解除了点歌限制，再加上可以裸连，歌词什么的可以容忍。重要的是没有单曲购买这种东西，什么歌都可以播。于是背叛网易云，润到Spotify了。</p>
-<h2 id="apple-music" id="Apple-Music">Apple Music</h2>
-<p>听同学说Apple Music不错，刚好又在闲鱼上看到1元的Apple Music会员，号称到期了可以重复拍。好奇试了试，反正被骗了也才一块钱。听第一耳时，居然顿感音质比Spotify好。 <s>我可是木耳。</s> Apple Music的歌词动画应该是全网最好的了，非常的好看。而且绝大多数歌都有歌词，不像Spotify的垃圾歌词支持。国区的版权并没有很少，至少我听的歌都有版权。Apple Music一直被人诟病的一点是日语歌曲名字混乱，罗马音、英文、假名都有。</p>
-<p>既然可以一直1元购，那为何不转Apple Music呢？于是，它成了我的主力软件，背叛了Spotify😜。</p>
-<p>后来，在闲鱼看到有些卖家描述：“账号已达试用上限的勿拍”，貌似不能一直一元购下去？于是选择家庭拼车，一个月也就3块多（如果不被骗的话）</p>
-<hr class="footnotes-sep">
-<section class="footnotes">
-<ol class="footnotes-list">
-<li id="fn1" class="footnote-item"><p><a href="https://sspai.com/post/64477#">https://sspai.com/post/64477#</a>! <a href="#fnref1" class="footnote-backref">↩︎</a></p>
-</li>
-</ol>
-</section>
-]]></content>
-      <categories>
-        <category>杂谈</category>
-      </categories>
-      <tags>
-        <tag>杂谈</tag>
-        <tag>音乐</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>梦</title>
-    <url>/2024/08/12/%E6%A2%A6/</url>
-    <content><![CDATA[<h1 id="xu">序</h1>
-<p>从小到大，每当我从梦中醒来，我几乎都不会记得梦里的内容。</p>
-<p>但今天午睡，做了一个诡异的梦，醒来时还残留了一些记忆，于是赶紧记录下来。</p>
-<p>为何诡异呢？因为这个梦很像游戏《超阈限空间》里的场景。而这款游戏，我早在几个月前就通关不玩了，居然今天才做这种梦！</p>
-<p>以下是残存的梦境记录</p>
-<h1 id="shui-qian">睡前</h1>
-<p>我弟在我房间玩，开着灯。</p>
-<p>我弟终于出去了，赶紧关灯入睡。</p>
-<h1 id="qi-yi">其一</h1>
-<p>有人在碰我脚，我挪了挪腿，清晰地感受到凉席与脚摩擦的质感。</p>
-<p>嘶，怎么有有人在碰我脚，再次挪了挪腿，醒来看了一眼。房间的灯还是开的，我弟不在房间里。现在还有困意，先赶紧入睡。</p>
-<h1 id="qi-er">其二</h1>
-<p>面前是美式霸凌，不过后面的栅栏是红色的房子<br>
-<img src="1.jpg" alt=""><br>
-他要打我啦啊啊啊，我务必重拳出击。<br>
-？？？，眼前的画面变成了一块木板，打过去把木板打碎了。<br>
-<img src="1.gif" alt="大概这样吧"></p>
-<h1 id="qi-san">其三</h1>
-<p>我又在房间里醒来，灯还是开着的，房间只有我一个人。呼，先刷会手机吧。</p>
-<p>.…“你真的在现实吗？”</p>
-<p>大脑突然闪过一句话。低头看向手机，发现豆瓣的广告位变成了梦境其二————我的第一人称视角。</p>
-<p>😱，看向窗户旁边的挂历，挂历的日、月都在变化，数字在不断地跳动！</p>
-<p>首先，窗户一角的空间开始扭曲，向漩涡一样旋转起来。然后，这些漩涡像是扩散的瘟疫，在房间中其他地方出现。</p>
-<p>🤯，😱😱😱</p>
-<p>我抬了下手，感觉手臂是搭在我眼睛上的，而且房间比较黑，还能听见我弟在房间外的声音，意识绝对比刚刚更清晰。我强烈地感知到：这个世界才是真实的。啊，挣扎失败，我又进入梦境了。</p>
-<p>仅回到那个漩涡的世界一瞬间，求生欲就开始工作了。我要.…抬起手.…</p>
-<p>颅内意识一阵混乱，再一激灵，终于醒了（这回真醒了），大口喘着气.…</p>
-<h1 id="jie-meng">解梦</h1>
-<p>亲自解读一下梦境</p>
-<p>Q：为什么梦境其一有人碰我脚？<br>
-A：睡前我弟曾多次故意碰我脚</p>
-<p>Q：为什么梦境里的房间是开着灯的？<br>
-A：醒来的时候发现面向窗户，可能是光线原因？</p>
-<p>Q：看手机为什么看豆瓣？<br>
-A：昨天看了电影，今天在豆瓣逛了一下</p>
-]]></content>
-      <categories>
-        <category>杂谈</category>
-      </categories>
-      <tags>
-        <tag>杂谈</tag>
       </tags>
   </entry>
   <entry>
@@ -493,6 +447,74 @@ npm install -g npm  #更新npm版本
       <tags>
         <tag>杂谈</tag>
         <tag>技术</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>梦</title>
+    <url>/2024/08/12/%E6%A2%A6/</url>
+    <content><![CDATA[<h1 id="xu">序</h1>
+<p>从小到大，每当我从梦中醒来，我几乎都不会记得梦里的内容。</p>
+<p>但今天午睡，做了一个诡异的梦，醒来时还残留了一些记忆，于是赶紧记录下来。</p>
+<p>为何诡异呢？因为这个梦很像游戏《超阈限空间》里的场景。而这款游戏，我早在几个月前就通关不玩了，居然今天才做这种梦！</p>
+<p>以下是残存的梦境记录</p>
+<h1 id="shui-qian">睡前</h1>
+<p>我弟在我房间玩，开着灯。</p>
+<p>我弟终于出去了，赶紧关灯入睡。</p>
+<h1 id="qi-yi">其一</h1>
+<p>有人在碰我脚，我挪了挪腿，清晰地感受到凉席与脚摩擦的质感。</p>
+<p>嘶，怎么有有人在碰我脚，再次挪了挪腿，醒来看了一眼。房间的灯还是开的，我弟不在房间里。现在还有困意，先赶紧入睡。</p>
+<h1 id="qi-er">其二</h1>
+<p>面前是美式霸凌，不过后面的栅栏是红色的房子<br>
+<img src="1.jpg" alt=""><br>
+他要打我啦啊啊啊，我务必重拳出击。<br>
+？？？，眼前的画面变成了一块木板，打过去把木板打碎了。<br>
+<img src="1.gif" alt="大概这样吧"></p>
+<h1 id="qi-san">其三</h1>
+<p>我又在房间里醒来，灯还是开着的，房间只有我一个人。呼，先刷会手机吧。</p>
+<p>.…“你真的在现实吗？”</p>
+<p>大脑突然闪过一句话。低头看向手机，发现豆瓣的广告位变成了梦境其二————我的第一人称视角。</p>
+<p>😱，看向窗户旁边的挂历，挂历的日、月都在变化，数字在不断地跳动！</p>
+<p>首先，窗户一角的空间开始扭曲，向漩涡一样旋转起来。然后，这些漩涡像是扩散的瘟疫，在房间中其他地方出现。</p>
+<p>🤯，😱😱😱</p>
+<p>我抬了下手，感觉手臂是搭在我眼睛上的，而且房间比较黑，还能听见我弟在房间外的声音，意识绝对比刚刚更清晰。我强烈地感知到：这个世界才是真实的。啊，挣扎失败，我又进入梦境了。</p>
+<p>仅回到那个漩涡的世界一瞬间，求生欲就开始工作了。我要.…抬起手.…</p>
+<p>颅内意识一阵混乱，再一激灵，终于醒了（这回真醒了），大口喘着气.…</p>
+<h1 id="jie-meng">解梦</h1>
+<p>亲自解读一下梦境</p>
+<p>Q：为什么梦境其一有人碰我脚？<br>
+A：睡前我弟曾多次故意碰我脚</p>
+<p>Q：为什么梦境里的房间是开着灯的？<br>
+A：醒来的时候发现面向窗户，可能是光线原因？</p>
+<p>Q：看手机为什么看豆瓣？<br>
+A：昨天看了电影，今天在豆瓣逛了一下</p>
+]]></content>
+      <categories>
+        <category>杂谈</category>
+      </categories>
+      <tags>
+        <tag>杂谈</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>记录我的一天</title>
+    <url>/2024/09/16/%E8%AE%B0%E5%BD%95%E6%88%91%E7%9A%84%E4%B8%80%E5%A4%A9/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="eff2e2eea8a487ad927df70e796fb2db97a1f5a8a394695792878a71ab9c622f">901b05b71b6ef9410c890050abab0ca5599982a5e298eaf24629af937d2da38b39092a5dafdef88f5ddcaf832c70014e9710f03cfb389ae4a184928c73f9847baf4d150ebe8640316b35a7628460c0b2b506ca2d026965e67cccdeaede8a87ec0f7f3cbd96f6def6ef25ea5f387a13f6faa30ab37ec4d18bfedec63adb1ad1cc7333627fb5983e48ade97fcd6b57d220696138a65935ac654e45d778b643593edcf582ce9f4a35d4becdd138c6feb7303be0bdeae2c257a2151ae4eb8b4af2c92b1cc3131f057503a33623b579dfc01d9ea4e352847ca767ffa125447b4987ab3129d0e43f5379a54325a1b88b3f8db1454c0254605e02c9ab4ab2c2f702e94a016685cf5c41d57f22fbbecb73d2da43b509404e00529021f2ddc0c0345485b05cc09879229efb1f9feea013bae2bc17c536ba48d808bc454d5a3a70bed1a119324624141f0ff36a25067a03676e4e7693b296570a83078fbea977c72276750a6ea19a9d38598362d0a280ddedaf9b893c91e9d3505519d222e0d3b86ea4a352c4c6f6bfef413d724683f791e6cfc4b06917935c2df5b8a49283d6cde057d816377ce27a11e99e24a0cc6ec95ed2971d065bb6929114b8051084c855d672e52ceecec36cb54636daeca5b3dd9b62348be11fdc8bf87b501d0ca5202261b7aef9d92034fa2b77247a1c4cbad01f03b9e5d76eac845136b78a4c8a6a775c0b989463586a33932706d0603ca974fdafda89942c4c4d65810a1e3b0c4a35bc435243a37c26bd8f4c9f5cde288c00d634ba2742014480223772c56336595400524f32e992b388151c61b30866327a9a70999a10977440ec8073d0e406b549dae72fa393ad1c480b3f3374d777039a54e3871ea1a674a71440e5fcea9776898cfbaefce84cb0823ea80b5a861c8e369a898544dbf009217abc71857588047599789dc8db37b6a85b2d623929d3ec00b76e6c49257606adeba1cc060ae226bbba368e7514a740b58dfa606df2e50155e61dc5432b2fd93cfe21255fde2039e612aec986a88afdc63635c02e66e364fbccaff1021f7c7d13e32858391dcd22e12ea9ee28c8ba7e287b3e70bb5107c79794e855fea8add49dc903cb8f2cab4e181f5c2e2479bf542d067361001133bd0eee7704b8e1e08234e8cc541301c42776c074a5b1a984c3b8fe2ffff75dca6c2de1454c93eddb1cb330c61a8c09e22b3f4cc55a4ed06f00522284077ff848378873d05b0110148c636f57c2655a0446c7aeb3769b7ea1b1c605c1d0bf50e17b7fc195cc52dcf7efb99bd8cdc311f93d91b3c8e79a82368df6be60a3e6b4029b75e76979e661818fb8f9665f7399b0e247731c34e81aa30552dd68e33f7471c348ff47428064d1ea3a667e6d5043d3ce70f75700fc700656838263a0a921a67a0947d0bf5dc8373a705b71b9a6a75c162c3650646f5f5ed5d3d76ec40f3e8049d9d5ed87b27062aa3e9e7618f9b82762578491b79c3bc72ff44c01871da135c9984ea2d8ad119dd2cb7220feee4bccb0754521c900249ff2b26e7c4726ed990d2e30efa700318e686dfcd2ac2a5cd3f26b834664b0fad803ad3f466125c985dfdfbb08745b8db241a6535dc9843d33e21186c3fd295b006250069166383bc3a522127fe927af44a740bd52e3898293c07436430b508f109baee75d25c58f2563480c980b43a552d9ffb86f329f5ced7897ab8cf52e8a04f6534e26867a253c3a8c3ff3561dd491f867e5f98fc26f426a819867ca42e212003bfe1b4c7b1df75b6bfb98039d7ee136b357dc3d9951557190aab4058fa4892f38ce10c2029a09ff6e79c546e40fe9c6d5ebde7f8863f13f3c7713b7caad2d967beccd4be902e30a8a6e79a594b3615ff3a18ba3d6d04b960b888b728415410b9159705daf5bea5e33069952a26a75afb6f55e5dbedb0fd38d1699249ba4e41492ca06e1025c1a28dfc6e3b19720d59dc4545c9a26431b284480553c7d94c3a7b8af2f98f0518e091f640e2dd168f58751c8f43198f7643e3a77ec9192052b48aca31f6d6690f734aef3974e262989f772774388ab31d18486620369518c7d519240284dc7af16b8f478f51a08c5ab940182576cbab40d72c4a627ee9cc29cd536bed23eb96dce707588021dac55b3ce29df3bb72ee156c99ba0300d745a98cdbd36a52ee0e7452b10f8e90223e4105b1cf7313341b9bcee79f48df28b857d7c8b34f216da120bc5041474c8682240a7c0c1250fba90d871ebae878603f1d5dd85b8b503e056b2315cb4ab7b78121ed7596688aab0d5738fa2614e0671a667785e572c1dd9d457ec22521269dc8cbe87dc3883b4e025841b6389347d90b3e3455ce6c228b559b6b7204b6380bf13e5d119d2014fc440b5c50f50719286813f02f1e3c01fbd810545784870d43ad13d9dcf207926b30150f4f413be38d42f0138ccdcad99c4b6dfafe04bd78b957fa204524881cb8729e42f01af0aaadade866dee47145f543f92a6a30019e1a9691c597dd0e16a3374bb669c27ff4268e16f5efad83a970499662b5783a9b52d652b9c010203a4b9c3fc0780b4bf88bd0c468d9561ad7e670023327cc29ded84aec4c468c12a6c9232ba4a782ef5fa5a440a454eafce973f2cdb42a567e7466e7885f5f3ca5de9815b2486af0d386eab662bbc31115e6301993c53f8faccbf6438996c3d616143606344a8edfef2ce3b3716747dec5e4db950d541a19dda2c7e7cbf2396513c78ec485ffda282b0726bf6a17b20efe350b915d7c925bab8d947d65558680e7382b8c0facadcb4003f614f1c1121302fb9633791586e2a0a4a17c8cc972e8bdacfe1c17bd44dee5c9a77f0c9e74578df530cb49820df370b44c97397ffa5f7549e37a6c3b38d55c85524aed383742061151f90067ba4b5ac8a5826d713224b21c4dca9a1f37b02572952d3943a80892467fa4924efe7aa766fb4426d0625e7dea02e36b2a8b7970259c97f999beb9d72b665cb9640fa519d5836124905b3033359be36ef7174490f3bc9401c25773a03e089c258f259dec1a65adbb1f14b3bc4ed8a6d5f0ef1193c9d49e63283459325e77a5cc63a32496a15fd8e91d7f82182bfbfb30cc852631fc8ab959c91c357aebe9f96ecdf8d183f7126f9adda5dff5463d2dc54587c4a5d598c93a3f8f020145b13d1f7f9a42ef95aceb2250a22566ba70c00a10efcfdf9f3e49bab45c4848c9591162792cd9fad0cb0cdc84c5a5b9373233f0a999a1048094a2ff02f9449e02ea47fc2ebbb7fe3c345164560e089b140131d8d84619b4224def0f5555736bf7a0ed3338458787f4e073c765c77d7ef57006dbf6a63936f809982fb0fbddbd7cdafb21cf33ab116d65cbd767612f47bb9719501b95d03ec82088ebc7dd8e271bebede5a8effb396c34156c7b0a71ef144b02a42998b949d5a9fbc2dc261a89027a4f67d853c99b071e0ebcea94096357fd5e2c4a241299c1fd773b573e264f0a4d67bf7e085d8b17b7253bdd59738876213f8a74829b3ee40f1325815593163597a63e57e498fd959cce803d206e73a80b67b642b663230eebbda5de196a97ebc0a53f3d18f8c3482d1250950e6e456c84203e4af417f41e9c155d5f2b7f5ac2763ac9acb95dc19730beda895f1dae3624667b4be7441026c4b12eaba618b30d4b48f27087496d50a0c5eecd3352019b95026627c3960b340b5e757af570fabe81800da62969dd1cd2535eae9e01d167b4a9c121337b4651946808426d3b9cdf8ef14e64a0a4f842b29ed5a5965ed8e03f121fb392390f283e7af7f9ec723aa61d1bf510546c13b5ce314ea11b94e545dd5454607b768337e4559569d62a80a91d75d03d8ea3bc181ef8dd6ea3147047fe35ca65189fd890f11770ab06a6ef7a2f13d007417cacf43912b7788e891e35299a8eed4b7a9fd1d12f78b624918abfaae9b9394333593ea8196443510f698b5b26f1c0ba143dd48f957e5fb5b2e0ad29f53e32ef51fca62f843e523c6a33b77e8b1c92a7f712bc0b9b876080fc0d3490a0cb23340b410a33e66001e9c86533e5db6544fb9b0d6cca60a5b0f021f564b87300ede75d85fc2a1f6b92a5eb4e7e86abcbc4d67c3ece81f5819db39fb5fc3a2490f3286b945facb4e34fc883aa7636d4208ab4180d075fda09e6f892b1e8e6cb67aff2ec563dec090c4cb5186e9534068261b6f6bec2c35cae66812672c12b06cdbe250dfdf3b381d6e0c5a8ba60a35410263fbe6f73fc4b8465d99c71c72c866abf6ca4202983f50d84f5d8db2dc1252713bb42e33fc5d5711f81f58ad98fb63da24cb5e174d2ccacfc902743567fe822ba13f60a91c60d287d6eae3410918e4f9e6a81b84514e0cf91868c9b7c5220834aba7b9a856ca15db7b5564cf051e710dcb7d4db8dced9df5d73c861c67d0fa63830471c98a35172616c297b3988ef1ce778e3cc0e4999a63d059a7a1c17a49bcce4779f3b32e1f2d8812e7ae6e3827e963848c6c8eeb99eafbf9641105949b15f958a13632dfa3ab8a45504a3ff20d8e76356cff3e3950467c2ddb5aac9d7a9374bf5e8863ec1db2df0452e8f7d620afd64c104593923a0bc1bf0572b56c6a4f418340450f5883e22e3c24d2433ae02257f1137e8fc4f8ed6d23ea031eb462f0c1babc287170df091be3d94dad42d78cd5433920ab265d24173831c0e78d2ee634d804840298cc82418a6e5eadaa7295b79b9ef9d9c06cf3971b8b16fd19ada02479a02dd3d301fcfc0d48c171fa2bf50bb2d9874c972ce2a7d4a9166f2c0fa1bc329823b98635ff0468a6a8a1740328bf6b9ada0478aef1f1efbb515fb952ed556cba488f66a805666db326c11d7d5704ff081049627ff441b5d2f8e9c0b94cb84a360643a5226989b67d561410e58fd1fb9d08738f87078a49fc3ccfbe8af573a526418491617b9c1c80d4dbee93be961aa83e7c37ab884bffc0560d168856ae46709542290523a98270bc426633b1a802d214e867b0c2a5523a89ba3aa9cfb07fb7478ca64686912ca6316f15ee5eb484a2f7a8d8b42bf2b1f68efdfebc498cb396756d30b50e84077389407b126913171cb612e1d55105826cb73b32b40c89fd969ddca95c62fa7715422999adb3231cae36f304d70c60d5a2e9682f0713aaf782daaa988858cd8d0457ece482edcdd9f68c177e</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">您好, 这里需要密码.</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+      <categories>
+        <category>杂谈</category>
+      </categories>
+      <tags>
+        <tag>杂谈</tag>
       </tags>
   </entry>
 </search>
