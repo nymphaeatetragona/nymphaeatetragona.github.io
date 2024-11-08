@@ -1,6 +1,135 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Root备忘录</title>
+    <url>/2024/11/08/Root%E5%A4%87%E5%BF%98%E5%BD%95/</url>
+    <content><![CDATA[<h1 id="root-bei-wang-lu">root备忘录</h1>
+<h2 id="qian-yan" id="前言">前言</h2>
+<p>本人的手机于2022年2月7日购入，如今它的电池已经不耐操了，一天要两充到三充。可是它运行流畅（指流畅运行巨信），现在换机显得浪费我这个芯片了。那么，改一下系统调度会不会好一些呢🤔。好，来刷个机吧。</p>
+<p>以下记录了遇到的问题以备日后不时之需。</p>
+<h2 id="she-bei" id="设备">设备</h2>
+<ul>
+<li>Redmi Note 10 Pro<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></li>
+</ul>
+<h2 id="root" id="root">root</h2>
+<p>用小米解锁工具解锁之后，第一次重启卡在了MIUI界面，想起来解锁前忘记打开“OEM解锁”了，吓得我一身冷汗😰。好在第二次重启成功了，没有变砖🥰。</p>
+<h2 id="guo-momo-jian-ce" id="过momo检测">过momo检测</h2>
+<p>我使用了kitsune mask作为root管理器，它本身提供了较强大的隐藏root的功能。隐藏root有白名单和黑名单两种模式。一般使用黑名单模式即可，不过勾选进黑名单的应用貌似无法启动，会卡白屏（测试了微信和momo两个应用），大概是我手机的玄学问题吧。白名单模式就没事了。</p>
+<p>开启隐藏前：<br>
+<img src="qian.jpg" alt=""><br>
+开启隐藏后：<br>
+<img src="hou.jpg" alt=""></p>
+<p>至于bootloader未锁定，可以通过刷safetynet fix模块来骗过momo，但不知道能不能骗过其他程序。</p>
+<h2 id="wei-xin-xiao-cheng-xu-wu-fa-da-kai" id="微信小程序无法打开">微信小程序无法打开</h2>
+<p>下载了Google play版微信，但发现小程序打不开😱，点小程序就卡在“正在加载”，难道是root的问题？瞎调一番后，偶然打开Google play，提示正在更新微信，更新完就能开小程序了😅。</p>
+<h2 id="wu-fa-lian-jie-wi-fi" id="无法连接WiFi">无法连接WiFi</h2>
+<p>打算连接舍友的手机热点，发现连不上，怎么点都显示“已保存”。几番调试，发现是无法连接WPA3-Personal加密的WiFi，其他加密方式可以连。但是之前我倒是可以连舍友WiFi。目前暂未找到解决方案。</p>
+<p><img src="wifi.jpg" alt=""></p>
+<h2 id="hou-ji" id="后记">后记</h2>
+<p>目前只遇到这么多问题，但是开了yc调度后依然一天两充😅。</p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>配置信息参见 <a href="https://detail.zol.com.cn/cell_phone/index1358240.shtml">https://detail.zol.com.cn/cell_phone/index1358240.shtml</a> <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>刷机</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>你好，世界！</title>
+    <url>/2024/05/20/hello_world/</url>
+    <content><![CDATA[<p>这是博客建站的第一篇文章，用以测试博客是否正常运行，如果你看到了这篇文章，那这个博客已经可以正常工作啦！这个博客应该主要用于分享我的生活（因为vx朋友圈有各种各样的原因使我不能愉快的畅谈）。我偶尔会写一些我的折腾历程，让大家看看我踩过的坑，帮大家排排雷。</p>
+<hr>
+<p>感谢友人<a href="https://yuuu.org/">竹月</a>，他在我建站时不费余力地解答我的疑惑。</p>
+]]></content>
+      <categories>
+        <category>杂谈</category>
+      </categories>
+      <tags>
+        <tag>杂谈</tag>
+        <tag>技术</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>香橙派的使用配置</title>
+    <url>/2024/05/22/orangepi-config/</url>
+    <content><![CDATA[<p>前些天购入了一个香橙派Zero3，但是时不时系统崩坏，（或许是sd卡不是香橙派官方店铺买的？）现在来捋一遍安装过程以便日后崩坏时重装系统。</p>
+<h1 id="ying-jian-zhun-bei">硬件准备</h1>
+<p>输出功率5V 2000mA以上适配器、USB Type-C数据线、USB 转 TTL 模块（串口模块）、读卡器、TF卡（Micro SD 卡）、杜邦线<br>
+<a href="https://www.wch.cn/download/CH341SER_EXE.html">串口驱动安装</a><br>
+接线：<br>
+TX——RX<br>
+RX——TX<br>
+GND——GND</p>
+<h1 id="xi-tong-gu-jian">系统固件</h1>
+<p>先<a href="http://www.orangepi.cn/html/serviceAndSupport/index.html">下载官方的固件</a></p>
+<h1 id="shao-lu-xi-tong">烧录系统</h1>
+<p>新SD卡要先格式化，我用了<a href="https://www.sdcardformatter.com/download/">SD Card Formatter</a></p>
+<p>用<a href="https://rufus.ie/zh/">refus</a>烧录进SD卡即可</p>
+<h1 id="yuan-cheng-guan-li-gong-ju">远程管理工具</h1>
+<p>可以在cmd或powershell里面输入命令来连接ssh<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></p>
+<pre><code>ssh –p端口号 用户名@IP地址  #例如：ssh –p22 root@127.0.0.1
+</code></pre>
+<p>我使用了<a href="https://mobaxterm.mobatek.net/download.html">MobaXterm</a>来连接ssh</p>
+<h1 id="mi-ma">密码</h1>
+<h3 id="mo-ren-zhang-hu-orangepi" id="默认账户：orangepi">默认账户：orangepi</h3>
+<h3 id="mo-ren-root-zhang-hu-root" id="默认root账户：root">默认root账户：root</h3>
+<h3 id="mo-ren-mi-ma-orangepi" id="默认密码：orangepi">默认密码：orangepi</h3>
+<pre><code>#修改密码
+sudo passwd orangepi #orangepi为要修改的用户的名字，按提示修改即可
+</code></pre>
+<h1 id="pei-zhi-wang-luo">配置网络</h1>
+<pre><code>nmtui #图形界面配置网络
+</code></pre>
+<p>其他网络信息</p>
+<pre><code>sudo ifconfig #查看ip信息
+route -n #查看网关信息
+</code></pre>
+<p>ip地址可能会跳动，ssh连接会不方便，要进入nmtui设置静态ip</p>
+<h1 id="ruan-jian-yuan">软件源</h1>
+<p>香橙派官方系统已经配置好国内源了，国产派大法好，一般不用改软件源</p>
+<pre><code>sudo cp /etc/apt/sources.list /etc/apt/sources.list.save #备份好习惯
+sudo cp /etc/apt/sources.list.save /etc/apt/sources.list #搞炸了用这条命令恢复
+nano /etc/apt/sources.list #编辑源
+</code></pre>
+<h1 id="geng-xin-xi-tong">更新系统</h1>
+<p>不更新，后期装软件会有各种奇怪的问题</p>
+<pre><code>sudo apt update
+sudo apt upgrade -y
+</code></pre>
+<h1 id="shi-qu">时区</h1>
+<p>香橙派连软件源都想好了，居然没调好时区（悲）<br>
+时间错误会导致某些网站证书验证问题</p>
+<pre><code>date #查看当前时间
+sudo tzselect #调整时区，看着按就行
+</code></pre>
+<h1 id="can-kao-wen-xian">参考文献</h1>
+<p><a href="https://zhuanlan.zhihu.com/p/658960791">OrangePi ZERO 2 新手配置教程</a></p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p><a href="https://blog.csdn.net/wm609972715/article/details/83759114">Windows 下 cmd 窗口使用 ssh 命令</a> <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>香橙派</tag>
+        <tag>单板机</tag>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>git连接GitHub-ssh异常</title>
     <url>/2024/07/04/git%E8%BF%9E%E6%8E%A5GitHub-ssh%E5%BC%82%E5%B8%B8/</url>
     <content><![CDATA[<p>事情是这样的，今天提交文章时，突然出现这样的情况</p>
@@ -136,18 +265,49 @@ permission denied please try again.
       </tags>
   </entry>
   <entry>
-    <title>你好，世界！</title>
-    <url>/2024/05/20/hello_world/</url>
-    <content><![CDATA[<p>这是博客建站的第一篇文章，用以测试博客是否正常运行，如果你看到了这篇文章，那这个博客已经可以正常工作啦！这个博客应该主要用于分享我的生活（因为vx朋友圈有各种各样的原因使我不能愉快的畅谈）。我偶尔会写一些我的折腾历程，让大家看看我踩过的坑，帮大家排排雷。</p>
-<hr>
-<p>感谢友人<a href="https://yuuu.org/">竹月</a>，他在我建站时不费余力地解答我的疑惑。</p>
+    <title>梦</title>
+    <url>/2024/08/12/%E6%A2%A6/</url>
+    <content><![CDATA[<h1 id="xu">序</h1>
+<p>从小到大，每当我从梦中醒来，我几乎都不会记得梦里的内容。</p>
+<p>但今天午睡，做了一个诡异的梦，醒来时还残留了一些记忆，于是赶紧记录下来。</p>
+<p>为何诡异呢？因为这个梦很像游戏《超阈限空间》里的场景。而这款游戏，我早在几个月前就通关不玩了，居然今天才做这种梦！</p>
+<p>以下是残存的梦境记录</p>
+<h1 id="shui-qian">睡前</h1>
+<p>我弟在我房间玩，开着灯。</p>
+<p>我弟终于出去了，赶紧关灯入睡。</p>
+<h1 id="qi-yi">其一</h1>
+<p>有人在碰我脚，我挪了挪腿，清晰地感受到凉席与脚摩擦的质感。</p>
+<p>嘶，怎么有有人在碰我脚，再次挪了挪腿，醒来看了一眼。房间的灯还是开的，我弟不在房间里。现在还有困意，先赶紧入睡。</p>
+<h1 id="qi-er">其二</h1>
+<p>面前是美式霸凌，不过后面的栅栏是红色的房子<br>
+<img src="1.jpg" alt=""><br>
+他要打我啦啊啊啊，我务必重拳出击。<br>
+？？？，眼前的画面变成了一块木板，打过去把木板打碎了。<br>
+<img src="1.gif" alt="大概这样吧"></p>
+<h1 id="qi-san">其三</h1>
+<p>我又在房间里醒来，灯还是开着的，房间只有我一个人。呼，先刷会手机吧。</p>
+<p>.…“你真的在现实吗？”</p>
+<p>大脑突然闪过一句话。低头看向手机，发现豆瓣的广告位变成了梦境其二————我的第一人称视角。</p>
+<p>😱，看向窗户旁边的挂历，挂历的日、月都在变化，数字在不断地跳动！</p>
+<p>首先，窗户一角的空间开始扭曲，向漩涡一样旋转起来。然后，这些漩涡像是扩散的瘟疫，在房间中其他地方出现。</p>
+<p>🤯，😱😱😱</p>
+<p>我抬了下手，感觉手臂是搭在我眼睛上的，而且房间比较黑，还能听见我弟在房间外的声音，意识绝对比刚刚更清晰。我强烈地感知到：这个世界才是真实的。啊，挣扎失败，我又进入梦境了。</p>
+<p>仅回到那个漩涡的世界一瞬间，求生欲就开始工作了。我要.…抬起手.…</p>
+<p>颅内意识一阵混乱，再一激灵，终于醒了（这回真醒了），大口喘着气.…</p>
+<h1 id="jie-meng">解梦</h1>
+<p>亲自解读一下梦境</p>
+<p>Q：为什么梦境其一有人碰我脚？<br>
+A：睡前我弟曾多次故意碰我脚</p>
+<p>Q：为什么梦境里的房间是开着灯的？<br>
+A：醒来的时候发现面向窗户，可能是光线原因？</p>
+<p>Q：看手机为什么看豆瓣？<br>
+A：昨天看了电影，今天在豆瓣逛了一下</p>
 ]]></content>
       <categories>
         <category>杂谈</category>
       </categories>
       <tags>
         <tag>杂谈</tag>
-        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -202,124 +362,6 @@ permission denied please try again.
       <tags>
         <tag>杂谈</tag>
         <tag>音乐</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>香橙派的使用配置</title>
-    <url>/2024/05/22/orangepi-config/</url>
-    <content><![CDATA[<p>前些天购入了一个香橙派Zero3，但是时不时系统崩坏，（或许是sd卡不是香橙派官方店铺买的？）现在来捋一遍安装过程以便日后崩坏时重装系统。</p>
-<h1 id="ying-jian-zhun-bei">硬件准备</h1>
-<p>输出功率5V 2000mA以上适配器、USB Type-C数据线、USB 转 TTL 模块（串口模块）、读卡器、TF卡（Micro SD 卡）、杜邦线<br>
-<a href="https://www.wch.cn/download/CH341SER_EXE.html">串口驱动安装</a><br>
-接线：<br>
-TX——RX<br>
-RX——TX<br>
-GND——GND</p>
-<h1 id="xi-tong-gu-jian">系统固件</h1>
-<p>先<a href="http://www.orangepi.cn/html/serviceAndSupport/index.html">下载官方的固件</a></p>
-<h1 id="shao-lu-xi-tong">烧录系统</h1>
-<p>新SD卡要先格式化，我用了<a href="https://www.sdcardformatter.com/download/">SD Card Formatter</a></p>
-<p>用<a href="https://rufus.ie/zh/">refus</a>烧录进SD卡即可</p>
-<h1 id="yuan-cheng-guan-li-gong-ju">远程管理工具</h1>
-<p>可以在cmd或powershell里面输入命令来连接ssh<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></p>
-<pre><code>ssh –p端口号 用户名@IP地址  #例如：ssh –p22 root@127.0.0.1
-</code></pre>
-<p>我使用了<a href="https://mobaxterm.mobatek.net/download.html">MobaXterm</a>来连接ssh</p>
-<h1 id="mi-ma">密码</h1>
-<h3 id="mo-ren-zhang-hu-orangepi" id="默认账户：orangepi">默认账户：orangepi</h3>
-<h3 id="mo-ren-root-zhang-hu-root" id="默认root账户：root">默认root账户：root</h3>
-<h3 id="mo-ren-mi-ma-orangepi" id="默认密码：orangepi">默认密码：orangepi</h3>
-<pre><code>#修改密码
-sudo passwd orangepi #orangepi为要修改的用户的名字，按提示修改即可
-</code></pre>
-<h1 id="pei-zhi-wang-luo">配置网络</h1>
-<pre><code>nmtui #图形界面配置网络
-</code></pre>
-<p>其他网络信息</p>
-<pre><code>sudo ifconfig #查看ip信息
-route -n #查看网关信息
-</code></pre>
-<p>ip地址可能会跳动，ssh连接会不方便，要进入nmtui设置静态ip</p>
-<h1 id="ruan-jian-yuan">软件源</h1>
-<p>香橙派官方系统已经配置好国内源了，国产派大法好，一般不用改软件源</p>
-<pre><code>sudo cp /etc/apt/sources.list /etc/apt/sources.list.save #备份好习惯
-sudo cp /etc/apt/sources.list.save /etc/apt/sources.list #搞炸了用这条命令恢复
-nano /etc/apt/sources.list #编辑源
-</code></pre>
-<h1 id="geng-xin-xi-tong">更新系统</h1>
-<p>不更新，后期装软件会有各种奇怪的问题</p>
-<pre><code>sudo apt update
-sudo apt upgrade -y
-</code></pre>
-<h1 id="shi-qu">时区</h1>
-<p>香橙派连软件源都想好了，居然没调好时区（悲）<br>
-时间错误会导致某些网站证书验证问题</p>
-<pre><code>date #查看当前时间
-sudo tzselect #调整时区，看着按就行
-</code></pre>
-<h1 id="can-kao-wen-xian">参考文献</h1>
-<p><a href="https://zhuanlan.zhihu.com/p/658960791">OrangePi ZERO 2 新手配置教程</a></p>
-<hr class="footnotes-sep">
-<section class="footnotes">
-<ol class="footnotes-list">
-<li id="fn1" class="footnote-item"><p><a href="https://blog.csdn.net/wm609972715/article/details/83759114">Windows 下 cmd 窗口使用 ssh 命令</a> <a href="#fnref1" class="footnote-backref">↩︎</a></p>
-</li>
-</ol>
-</section>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>香橙派</tag>
-        <tag>单板机</tag>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>梦</title>
-    <url>/2024/08/12/%E6%A2%A6/</url>
-    <content><![CDATA[<h1 id="xu">序</h1>
-<p>从小到大，每当我从梦中醒来，我几乎都不会记得梦里的内容。</p>
-<p>但今天午睡，做了一个诡异的梦，醒来时还残留了一些记忆，于是赶紧记录下来。</p>
-<p>为何诡异呢？因为这个梦很像游戏《超阈限空间》里的场景。而这款游戏，我早在几个月前就通关不玩了，居然今天才做这种梦！</p>
-<p>以下是残存的梦境记录</p>
-<h1 id="shui-qian">睡前</h1>
-<p>我弟在我房间玩，开着灯。</p>
-<p>我弟终于出去了，赶紧关灯入睡。</p>
-<h1 id="qi-yi">其一</h1>
-<p>有人在碰我脚，我挪了挪腿，清晰地感受到凉席与脚摩擦的质感。</p>
-<p>嘶，怎么有有人在碰我脚，再次挪了挪腿，醒来看了一眼。房间的灯还是开的，我弟不在房间里。现在还有困意，先赶紧入睡。</p>
-<h1 id="qi-er">其二</h1>
-<p>面前是美式霸凌，不过后面的栅栏是红色的房子<br>
-<img src="1.jpg" alt=""><br>
-他要打我啦啊啊啊，我务必重拳出击。<br>
-？？？，眼前的画面变成了一块木板，打过去把木板打碎了。<br>
-<img src="1.gif" alt="大概这样吧"></p>
-<h1 id="qi-san">其三</h1>
-<p>我又在房间里醒来，灯还是开着的，房间只有我一个人。呼，先刷会手机吧。</p>
-<p>.…“你真的在现实吗？”</p>
-<p>大脑突然闪过一句话。低头看向手机，发现豆瓣的广告位变成了梦境其二————我的第一人称视角。</p>
-<p>😱，看向窗户旁边的挂历，挂历的日、月都在变化，数字在不断地跳动！</p>
-<p>首先，窗户一角的空间开始扭曲，向漩涡一样旋转起来。然后，这些漩涡像是扩散的瘟疫，在房间中其他地方出现。</p>
-<p>🤯，😱😱😱</p>
-<p>我抬了下手，感觉手臂是搭在我眼睛上的，而且房间比较黑，还能听见我弟在房间外的声音，意识绝对比刚刚更清晰。我强烈地感知到：这个世界才是真实的。啊，挣扎失败，我又进入梦境了。</p>
-<p>仅回到那个漩涡的世界一瞬间，求生欲就开始工作了。我要.…抬起手.…</p>
-<p>颅内意识一阵混乱，再一激灵，终于醒了（这回真醒了），大口喘着气.…</p>
-<h1 id="jie-meng">解梦</h1>
-<p>亲自解读一下梦境</p>
-<p>Q：为什么梦境其一有人碰我脚？<br>
-A：睡前我弟曾多次故意碰我脚</p>
-<p>Q：为什么梦境里的房间是开着灯的？<br>
-A：醒来的时候发现面向窗户，可能是光线原因？</p>
-<p>Q：看手机为什么看豆瓣？<br>
-A：昨天看了电影，今天在豆瓣逛了一下</p>
-]]></content>
-      <categories>
-        <category>杂谈</category>
-      </categories>
-      <tags>
-        <tag>杂谈</tag>
       </tags>
   </entry>
   <entry>
