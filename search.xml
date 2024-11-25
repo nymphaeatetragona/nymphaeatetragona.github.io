@@ -68,6 +68,21 @@ permission denied please try again.
       </tags>
   </entry>
   <entry>
+    <title>你好，世界！</title>
+    <url>/2024/05/20/hello_world/</url>
+    <content><![CDATA[<p>这是博客建站的第一篇文章，用以测试博客是否正常运行，如果你看到了这篇文章，那这个博客已经可以正常工作啦！这个博客应该主要用于分享我的生活（因为vx朋友圈有各种各样的原因使我不能愉快的畅谈）。我偶尔会写一些我的折腾历程，让大家看看我踩过的坑，帮大家排排雷。</p>
+<hr>
+<p>感谢友人<a href="https://yuuu.org/">竹月</a>，他在我建站时不费余力地解答我的疑惑。</p>
+]]></content>
+      <categories>
+        <category>杂谈</category>
+      </categories>
+      <tags>
+        <tag>杂谈</tag>
+        <tag>技术</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>香橙派的使用配置</title>
     <url>/2024/05/22/orangepi-config/</url>
     <content><![CDATA[<p>前些天购入了一个香橙派Zero3，但是时不时系统崩坏，（或许是sd卡不是香橙派官方店铺买的？）现在来捋一遍安装过程以便日后崩坏时重装系统。</p>
@@ -137,21 +152,6 @@ sudo tzselect #调整时区，看着按就行
         <tag>香橙派</tag>
         <tag>单板机</tag>
         <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>你好，世界！</title>
-    <url>/2024/05/20/hello_world/</url>
-    <content><![CDATA[<p>这是博客建站的第一篇文章，用以测试博客是否正常运行，如果你看到了这篇文章，那这个博客已经可以正常工作啦！这个博客应该主要用于分享我的生活（因为vx朋友圈有各种各样的原因使我不能愉快的畅谈）。我偶尔会写一些我的折腾历程，让大家看看我踩过的坑，帮大家排排雷。</p>
-<hr>
-<p>感谢友人<a href="https://yuuu.org/">竹月</a>，他在我建站时不费余力地解答我的疑惑。</p>
-]]></content>
-      <categories>
-        <category>杂谈</category>
-      </categories>
-      <tags>
-        <tag>杂谈</tag>
-        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -508,8 +508,10 @@ ohhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</p>
 <p><img src="cloudns.png" alt=""></p>
 <p>然后去GitHub如下设置自定义域名，成功了会显示DNS check successful，然后再等十几分钟，因为证书要刷新。最后记得清除浏览器缓存再看效果！！！</p>
 <p><img src="github1.png" alt=""></p>
-<p>最后加上Enforce HTTPS，成功样例如下图</p>
+<p>（可选）加上Enforce HTTPS，成功样例如下图</p>
 <p><img src="github2.png" alt=""></p>
+<p>但是下次hexo更新文章的时候会把根目录下的CNAME文件清除，这样会导致配置的域名失效，所以要在souce目录下添加上CNAME文件，里面填上自己的域名。</p>
+<p><img src="%E6%9C%AC%E5%9C%B0.jpg" alt=""></p>
 <hr class="footnotes-sep">
 <section class="footnotes">
 <ol class="footnotes-list">
