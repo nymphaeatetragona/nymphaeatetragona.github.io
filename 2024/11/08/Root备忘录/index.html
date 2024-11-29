@@ -243,17 +243,17 @@
         <section class="flex items-center gap-3 text-sm">
           <span class="flex items-center gap-1">
             <iconify-icon width="18" icon="carbon-calendar" ></iconify-icon>
-            <time>2024-11-08</time>
+            <time>2024-11-29</time>
           </span>
           <span class="text-gray-400">·</span>
           <span class="flex items-center gap-1">
             <iconify-icon width="18" icon="ic:round-access-alarm" ></iconify-icon>
-            <span>1 min</span>
+            <span>4 min</span>
           </span>
           <span class="text-gray-400">·</span>
           <span class="flex items-center gap-1">
             <iconify-icon width="18" icon="icon-park-outline:font-search" ></iconify-icon>
-            <span>513 words</span>
+            <span>1.2k words</span>
           </span>
           
             <span class="text-gray-400">·</span>
@@ -290,8 +290,40 @@
 <h2 id="wu-fa-lian-jie-wi-fi" id="无法连接WiFi">无法连接WiFi</h2>
 <p>打算连接舍友的手机热点，发现连不上，怎么点都显示“已保存”。几番调试，发现是无法连接WPA3-Personal加密的WiFi，其他加密方式可以连。但是之前我倒是可以连舍友WiFi。目前暂未找到解决方案。</p>
 <p><img src="wifi.jpg" alt=""></p>
-<h2 id="hou-ji" id="后记">后记</h2>
-<p>目前只遇到这么多问题，但是开了yc调度后依然一天两充😅。</p>
+<hr>
+<h1 id="lei-yuan-sheng-zhi-lu">类原生之旅</h1>
+<p>网上看到DSU Sideload这个软件.它利用了安卓自带的动态系统更新功能，但是可以自己分配动态系统的用户数据空间。也就是说，可以讲这个动态系统作为主力系统使用🤪。于是尝试了刷入CrDroid的GSI(通用系统镜像)。这可是人生中第一次用类原生当主力机器🥰。但是毕竟没经过适配，所以系统有Bug。</p>
+<p>CrDroid 9.X（安卓13） 版本下的bug：</p>
+<ul>
+<li>蓝牙断连</li>
+<li>5G环境下无法通话和收发短信</li>
+<li>无法使用杜比全景声</li>
+</ul>
+<p>CrDroid 10.X（安卓14） 版本下的bug：</p>
+<ul>
+<li>无法使用人脸识别</li>
+<li>仅使用了几天，测试不全</li>
+</ul>
+<p>刷上去之后，本以为可以回到一天一充的时代，但是貌似是我高估了类原生了。一天两充还是最低标准😥。看来就是硬件损耗了。</p>
+<p>用了一段时间，还是不能自适应这些bug，而且续航并没有提升。还是回去MIUI吧😅。</p>
+<p><s>为什么这一段没图呢？因为手机现在已经变砖了</s></p>
+<h1 id="yuan-ni-shua-ji-ban-sheng-gui-lai-gui-bu-lai-liao-a-a-a">愿你刷机半生，归来…归不来了啊啊啊</h1>
+<p>前文提到我使用的是动态系统。回去之前的MIUI14还是很顺利的。但是有一个说法：出厂系统就是最好的系统。于是决定刷回出厂的MIUI12.5.</p>
+<p>当然是选择最安全的Fastboot + miflash刷机大法。但在此之前，我萌生了个想法：何不把boot.img文件用magisk修补之后放回刷机包呢，这样就不用再次进Fastboot来root了🤪。</p>
+<p>经过漫长的等待，得到的是进度条的标红＞﹏＜，提示check boot_ab failed。看起来我偷梁换柱的计划露出鸡脚了。但是它还停留在Fastboot界面。</p>
+<p>好吧，已老实。刷原系统吧。这下总不会有问题吧，于是我安心地去刷牙了（此时是22：40）。</p>
+<p>事实证明，不要晚上刷机。刷完牙回来，天都塌了</p>
+<p>屏幕上鲜艳的红条直接让我心肺骤停。？？？，这还能报错？屏幕还黑了？尝试重新进入Fastboot…</p>
+<p>它没反应！！！而且电脑还一直有插入、拔出设备的提示音！看着计算机设备上的MediaTek device陷入了沉思，这是给我干进深度刷机里了？</p>
+<p>按照网上方法，使用SP Flash救砖。但是多次尝试，换了两个刷机包，仍然报错</p>
+<p><img src="dead.jpg" alt=""></p>
+<p>已经23：45了，明天还要上课＞︿＜。当机立断，下单Redmi K80，以后再也不乱搞主力机了😭。<s>想不到我也有冲首发的一天</s></p>
+<h1 id="can-kao-wen-xian">参考文献</h1>
+<p><a target="_blank" rel="noopener" href="https://github.com/phhusson/treble_experimentations/wiki/Generic-System-Image-%28GSI%29-list">部分类原生GSI</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/opus/990431050619420673">红米 note 10 pro 刷入 crDroid 9.17 GSI</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/opus/624055294964199515">MTK（联发科）黑砖拯救（无法进入fastboot或recovery）</a></p>
+<p><a target="_blank" rel="noopener" href="https://xdaforums.com/t/guide-how-to-properly-solve-the-errors-of-the-sp-flash-tool-for-merlin-redmi-note-9-redmi-10x-4g.4238161/">如何正确解决 SP FLASH TOOL for MERLIN 的错误</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/codingnotes/article/details/78595500">通过SP_Flash_Tool线刷失败解决方法</a></p>
 <hr class="footnotes-sep">
 <section class="footnotes">
 <ol class="footnotes-list">
