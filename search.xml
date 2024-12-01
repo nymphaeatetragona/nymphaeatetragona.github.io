@@ -48,11 +48,14 @@
 <p>经过漫长的等待，得到的是进度条的标红＞﹏＜，提示check boot_ab failed。看起来我偷梁换柱的计划露出鸡脚了。但是它还停留在Fastboot界面。</p>
 <p>好吧，已老实。刷原系统吧。这下总不会有问题吧，于是我安心地去刷牙了（此时是22：40）。</p>
 <p>事实证明，不要晚上刷机。刷完牙回来，天都塌了</p>
-<p>屏幕上鲜艳的红条直接让我心肺骤停。？？？，这还能报错？屏幕还黑了？尝试重新进入Fastboot…</p>
+<p>屏幕上鲜艳的红条直接让我心肺骤停（也是提示check xxx failed）。？？？，这还能报错？屏幕还黑了？尝试重新进入Fastboot…</p>
 <p>它没反应！！！而且电脑还一直有插入、拔出设备的提示音！看着计算机设备上的MediaTek device陷入了沉思，这是给我干进深度刷机里了？</p>
 <p>按照网上方法，使用SP Flash救砖。但是多次尝试，换了两个刷机包，仍然报错</p>
 <p><img src="dead.jpg" alt=""></p>
 <p>已经23：45了，明天还要上课＞︿＜。当机立断，下单Redmi K80，以后再也不乱搞主力机了😭。<s>想不到我也有冲首发的一天</s></p>
+<hr>
+<p><img src="dead2.jpg" alt="Redmi Note 10 Pro同志遗像"></p>
+<p>我敬爱的Redmi Note 10 Pro同志Fastboot刷机失败，深度刷机抢救无效，于2024年11月28日逝世，享年2.8岁</p>
 <h1 id="can-kao-wen-xian">参考文献</h1>
 <p><a href="https://github.com/phhusson/treble_experimentations/wiki/Generic-System-Image-%28GSI%29-list">部分类原生GSI</a></p>
 <p><a href="https://www.bilibili.com/opus/990431050619420673">红米 note 10 pro 刷入 crDroid 9.17 GSI</a></p>
@@ -187,60 +190,6 @@ sudo tzselect #调整时区，看着按就行
       </tags>
   </entry>
   <entry>
-    <title>听歌难题</title>
-    <url>/2024/06/26/%E5%90%AC%E6%AD%8C%E9%9A%BE%E9%A2%98/</url>
-    <content><![CDATA[<h1 id="ting-ge-nan-ti">听歌难题</h1>
-<p>什么样的音乐平台最好？有很多版权，简洁美观的UI，较低的会员费。在我体验了好几家平台后发现，想集三点于一身就是在做梦😅。</p>
-<p>目前已体验过QQ音乐，网易云音乐，Spotify，Apple Music。当前正在使用Apple Music。</p>
-<p>由于QQ音乐，酷狗音乐，酷我音乐版权共享，故下文以QQ音乐为代表，不再作区分。</p>
-<h1 id="ban-quan-dui-bi">版权对比</h1>
-<p>版权由多到少排序<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></p>
-<ul>
-<li>Spotify</li>
-<li>Apple Music外区，QQ音乐</li>
-<li>Apple Music国区</li>
-<li>网易云音乐</li>
-</ul>
-<h1 id="hui-yuan-fei">会员费</h1>
-<p>费用由多到少排序</p>
-<ul>
-<li>Spotify，Apple Music外区</li>
-<li>QQ音乐，网易云音乐</li>
-<li>Apple Music国区（大学生认证，闲鱼轻松拿下）</li>
-</ul>
-<p>PS：Apple Music家庭拼车会更加便宜，但是有卖家销号跑路的情况。目前我正在尝试拼车，希望不会遇到骗子🤨。</p>
-<hr>
-<h1 id="yi-xia-shi-fa-lao-sao-shi-jian">以下是发牢骚时间</h1>
-<h2 id="q-yin-shi-dai" id="Q音时代">Q音时代</h2>
-<p>在我小学的时候，身边朋友在用QQ音乐（或许是因为能和腾讯系产品联动？），酷我音乐比较小众，而酷狗音乐经常在电脑上被“高速下崽器”下崽，不喜欢。在初中的时候，决定听歌。刚好我妈的手机上安装了QQ音乐，直接QQ登录，非常方便。</p>
-<p>后来，看一些游戏主播直播的时候，发现他们大多都用网易云。嗯，为什么都用网易云呢？莫非关键之处在于“云”字？想起一些视频平台，没版权的影视就给你一个外链，可以跳转看。难道网易云也可以实现类似操作，故称“网易云”？又或者网易云本身版权多，主播才用？</p>
-<p>后来发生了“五五断更节”事件，使我彻底下定决心，非必要不使用腾讯系产品，<s>万恶的资本家</s>。于是转移网易云。</p>
-<h2 id="wang-yi-yun-shi-dai" id="网易云时代">网易云时代</h2>
-<p>转到网易云后发现，它才是版权最少的😅。经常出现之前点收藏的歌曲突然没版权，或者变成VIP专享。QQ音乐也会出现，但是网易云频率更高。当然，网易云也是有好处的，小的音乐人比较多，一些小众音乐是在网易云独占的。</p>
-<h2 id="spotify-shi-dai" id="Spotify时代">Spotify时代</h2>
-<p>刚知道这个平台的时候就下载来体验了一下，发现不开会员不能自己点歌！搜索一首想听的歌，只能播放歌曲所在的专辑，而且顺序随机。有些歌的歌词还加载不出来。垃圾软件！！！</p>
-<p>后来，发现吾爱大神的破解版，解除了点歌限制，再加上可以裸连，歌词什么的可以容忍。重要的是没有单曲购买这种东西，什么歌都可以播。于是背叛网易云，润到Spotify了。</p>
-<h2 id="apple-music" id="Apple-Music">Apple Music</h2>
-<p>听同学说Apple Music不错，刚好又在闲鱼上看到1元的Apple Music会员，号称到期了可以重复拍。好奇试了试，反正被骗了也才一块钱。听第一耳时，居然顿感音质比Spotify好。 <s>我可是木耳。</s> Apple Music的歌词动画应该是全网最好的了，非常的好看。而且绝大多数歌都有歌词，不像Spotify的垃圾歌词支持。国区的版权并没有很少，至少我听的歌都有版权。Apple Music一直被人诟病的一点是日语歌曲名字混乱，罗马音、英文、假名都有。</p>
-<p>既然可以一直1元购，那为何不转Apple Music呢？于是，它成了我的主力软件，背叛了Spotify😜。</p>
-<p>后来，在闲鱼看到有些卖家描述：“账号已达试用上限的勿拍”，貌似不能一直一元购下去？于是选择家庭拼车，一个月也就3块多（如果不被骗的话）</p>
-<hr class="footnotes-sep">
-<section class="footnotes">
-<ol class="footnotes-list">
-<li id="fn1" class="footnote-item"><p><a href="https://sspai.com/post/64477#">https://sspai.com/post/64477#</a>! <a href="#fnref1" class="footnote-backref">↩︎</a></p>
-</li>
-</ol>
-</section>
-]]></content>
-      <categories>
-        <category>杂谈</category>
-      </categories>
-      <tags>
-        <tag>杂谈</tag>
-        <tag>音乐</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>体验《鸣潮》</title>
     <url>/2024/06/03/%E4%BD%93%E9%AA%8C%E3%80%8A%E9%B8%A3%E6%BD%AE%E3%80%8B/</url>
     <content><![CDATA[<h1 id="qian-yan">前言</h1>
@@ -351,6 +300,60 @@ sudo tzselect #调整时区，看着按就行
       </tags>
   </entry>
   <entry>
+    <title>听歌难题</title>
+    <url>/2024/06/26/%E5%90%AC%E6%AD%8C%E9%9A%BE%E9%A2%98/</url>
+    <content><![CDATA[<h1 id="ting-ge-nan-ti">听歌难题</h1>
+<p>什么样的音乐平台最好？有很多版权，简洁美观的UI，较低的会员费。在我体验了好几家平台后发现，想集三点于一身就是在做梦😅。</p>
+<p>目前已体验过QQ音乐，网易云音乐，Spotify，Apple Music。当前正在使用Apple Music。</p>
+<p>由于QQ音乐，酷狗音乐，酷我音乐版权共享，故下文以QQ音乐为代表，不再作区分。</p>
+<h1 id="ban-quan-dui-bi">版权对比</h1>
+<p>版权由多到少排序<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></p>
+<ul>
+<li>Spotify</li>
+<li>Apple Music外区，QQ音乐</li>
+<li>Apple Music国区</li>
+<li>网易云音乐</li>
+</ul>
+<h1 id="hui-yuan-fei">会员费</h1>
+<p>费用由多到少排序</p>
+<ul>
+<li>Spotify，Apple Music外区</li>
+<li>QQ音乐，网易云音乐</li>
+<li>Apple Music国区（大学生认证，闲鱼轻松拿下）</li>
+</ul>
+<p>PS：Apple Music家庭拼车会更加便宜，但是有卖家销号跑路的情况。目前我正在尝试拼车，希望不会遇到骗子🤨。</p>
+<hr>
+<h1 id="yi-xia-shi-fa-lao-sao-shi-jian">以下是发牢骚时间</h1>
+<h2 id="q-yin-shi-dai" id="Q音时代">Q音时代</h2>
+<p>在我小学的时候，身边朋友在用QQ音乐（或许是因为能和腾讯系产品联动？），酷我音乐比较小众，而酷狗音乐经常在电脑上被“高速下崽器”下崽，不喜欢。在初中的时候，决定听歌。刚好我妈的手机上安装了QQ音乐，直接QQ登录，非常方便。</p>
+<p>后来，看一些游戏主播直播的时候，发现他们大多都用网易云。嗯，为什么都用网易云呢？莫非关键之处在于“云”字？想起一些视频平台，没版权的影视就给你一个外链，可以跳转看。难道网易云也可以实现类似操作，故称“网易云”？又或者网易云本身版权多，主播才用？</p>
+<p>后来发生了“五五断更节”事件，使我彻底下定决心，非必要不使用腾讯系产品，<s>万恶的资本家</s>。于是转移网易云。</p>
+<h2 id="wang-yi-yun-shi-dai" id="网易云时代">网易云时代</h2>
+<p>转到网易云后发现，它才是版权最少的😅。经常出现之前点收藏的歌曲突然没版权，或者变成VIP专享。QQ音乐也会出现，但是网易云频率更高。当然，网易云也是有好处的，小的音乐人比较多，一些小众音乐是在网易云独占的。</p>
+<h2 id="spotify-shi-dai" id="Spotify时代">Spotify时代</h2>
+<p>刚知道这个平台的时候就下载来体验了一下，发现不开会员不能自己点歌！搜索一首想听的歌，只能播放歌曲所在的专辑，而且顺序随机。有些歌的歌词还加载不出来。垃圾软件！！！</p>
+<p>后来，发现吾爱大神的破解版，解除了点歌限制，再加上可以裸连，歌词什么的可以容忍。重要的是没有单曲购买这种东西，什么歌都可以播。于是背叛网易云，润到Spotify了。</p>
+<h2 id="apple-music" id="Apple-Music">Apple Music</h2>
+<p>听同学说Apple Music不错，刚好又在闲鱼上看到1元的Apple Music会员，号称到期了可以重复拍。好奇试了试，反正被骗了也才一块钱。听第一耳时，居然顿感音质比Spotify好。 <s>我可是木耳。</s> Apple Music的歌词动画应该是全网最好的了，非常的好看。而且绝大多数歌都有歌词，不像Spotify的垃圾歌词支持。国区的版权并没有很少，至少我听的歌都有版权。Apple Music一直被人诟病的一点是日语歌曲名字混乱，罗马音、英文、假名都有。</p>
+<p>既然可以一直1元购，那为何不转Apple Music呢？于是，它成了我的主力软件，背叛了Spotify😜。</p>
+<p>后来，在闲鱼看到有些卖家描述：“账号已达试用上限的勿拍”，貌似不能一直一元购下去？于是选择家庭拼车，一个月也就3块多（如果不被骗的话）</p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p><a href="https://sspai.com/post/64477#">https://sspai.com/post/64477#</a>! <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+]]></content>
+      <categories>
+        <category>杂谈</category>
+      </categories>
+      <tags>
+        <tag>杂谈</tag>
+        <tag>音乐</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>梦</title>
     <url>/2024/08/12/%E6%A2%A6/</url>
     <content><![CDATA[<h1 id="xu">序</h1>
@@ -395,37 +398,6 @@ A：昨天看了电影，今天在豆瓣逛了一下</p>
       <tags>
         <tag>杂谈</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>网站更换域名啦</title>
-    <url>/2024/11/25/%E7%BD%91%E7%AB%99%E6%9B%B4%E6%8D%A2%E5%9F%9F%E5%90%8D%E5%95%A6/</url>
-    <content><![CDATA[<p>近期看到了个新闻，说是io域名药丸😨<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>，拖了近一个月，终于决定处理这件事了——换域名。不知道有没有用，但至少可以换个符合博客名字的域名啦🥰。</p>
-<p>首先，买个域名。奈何本人不想每年交一笔钱来运营这个没人看的博客，于是选择了免费的二级域名。我选择了cloudns提供的二级域名，如下图设置就行</p>
-<p><img src="cloudns.png" alt=""></p>
-<p>然后去GitHub如下设置自定义域名，成功了会显示DNS check successful，然后再等十几分钟，因为证书要刷新。最后记得清除浏览器缓存再看效果！！！</p>
-<p><img src="github1.png" alt=""></p>
-<p>（可选）加上Enforce HTTPS，成功样例如下图</p>
-<p><img src="github2.png" alt=""></p>
-<p>但是下次hexo更新文章的时候会把根目录下的CNAME文件清除，这样会导致配置的域名失<br>
-效，所以要在souce目录下添加上CNAME文件，里面填上自己的域名。</p>
-<p><img src="%E6%9C%AC%E5%9C%B0.jpg" alt=""></p>
-<hr>
-<p>参考教程<br>
-<a href="https://www.cnblogs.com/gambler/p/12051638.html">https://www.cnblogs.com/gambler/p/12051638.html</a></p>
-<p><a href="https://segmentfault.com/a/1190000011203711">https://segmentfault.com/a/1190000011203711</a></p>
-<p>域名解决方案</p>
-<p><a href="https://www.tjsky.net/tutorial/922">https://www.tjsky.net/tutorial/922</a></p>
-<hr class="footnotes-sep">
-<section class="footnotes">
-<ol class="footnotes-list">
-<li id="fn1" class="footnote-item"><p><a href="https://www.ithome.com/0/801/540.htm">https://www.ithome.com/0/801/540.htm</a> <a href="#fnref1" class="footnote-backref">↩︎</a></p>
-</li>
-</ol>
-</section>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
   </entry>
   <entry>
     <title>科目三记事</title>
@@ -562,6 +534,37 @@ ohhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</p>
       <tags>
         <tag>杂谈</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>网站更换域名啦</title>
+    <url>/2024/11/25/%E7%BD%91%E7%AB%99%E6%9B%B4%E6%8D%A2%E5%9F%9F%E5%90%8D%E5%95%A6/</url>
+    <content><![CDATA[<p>近期看到了个新闻，说是io域名药丸😨<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>，拖了近一个月，终于决定处理这件事了——换域名。不知道有没有用，但至少可以换个符合博客名字的域名啦🥰。</p>
+<p>首先，买个域名。奈何本人不想每年交一笔钱来运营这个没人看的博客，于是选择了免费的二级域名。我选择了cloudns提供的二级域名，如下图设置就行</p>
+<p><img src="cloudns.png" alt=""></p>
+<p>然后去GitHub如下设置自定义域名，成功了会显示DNS check successful，然后再等十几分钟，因为证书要刷新。最后记得清除浏览器缓存再看效果！！！</p>
+<p><img src="github1.png" alt=""></p>
+<p>（可选）加上Enforce HTTPS，成功样例如下图</p>
+<p><img src="github2.png" alt=""></p>
+<p>但是下次hexo更新文章的时候会把根目录下的CNAME文件清除，这样会导致配置的域名失<br>
+效，所以要在souce目录下添加上CNAME文件，里面填上自己的域名。</p>
+<p><img src="%E6%9C%AC%E5%9C%B0.jpg" alt=""></p>
+<hr>
+<p>参考教程<br>
+<a href="https://www.cnblogs.com/gambler/p/12051638.html">https://www.cnblogs.com/gambler/p/12051638.html</a></p>
+<p><a href="https://segmentfault.com/a/1190000011203711">https://segmentfault.com/a/1190000011203711</a></p>
+<p>域名解决方案</p>
+<p><a href="https://www.tjsky.net/tutorial/922">https://www.tjsky.net/tutorial/922</a></p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p><a href="https://www.ithome.com/0/801/540.htm">https://www.ithome.com/0/801/540.htm</a> <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
   </entry>
   <entry>
     <title>“能跑就行”</title>
