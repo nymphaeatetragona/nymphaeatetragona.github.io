@@ -1,31 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>git连接GitHub-ssh异常</title>
-    <url>/2024/07/04/git%E8%BF%9E%E6%8E%A5GitHub-ssh%E5%BC%82%E5%B8%B8/</url>
-    <content><![CDATA[<p>事情是这样的，今天提交文章时，突然出现这样的情况</p>
-<p><img src="1.webp" alt=""><br>
-<img src="2.webp" alt=""></p>
-<p>以前也会出现这种情况，不过是连了steam++加速GitHub才会出现ssh密钥验证失败，可是今天裸连都出现这种情况了。</p>
-<p>于是采用最原始的方法：重新添加sshkey到GitHub上，顺便改一下域名。</p>
-<p>反正平时都要开steam++才能打开GitHub，干脆就开着它直接生成ssh公钥吧。</p>
-<p>hexo部署，生成，一气呵成，然后要我输入密码</p>
-<pre><code>git@github's password:
-
-permission denied please try again.
-</code></pre>
-<p>输半天都输不对，特意改了GitHub密码，依然输不对🤬</p>
-<p>关闭steam++生成公钥试试，然后…就成功了？？？ <code>hexo d</code> 的时候根本不要求我输入密码</p>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>ssh</tag>
-        <tag>git</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Root备忘录</title>
     <url>/2024/11/08/Root%E5%A4%87%E5%BF%98%E5%BD%95/</url>
     <content><![CDATA[<h1 id="root-bei-wang-lu">root备忘录</h1>
@@ -41,15 +16,15 @@ permission denied please try again.
 <h2 id="guo-momo-jian-ce" id="过momo检测">过momo检测</h2>
 <p>我使用了kitsune mask作为root管理器，它本身提供了较强大的隐藏root的功能。隐藏root有白名单和黑名单两种模式。一般使用黑名单模式即可，不过勾选进黑名单的应用貌似无法启动，会卡白屏（测试了微信和momo两个应用），大概是我手机的玄学问题吧。白名单模式就没事了。</p>
 <p>开启隐藏前：<br>
-<img src="qian.jpg" alt=""><br>
+<img src="qian.webp" alt=""><br>
 开启隐藏后：<br>
-<img src="hou.jpg" alt=""></p>
+<img src="hou.webp" alt=""></p>
 <p>至于bootloader未锁定，可以通过刷safetynet fix模块来骗过momo，但不知道能不能骗过其他程序。</p>
 <h2 id="wei-xin-xiao-cheng-xu-wu-fa-da-kai" id="微信小程序无法打开">微信小程序无法打开</h2>
 <p>下载了Google play版微信，但发现小程序打不开😱，点小程序就卡在“正在加载”，难道是root的问题？瞎调一番后，偶然打开Google play，提示正在更新微信，更新完就能开小程序了😅。</p>
 <h2 id="wu-fa-lian-jie-wi-fi" id="无法连接WiFi">无法连接WiFi</h2>
 <p>打算连接舍友的手机热点，发现连不上，怎么点都显示“已保存”。几番调试，发现是无法连接WPA3-Personal加密的WiFi，其他加密方式可以连。但是之前我倒是可以连舍友WiFi。目前暂未找到解决方案。</p>
-<p><img src="wifi.jpg" alt=""></p>
+<p><img src="wifi.webp" alt=""></p>
 <hr>
 <h1 id="lei-yuan-sheng-zhi-lu">类原生之旅</h1>
 <p>网上看到DSU Sideload这个软件.它利用了安卓自带的动态系统更新功能，但是可以自己分配动态系统的用户数据空间。也就是说，可以讲这个动态系统作为主力系统使用🤪。于是尝试了刷入CrDroid的GSI(通用系统镜像)。这可是人生中第一次用类原生当主力机器🥰。但是毕竟没经过适配，所以系统有Bug。</p>
@@ -76,11 +51,12 @@ permission denied please try again.
 <p>屏幕上鲜艳的红条直接让我心肺骤停（也是提示check xxx failed）。？？？，这还能报错？屏幕还黑了？尝试重新进入Fastboot…</p>
 <p>它没反应！！！而且电脑还一直有插入、拔出设备的提示音！看着计算机设备上的MediaTek device陷入了沉思，这是给我干进深度刷机里了？</p>
 <p>按照网上方法，使用SP Flash救砖。但是多次尝试，换了两个刷机包，仍然报错</p>
-<p><img src="dead.jpg" alt=""></p>
+<p><img src="dead.webp" alt=""></p>
 <p>已经23：45了，明天还要上课＞︿＜。当机立断，下单Redmi K80，以后再也不乱搞主力机了😭。<s>想不到我也有冲首发的一天</s></p>
 <hr>
-<p><img src="dead2.jpg" alt="Redmi Note 10 Pro同志遗像"></p>
-<p>我敬爱的Redmi Note 10 Pro同志Fastboot刷机失败，深度刷机抢救无效，于2024年11月28日逝世，享年2.8岁</p>
+<p><s>我敬爱的Redmi Note 10 Pro同志Fastboot刷机失败，深度刷机抢救无效，于2024年11月28日逝世，享年2.8岁</s></p>
+<p>还是选择了闲鱼花30￥让手机起死回生，现在它又活了*^____^*。<br>
+为什么之前刷不进去呢？据闲鱼卖家说，刷入官方包的DA.bin文件需要验证，所以会卡红条。</p>
 <h1 id="can-kao-wen-xian">参考文献</h1>
 <p><a href="https://github.com/phhusson/treble_experimentations/wiki/Generic-System-Image-%28GSI%29-list">部分类原生GSI</a></p>
 <p><a href="https://www.bilibili.com/opus/990431050619420673">红米 note 10 pro 刷入 crDroid 9.17 GSI</a></p>
@@ -115,6 +91,31 @@ permission denied please try again.
       <tags>
         <tag>杂谈</tag>
         <tag>技术</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>git连接GitHub-ssh异常</title>
+    <url>/2024/07/04/git%E8%BF%9E%E6%8E%A5GitHub-ssh%E5%BC%82%E5%B8%B8/</url>
+    <content><![CDATA[<p>事情是这样的，今天提交文章时，突然出现这样的情况</p>
+<p><img src="1.webp" alt=""><br>
+<img src="2.webp" alt=""></p>
+<p>以前也会出现这种情况，不过是连了steam++加速GitHub才会出现ssh密钥验证失败，可是今天裸连都出现这种情况了。</p>
+<p>于是采用最原始的方法：重新添加sshkey到GitHub上，顺便改一下域名。</p>
+<p>反正平时都要开steam++才能打开GitHub，干脆就开着它直接生成ssh公钥吧。</p>
+<p>hexo部署，生成，一气呵成，然后要我输入密码</p>
+<pre><code>git@github's password:
+
+permission denied please try again.
+</code></pre>
+<p>输半天都输不对，特意改了GitHub密码，依然输不对🤬</p>
+<p>关闭steam++生成公钥试试，然后…就成功了？？？ <code>hexo d</code> 的时候根本不要求我输入密码</p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>ssh</tag>
+        <tag>git</tag>
       </tags>
   </entry>
   <entry>
@@ -540,14 +541,14 @@ ohhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</p>
     <url>/2024/11/25/%E7%BD%91%E7%AB%99%E6%9B%B4%E6%8D%A2%E5%9F%9F%E5%90%8D%E5%95%A6/</url>
     <content><![CDATA[<p>近期看到了个新闻，说是io域名药丸😨<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>，拖了近一个月，终于决定处理这件事了——换域名。不知道有没有用，但至少可以换个符合博客名字的域名啦🥰。</p>
 <p>首先，买个域名。奈何本人不想每年交一笔钱来运营这个没人看的博客，于是选择了免费的二级域名。我选择了cloudns提供的二级域名，如下图设置就行</p>
-<p><img src="cloudns.png" alt=""></p>
+<p><img src="cloudns.webp" alt=""></p>
 <p>然后去GitHub如下设置自定义域名，成功了会显示DNS check successful，然后再等十几分钟，因为证书要刷新。最后记得清除浏览器缓存再看效果！！！</p>
-<p><img src="github1.png" alt=""></p>
+<p><img src="github1.webp" alt=""></p>
 <p>（可选）加上Enforce HTTPS，成功样例如下图</p>
-<p><img src="github2.png" alt=""></p>
+<p><img src="github2.webp" alt=""></p>
 <p>但是下次hexo更新文章的时候会把根目录下的CNAME文件清除，这样会导致配置的域名失<br>
 效，所以要在souce目录下添加上CNAME文件，里面填上自己的域名。</p>
-<p><img src="%E6%9C%AC%E5%9C%B0.jpg" alt=""></p>
+<p><img src="%E6%9C%AC%E5%9C%B0.webp" alt=""></p>
 <hr>
 <p>参考教程<br>
 <a href="https://www.cnblogs.com/gambler/p/12051638.html">https://www.cnblogs.com/gambler/p/12051638.html</a></p>
