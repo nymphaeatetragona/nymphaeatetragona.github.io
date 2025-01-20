@@ -79,6 +79,21 @@
       </tags>
   </entry>
   <entry>
+    <title>你好，世界！</title>
+    <url>/2024/05/20/hello_world/</url>
+    <content><![CDATA[<p>这是博客建站的第一篇文章，用以测试博客是否正常运行，如果你看到了这篇文章，那这个博客已经可以正常工作啦！这个博客应该主要用于分享我的生活（因为vx朋友圈有各种各样的原因使我不能愉快的畅谈）。我偶尔会写一些我的折腾历程，让大家看看我踩过的坑，帮大家排排雷。</p>
+<hr>
+<p>感谢友人<a href="https://yuuu.org/">竹月</a>，他在我建站时不费余力地解答我的疑惑。</p>
+]]></content>
+      <categories>
+        <category>杂谈</category>
+      </categories>
+      <tags>
+        <tag>杂谈</tag>
+        <tag>技术</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>git连接GitHub-ssh异常</title>
     <url>/2024/07/04/git%E8%BF%9E%E6%8E%A5GitHub-ssh%E5%BC%82%E5%B8%B8/</url>
     <content><![CDATA[<p>事情是这样的，今天提交文章时，突然出现这样的情况</p>
@@ -157,21 +172,6 @@ GND——GND</p>
         <tag>香橙派</tag>
         <tag>单板机</tag>
         <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>你好，世界！</title>
-    <url>/2024/05/20/hello_world/</url>
-    <content><![CDATA[<p>这是博客建站的第一篇文章，用以测试博客是否正常运行，如果你看到了这篇文章，那这个博客已经可以正常工作啦！这个博客应该主要用于分享我的生活（因为vx朋友圈有各种各样的原因使我不能愉快的畅谈）。我偶尔会写一些我的折腾历程，让大家看看我踩过的坑，帮大家排排雷。</p>
-<hr>
-<p>感谢友人<a href="https://yuuu.org/">竹月</a>，他在我建站时不费余力地解答我的疑惑。</p>
-]]></content>
-      <categories>
-        <category>杂谈</category>
-      </categories>
-      <tags>
-        <tag>杂谈</tag>
-        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -542,6 +542,80 @@ A：昨天看了电影，今天在豆瓣逛了一下</p>
       </tags>
   </entry>
   <entry>
+    <title>组一个廉价后环绕声</title>
+    <url>/2025/01/13/%E7%BB%84%E4%B8%80%E4%B8%AA%E5%BB%89%E4%BB%B7%E5%90%8E%E7%8E%AF%E7%BB%95%E5%A3%B0/</url>
+    <content><![CDATA[<h1 id="qian-yan">前言</h1>
+<p>闲来无事，掏出了许久之前买的两只联想Thinkplue-K3 Pro。本来是打算给家里的投影仪用的，但是一时半会还不能回家，于是先给自己的电脑用上先😋。</p>
+<p>这两只音响的低频表现过于垃圾，想着搜索一下能不能给音响加一个倒相孔，但是偶然一个走神，刷到了b站视频教我怎么用外接音响配合电脑音响组成环绕声。欸🤓，那就来研究一下吧。</p>
+<h1 id="ruan-jian-an-zhuang">软件安装</h1>
+<p>使用一个虚拟声卡软件Voicemeeter，可以将不同品牌的音响分别映射到不同的声音输出通道。~~万物断连变万物互联啦。~~可惜的是这个方案只支持在电脑端使用，想在电视机上用只能把电脑连电视了。</p>
+<p>进入Voicemeeter官网，选择Banana版本即可（Potato版本是捐赠版）<br>
+<a href="https://vb-audio.com/Voicemeeter/index.htm">https://vb-audio.com/Voicemeeter/index.htm</a><br>
+<img src="%E5%AE%98%E7%BD%91.webp" alt=""><br>
+<img src="%E4%B8%8B%E8%BD%BD.webp" alt=""></p>
+<p>下载完成后解压文件，双击安装，无脑下一步（Voicemeeter无法更改安装目录）<br>
+<img src="%E5%AE%89%E8%A3%85.webp" alt=""></p>
+<p>安装完重启一遍电脑。</p>
+<h1 id="pei-zhi-ruan-jian">配置软件</h1>
+<p>在开始菜单中打开Voicemeeter Banana ×64（应该不会还有人用32位电脑吧🧐）<br>
+<img src="banana.webp" alt=""></p>
+<p>关闭不必要的功能。关闭蓝色框内的功能，只需要关注红色框里的内容。<br>
+红色框里，只需开启A1，A2，A3，其他功能关闭。A1，A2，A3是输入通道，接了多少个设备，就开多少个通道（电脑内置音响也算一个通道）。<br>
+<img src="%E5%85%B3%E9%97%AD%E5%8A%9F%E8%83%BD.webp" alt=""></p>
+<p>接下来配置输入通道，在A1，A2，A3分别选择音响设备，其中A1最好选择的是主力设备。<br>
+<img src="%E9%85%8D%E7%BD%AE1.webp" alt=""></p>
+<p>左侧WDM和MME均可选择，其中WDM延迟较低，MME对设备兼容性好。我的电脑选WDM会有电流声，于是选择了MME<br>
+<img src="%E9%85%8D%E7%BD%AE2.webp" alt=""></p>
+<p>然后映射声道，点击红框，换成所需的声道。鼠标左键切换下一个，鼠标右键切换上一个。Normal是前左和前右喇叭，MIX down A是所有前喇叭，MIX down B是所有喇叭，rear only是后喇叭，center only是前中置喇叭。如果不会选，下文还有办法。<br>
+<img src="%E5%A3%B0%E9%81%93.webp" alt=""></p>
+<p>在任务栏搜索框里搜索“声音”<br>
+<img src="%E6%94%B9%E5%8F%98%E5%A3%B0%E9%9F%B3.webp" alt=""></p>
+<p>点击“播放”，找到Voicemeeter Input，鼠标右键点击它，先设为默认设备，再点击配置扬声器。<br>
+<img src="%E9%85%8D%E7%BD%AE%E6%89%AC%E5%A3%B0%E5%99%A8.webp" alt=""></p>
+<p>然后选择合适的声道预设（我选的是5.1环绕），点击绿框内的喇叭，对应声道会发声，可以测试每个声道是否正确。如果之前不会选择声道映射或者选择错误，可以打开Voicemeeter Banana重新调整声道映射方法。<br>
+<img src="%E6%B5%8B%E8%AF%95%E5%A3%B0%E9%81%93.webp" alt=""></p>
+<p>最好不要存在无声音的声道，否则一些5.1声道的电影或游戏会失去那个声道的声音。调整好之后点下一步。如果你有低音单元，请<code>不要</code>开启全音域扬声器。<br>
+<img src="%E5%85%A8%E9%9F%B3%E5%9F%9F.webp" alt=""></p>
+<p>至此，我们已经可以享用环绕声啦。</p>
+<h1 id="she-zhi-kai-ji-zi-qi-dong">设置开机自启动</h1>
+<p>Voicemeeter需要一直在后台才能输出声音。最好把它设置为开机自启动。<br>
+打开Voicemeeter Banana，点击Menu，如图勾选。<br>
+<img src="%E8%87%AA%E5%90%AF%E5%8A%A8.webp" alt=""></p>
+<p>为什么要勾选System Tray呢？勾选上之后，叉掉Voicemeeter Banana时就不会完全退出软件了，而是龟缩到系统托盘里。</p>
+<h1 id="jiang-di-yan-chi">降低延迟</h1>
+<p>据说打游戏时声音略有延迟，此时可以以管理员身份打开Pannel<br>
+<img src="pannel.webp" alt=""></p>
+<p>点击Options，点击Set Max Latency:4096 smp<br>
+<img src="Windows%E9%9F%B3%E9%87%8F.webp" alt=""></p>
+<p>这样会降低总体声音延迟。</p>
+<h1 id="lan-ya-you-xian-yin-xiang-hun-yong">蓝牙、有线音响混用</h1>
+<p>但是，如果你连接的是蓝牙音响，会发现蓝牙音响比电脑内置音响发声慢。这时候要单独调整延迟。打开Voicemeeter Banana，点击Menu，然后点System settings<br>
+<img src="%E8%AE%BE%E7%BD%AE.webp" alt=""></p>
+<p>由于我们无法把延迟设成负数，只能让电脑内置音响延迟发声以达到电脑音响和蓝牙音响同步发声的目的。找到OUT A1，那一列可以调整A1，A2，A3的延迟。<br>
+<img src="%E5%BB%B6%E8%BF%9F.webp" alt=""></p>
+<p>可以打开Voicemeeter Banana把声道映射全改成MIX down B，再打开声音预设，点击绿框内喇叭播放声音测试电脑音响是否和蓝牙音响同步发声。<br>
+<img src="%E6%B5%8B%E8%AF%95%E5%A3%B0%E9%81%93.webp" alt=""></p>
+<p>不过这样一来，上一步降低的延迟又提高了（悲）</p>
+<h1 id="diao-zheng-yin-liang-da-xiao">调整音量大小</h1>
+<p>刚配置好后会发现，系统的调整音量功能无法使用了！！！当然，这是有解决办法的。</p>
+<p>打开pannel，勾选上Enable Windows Volume Control，重启一下电脑就行。<br>
+<img src="Windows%E9%9F%B3%E9%87%8F.webp" alt=""></p>
+<h1 id="wei-jie-jue-bugs">未解决bugs</h1>
+<p>上文说，MIX down A模式是把所有前喇叭映射到一个设备上，但是实测发现，这个模式会把所有喇叭映射到一个设备上。但如果我选择Normal模式就会丢失前中置声道。所以现在，我电脑上后声道的声音会前后一起响。</p>
+<h1 id="can-kao-wen-xian">参考文献</h1>
+<p><a href="https://www.bilibili.com/video/BV1Hj421d7j3/">旧音响别扔，免费组建5.1环绕声，感受悔恨之泪，VoiceMeeter组多设备详细教程</a></p>
+<p><a href="https://www.bilibili.com/video/BV1vB4y1Y7MM/">使用VoiceMeeter 让电脑喇叭与蓝牙音箱同时播放音频 一招解决声音不同步</a></p>
+<p><a href="https://www.bilibili.com/video/BV1Ykc7ewESK/">Voicemeeter使用系统音量控制和调整声音大小</a></p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>音响</tag>
+        <tag>教程</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>科目三记事</title>
     <url>/2024/07/31/%E7%A7%91%E7%9B%AE%E4%B8%89%E8%AE%B0%E4%BA%8B/</url>
     <content><![CDATA[<h1 id="qian-yan">前言</h1>
@@ -675,80 +749,6 @@ ohhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</p>
       </categories>
       <tags>
         <tag>杂谈</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>组一个廉价后环绕声</title>
-    <url>/2025/01/13/%E7%BB%84%E4%B8%80%E4%B8%AA%E5%BB%89%E4%BB%B7%E5%90%8E%E7%8E%AF%E7%BB%95%E5%A3%B0/</url>
-    <content><![CDATA[<h1 id="qian-yan">前言</h1>
-<p>闲来无事，掏出了许久之前买的两只联想Thinkplue-K3 Pro。本来是打算给家里的投影仪用的，但是一时半会还不能回家，于是先给自己的电脑用上先😋。</p>
-<p>这两只音响的低频表现过于垃圾，想着搜索一下能不能给音响加一个倒相孔，但是偶然一个走神，刷到了b站视频教我怎么用外接音响配合电脑音响组成环绕声。欸🤓，那就来研究一下吧。</p>
-<h1 id="ruan-jian-an-zhuang">软件安装</h1>
-<p>使用一个虚拟声卡软件Voicemeeter，可以将不同品牌的音响分别映射到不同的声音输出通道。~~万物断连变万物互联啦。~~可惜的是这个方案只支持在电脑端使用，想在电视机上用只能把电脑连电视了。</p>
-<p>进入Voicemeeter官网，选择Banana版本即可（Potato版本是捐赠版）<br>
-<a href="https://vb-audio.com/Voicemeeter/index.htm">https://vb-audio.com/Voicemeeter/index.htm</a><br>
-<img src="%E5%AE%98%E7%BD%91.webp" alt=""><br>
-<img src="%E4%B8%8B%E8%BD%BD.webp" alt=""></p>
-<p>下载完成后解压文件，双击安装，无脑下一步（Voicemeeter无法更改安装目录）<br>
-<img src="%E5%AE%89%E8%A3%85.webp" alt=""></p>
-<p>安装完重启一遍电脑。</p>
-<h1 id="pei-zhi-ruan-jian">配置软件</h1>
-<p>在开始菜单中打开Voicemeeter Banana ×64（应该不会还有人用32位电脑吧🧐）<br>
-<img src="banana.webp" alt=""></p>
-<p>关闭不必要的功能。关闭蓝色框内的功能，只需要关注红色框里的内容。<br>
-红色框里，只需开启A1，A2，A3，其他功能关闭。A1，A2，A3是输入通道，接了多少个设备，就开多少个通道（电脑内置音响也算一个通道）。<br>
-<img src="%E5%85%B3%E9%97%AD%E5%8A%9F%E8%83%BD.webp" alt=""></p>
-<p>接下来配置输入通道，在A1，A2，A3分别选择音响设备，其中A1最好选择的是主力设备。<br>
-<img src="%E9%85%8D%E7%BD%AE1.webp" alt=""></p>
-<p>左侧WDM和MME均可选择，其中WDM延迟较低，MME对设备兼容性好。我的电脑选WDM会有电流声，于是选择了MME<br>
-<img src="%E9%85%8D%E7%BD%AE2.webp" alt=""></p>
-<p>然后映射声道，点击红框，换成所需的声道。鼠标左键切换下一个，鼠标右键切换上一个。Normal是前左和前右喇叭，MIX down A是所有前喇叭，MIX down B是所有喇叭，rear only是后喇叭，center only是前中置喇叭。如果不会选，下文还有办法。<br>
-<img src="%E5%A3%B0%E9%81%93.webp" alt=""></p>
-<p>在任务栏搜索框里搜索“声音”<br>
-<img src="%E6%94%B9%E5%8F%98%E5%A3%B0%E9%9F%B3.webp" alt=""></p>
-<p>点击“播放”，找到Voicemeeter Input，鼠标右键点击它，先设为默认设备，再点击配置扬声器。<br>
-<img src="%E9%85%8D%E7%BD%AE%E6%89%AC%E5%A3%B0%E5%99%A8.webp" alt=""></p>
-<p>然后选择合适的声道预设（我选的是5.1环绕），点击绿框内的喇叭，对应声道会发声，可以测试每个声道是否正确。如果之前不会选择声道映射或者选择错误，可以打开Voicemeeter Banana重新调整声道映射方法。<br>
-<img src="%E6%B5%8B%E8%AF%95%E5%A3%B0%E9%81%93.webp" alt=""></p>
-<p>最好不要存在无声音的声道，否则一些5.1声道的电影或游戏会失去那个声道的声音。调整好之后点下一步。如果你有低音单元，请<code>不要</code>开启全音域扬声器。<br>
-<img src="%E5%85%A8%E9%9F%B3%E5%9F%9F.webp" alt=""></p>
-<p>至此，我们已经可以享用环绕声啦。</p>
-<h1 id="she-zhi-kai-ji-zi-qi-dong">设置开机自启动</h1>
-<p>Voicemeeter需要一直在后台才能输出声音。最好把它设置为开机自启动。<br>
-打开Voicemeeter Banana，点击Menu，如图勾选。<br>
-<img src="%E8%87%AA%E5%90%AF%E5%8A%A8.webp" alt=""></p>
-<p>为什么要勾选System Tray呢？勾选上之后，叉掉Voicemeeter Banana时就不会完全退出软件了，而是龟缩到系统托盘里。</p>
-<h1 id="jiang-di-yan-chi">降低延迟</h1>
-<p>据说打游戏时声音略有延迟，此时可以以管理员身份打开Pannel<br>
-<img src="pannel.webp" alt=""></p>
-<p>点击Options，点击Set Max Latency:4096 smp<br>
-<img src="Windows%E9%9F%B3%E9%87%8F.webp" alt=""></p>
-<p>这样会降低总体声音延迟。</p>
-<h1 id="lan-ya-you-xian-yin-xiang-hun-yong">蓝牙、有线音响混用</h1>
-<p>但是，如果你连接的是蓝牙音响，会发现蓝牙音响比电脑内置音响发声慢。这时候要单独调整延迟。打开Voicemeeter Banana，点击Menu，然后点System settings<br>
-<img src="%E8%AE%BE%E7%BD%AE.webp" alt=""></p>
-<p>由于我们无法把延迟设成负数，只能让电脑内置音响延迟发声以达到电脑音响和蓝牙音响同步发声的目的。找到OUT A1，那一列可以调整A1，A2，A3的延迟。<br>
-<img src="%E5%BB%B6%E8%BF%9F.webp" alt=""></p>
-<p>可以打开Voicemeeter Banana把声道映射全改成MIX down B，再打开声音预设，点击绿框内喇叭播放声音测试电脑音响是否和蓝牙音响同步发声。<br>
-<img src="%E6%B5%8B%E8%AF%95%E5%A3%B0%E9%81%93.webp" alt=""></p>
-<p>不过这样一来，上一步降低的延迟又提高了（悲）</p>
-<h1 id="diao-zheng-yin-liang-da-xiao">调整音量大小</h1>
-<p>刚配置好后会发现，系统的调整音量功能无法使用了！！！当然，这是有解决办法的。</p>
-<p>打开pannel，勾选上Enable Windows Volume Control，重启一下电脑就行。<br>
-<img src="Windows%E9%9F%B3%E9%87%8F.webp" alt=""></p>
-<h1 id="wei-jie-jue-bugs">未解决bugs</h1>
-<p>上文说，MIX down A模式是把所有前喇叭映射到一个设备上，但是实测发现，这个模式会把所有喇叭映射到一个设备上。但如果我选择Normal模式就会丢失前中置声道。所以现在，我电脑上后声道的声音会前后一起响。</p>
-<h1 id="can-kao-wen-xian">参考文献</h1>
-<p><a href="https://www.bilibili.com/video/BV1Hj421d7j3/">旧音响别扔，免费组建5.1环绕声，感受悔恨之泪，VoiceMeeter组多设备详细教程</a></p>
-<p><a href="https://www.bilibili.com/video/BV1vB4y1Y7MM/">使用VoiceMeeter 让电脑喇叭与蓝牙音箱同时播放音频 一招解决声音不同步</a></p>
-<p><a href="https://www.bilibili.com/video/BV1Ykc7ewESK/">Voicemeeter使用系统音量控制和调整声音大小</a></p>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>音响</tag>
-        <tag>教程</tag>
       </tags>
   </entry>
   <entry>
