@@ -1,43 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>git连接GitHub-ssh异常</title>
-    <url>/2024/07/04/git%E8%BF%9E%E6%8E%A5GitHub-ssh%E5%BC%82%E5%B8%B8/</url>
-    <content><![CDATA[<p>事情是这样的，今天提交文章时，突然出现这样的情况</p>
-<p><img src="1.webp" alt=""><br>
-<img src="2.webp" alt=""></p>
-<p>以前也会出现这种情况，不过是连了steam++加速GitHub才会出现ssh密钥验证失败，可是今天裸连都出现这种情况了。</p>
-<p>于是采用最原始的方法：重新添加sshkey到GitHub上，顺便改一下域名。</p>
-<p>反正平时都要开steam++才能打开GitHub，干脆就开着它直接生成ssh公钥吧。</p>
-<p>hexo部署，生成，一气呵成，然后要我输入密码</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git@github&#x27;s password:</span><br><span class="line"></span><br><span class="line">permission denied please try again.</span><br></pre></td></tr></table></figure>
-<p>输半天都输不对，特意改了GitHub密码，依然输不对🤬</p>
-<p>关闭steam++生成公钥试试，然后…就成功了？？？ <code>hexo d</code> 的时候根本不要求我输入密码</p>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>ssh</tag>
-        <tag>git</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>你好，世界！</title>
-    <url>/2024/05/20/hello_world/</url>
-    <content><![CDATA[<p>这是博客建站的第一篇文章，用以测试博客是否正常运行，如果你看到了这篇文章，那这个博客已经可以正常工作啦！这个博客应该主要用于分享我的生活（因为vx朋友圈有各种各样的原因使我不能愉快的畅谈）。我偶尔会写一些我的折腾历程，让大家看看我踩过的坑，帮大家排排雷。</p>
-<hr>
-<p>感谢友人<a href="https://yuuu.org/">竹月</a>，他在我建站时不费余力地解答我的疑惑。</p>
-]]></content>
-      <categories>
-        <category>杂谈</category>
-      </categories>
-      <tags>
-        <tag>杂谈</tag>
-        <tag>技术</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Root备忘录</title>
     <url>/2024/11/08/Root%E5%A4%87%E5%BF%98%E5%BD%95/</url>
     <content><![CDATA[<h1 id="root-bei-wang-lu">root备忘录</h1>
@@ -116,6 +79,28 @@
       </tags>
   </entry>
   <entry>
+    <title>git连接GitHub-ssh异常</title>
+    <url>/2024/07/04/git%E8%BF%9E%E6%8E%A5GitHub-ssh%E5%BC%82%E5%B8%B8/</url>
+    <content><![CDATA[<p>事情是这样的，今天提交文章时，突然出现这样的情况</p>
+<p><img src="1.webp" alt=""><br>
+<img src="2.webp" alt=""></p>
+<p>以前也会出现这种情况，不过是连了steam++加速GitHub才会出现ssh密钥验证失败，可是今天裸连都出现这种情况了。</p>
+<p>于是采用最原始的方法：重新添加sshkey到GitHub上，顺便改一下域名。</p>
+<p>反正平时都要开steam++才能打开GitHub，干脆就开着它直接生成ssh公钥吧。</p>
+<p>hexo部署，生成，一气呵成，然后要我输入密码</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git@github&#x27;s password:</span><br><span class="line"></span><br><span class="line">permission denied please try again.</span><br></pre></td></tr></table></figure>
+<p>输半天都输不对，特意改了GitHub密码，依然输不对🤬</p>
+<p>关闭steam++生成公钥试试，然后…就成功了？？？ <code>hexo d</code> 的时候根本不要求我输入密码</p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>ssh</tag>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>香橙派的使用配置</title>
     <url>/2024/05/22/orangepi-config/</url>
     <content><![CDATA[<p>前些天购入了一个香橙派Zero3，但是时不时系统崩坏，（或许是sd卡不是香橙派官方店铺买的？）现在来捋一遍安装过程以便日后崩坏时重装系统。</p>
@@ -172,6 +157,21 @@ GND——GND</p>
         <tag>香橙派</tag>
         <tag>单板机</tag>
         <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>你好，世界！</title>
+    <url>/2024/05/20/hello_world/</url>
+    <content><![CDATA[<p>这是博客建站的第一篇文章，用以测试博客是否正常运行，如果你看到了这篇文章，那这个博客已经可以正常工作啦！这个博客应该主要用于分享我的生活（因为vx朋友圈有各种各样的原因使我不能愉快的畅谈）。我偶尔会写一些我的折腾历程，让大家看看我踩过的坑，帮大家排排雷。</p>
+<hr>
+<p>感谢友人<a href="https://yuuu.org/">竹月</a>，他在我建站时不费余力地解答我的疑惑。</p>
+]]></content>
+      <categories>
+        <category>杂谈</category>
+      </categories>
+      <tags>
+        <tag>杂谈</tag>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -442,52 +442,6 @@ GND——GND</p>
       </tags>
   </entry>
   <entry>
-    <title>梦</title>
-    <url>/2024/08/12/%E6%A2%A6/</url>
-    <content><![CDATA[<h1 id="xu">序</h1>
-<p>从小到大，每当我从梦中醒来，我几乎都不会记得梦里的内容。</p>
-<p>但今天午睡，做了一个诡异的梦，醒来时还残留了一些记忆，于是赶紧记录下来。</p>
-<p>为何诡异呢？因为这个梦很像游戏《超阈限空间》里的场景。而这款游戏，我早在几个月前就通关不玩了，居然今天才做这种梦！</p>
-<p>以下是残存的梦境记录</p>
-<h1 id="shui-qian">睡前</h1>
-<p>我弟在我房间玩，开着灯。</p>
-<p>我弟终于出去了，赶紧关灯入睡。</p>
-<h1 id="qi-yi">其一</h1>
-<p>有人在碰我脚，我挪了挪腿，清晰地感受到凉席与脚摩擦的质感。</p>
-<p>嘶，怎么有有人在碰我脚，再次挪了挪腿，醒来看了一眼。房间的灯还是开的，我弟不在房间里。现在还有困意，先赶紧入睡。</p>
-<h1 id="qi-er">其二</h1>
-<p>面前是美式霸凌，不过后面的栅栏是红色的房子<br>
-<img src="1.jpg" alt=""><br>
-他要打我啦啊啊啊，我务必重拳出击。<br>
-？？？，眼前的画面变成了一块木板，打过去把木板打碎了。<br>
-<img src="1.gif" alt="大概这样吧"></p>
-<h1 id="qi-san">其三</h1>
-<p>我又在房间里醒来，灯还是开着的，房间只有我一个人。呼，先刷会手机吧。</p>
-<p>.…“你真的在现实吗？”</p>
-<p>大脑突然闪过一句话。低头看向手机，发现豆瓣的广告位变成了梦境其二————我的第一人称视角。</p>
-<p>😱，看向窗户旁边的挂历，挂历的日、月都在变化，数字在不断地跳动！</p>
-<p>首先，窗户一角的空间开始扭曲，向漩涡一样旋转起来。然后，这些漩涡像是扩散的瘟疫，在房间中其他地方出现。</p>
-<p>🤯，😱😱😱</p>
-<p>我抬了下手，感觉手臂是搭在我眼睛上的，而且房间比较黑，还能听见我弟在房间外的声音，意识绝对比刚刚更清晰。我强烈地感知到：这个世界才是真实的。啊，挣扎失败，我又进入梦境了。</p>
-<p>仅回到那个漩涡的世界一瞬间，求生欲就开始工作了。我要.…抬起手.…</p>
-<p>颅内意识一阵混乱，再一激灵，终于醒了（这回真醒了），大口喘着气.…</p>
-<h1 id="jie-meng">解梦</h1>
-<p>亲自解读一下梦境</p>
-<p>Q：为什么梦境其一有人碰我脚？<br>
-A：睡前我弟曾多次故意碰我脚</p>
-<p>Q：为什么梦境里的房间是开着灯的？<br>
-A：醒来的时候发现面向窗户，可能是光线原因？</p>
-<p>Q：看手机为什么看豆瓣？<br>
-A：昨天看了电影，今天在豆瓣逛了一下</p>
-]]></content>
-      <categories>
-        <category>杂谈</category>
-      </categories>
-      <tags>
-        <tag>杂谈</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>听歌难题</title>
     <url>/2024/06/26/%E5%90%AC%E6%AD%8C%E9%9A%BE%E9%A2%98/</url>
     <content><![CDATA[<h1 id="ting-ge-nan-ti">听歌难题</h1>
@@ -539,6 +493,52 @@ A：昨天看了电影，今天在豆瓣逛了一下</p>
       <tags>
         <tag>杂谈</tag>
         <tag>音乐</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>梦</title>
+    <url>/2024/08/12/%E6%A2%A6/</url>
+    <content><![CDATA[<h1 id="xu">序</h1>
+<p>从小到大，每当我从梦中醒来，我几乎都不会记得梦里的内容。</p>
+<p>但今天午睡，做了一个诡异的梦，醒来时还残留了一些记忆，于是赶紧记录下来。</p>
+<p>为何诡异呢？因为这个梦很像游戏《超阈限空间》里的场景。而这款游戏，我早在几个月前就通关不玩了，居然今天才做这种梦！</p>
+<p>以下是残存的梦境记录</p>
+<h1 id="shui-qian">睡前</h1>
+<p>我弟在我房间玩，开着灯。</p>
+<p>我弟终于出去了，赶紧关灯入睡。</p>
+<h1 id="qi-yi">其一</h1>
+<p>有人在碰我脚，我挪了挪腿，清晰地感受到凉席与脚摩擦的质感。</p>
+<p>嘶，怎么有有人在碰我脚，再次挪了挪腿，醒来看了一眼。房间的灯还是开的，我弟不在房间里。现在还有困意，先赶紧入睡。</p>
+<h1 id="qi-er">其二</h1>
+<p>面前是美式霸凌，不过后面的栅栏是红色的房子<br>
+<img src="1.jpg" alt=""><br>
+他要打我啦啊啊啊，我务必重拳出击。<br>
+？？？，眼前的画面变成了一块木板，打过去把木板打碎了。<br>
+<img src="1.gif" alt="大概这样吧"></p>
+<h1 id="qi-san">其三</h1>
+<p>我又在房间里醒来，灯还是开着的，房间只有我一个人。呼，先刷会手机吧。</p>
+<p>.…“你真的在现实吗？”</p>
+<p>大脑突然闪过一句话。低头看向手机，发现豆瓣的广告位变成了梦境其二————我的第一人称视角。</p>
+<p>😱，看向窗户旁边的挂历，挂历的日、月都在变化，数字在不断地跳动！</p>
+<p>首先，窗户一角的空间开始扭曲，向漩涡一样旋转起来。然后，这些漩涡像是扩散的瘟疫，在房间中其他地方出现。</p>
+<p>🤯，😱😱😱</p>
+<p>我抬了下手，感觉手臂是搭在我眼睛上的，而且房间比较黑，还能听见我弟在房间外的声音，意识绝对比刚刚更清晰。我强烈地感知到：这个世界才是真实的。啊，挣扎失败，我又进入梦境了。</p>
+<p>仅回到那个漩涡的世界一瞬间，求生欲就开始工作了。我要.…抬起手.…</p>
+<p>颅内意识一阵混乱，再一激灵，终于醒了（这回真醒了），大口喘着气.…</p>
+<h1 id="jie-meng">解梦</h1>
+<p>亲自解读一下梦境</p>
+<p>Q：为什么梦境其一有人碰我脚？<br>
+A：睡前我弟曾多次故意碰我脚</p>
+<p>Q：为什么梦境里的房间是开着灯的？<br>
+A：醒来的时候发现面向窗户，可能是光线原因？</p>
+<p>Q：看手机为什么看豆瓣？<br>
+A：昨天看了电影，今天在豆瓣逛了一下</p>
+]]></content>
+      <categories>
+        <category>杂谈</category>
+      </categories>
+      <tags>
+        <tag>杂谈</tag>
       </tags>
   </entry>
   <entry>

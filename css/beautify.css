@@ -49,7 +49,9 @@ div#archive {
 [data-theme="dark"] div#page {
   background: var(--trans-dark);
 }
-
+[data-theme='dark'] #web_bg:before {
+  background-color: rgba(0,0,0,0.2);
+}
 
 /* 夜间模式页脚页头遮罩透明 */
 [data-theme="dark"] #footer::before {
