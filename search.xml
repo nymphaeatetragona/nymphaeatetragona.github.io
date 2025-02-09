@@ -74,6 +74,43 @@ opkg install coreutils-nohup bash dnsmasq-full curl ca-certificates ipset ip-ful
       </tags>
   </entry>
   <entry>
+    <title>git连接GitHub-ssh异常</title>
+    <url>/2024/07/04/git%E8%BF%9E%E6%8E%A5GitHub-ssh%E5%BC%82%E5%B8%B8/</url>
+    <content><![CDATA[<p>事情是这样的，今天提交文章时，突然出现这样的情况</p>
+<p><img src="1.webp" alt=""><br>
+<img src="2.webp" alt=""></p>
+<p>以前也会出现这种情况，不过是连了steam++加速GitHub才会出现ssh密钥验证失败，可是今天裸连都出现这种情况了。</p>
+<p>于是采用最原始的方法：重新添加sshkey到GitHub上，顺便改一下域名。</p>
+<p>反正平时都要开steam++才能打开GitHub，干脆就开着它直接生成ssh公钥吧。</p>
+<p>hexo部署，生成，一气呵成，然后要我输入密码</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git@github&#x27;s password:</span><br><span class="line"></span><br><span class="line">permission denied please try again.</span><br></pre></td></tr></table></figure>
+<p>输半天都输不对，特意改了GitHub密码，依然输不对🤬</p>
+<p>关闭steam++生成公钥试试，然后…就成功了？？？ <code>hexo d</code> 的时候根本不要求我输入密码</p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>ssh</tag>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>你好，世界！</title>
+    <url>/2024/05/20/hello_world/</url>
+    <content><![CDATA[<p>这是博客建站的第一篇文章，用以测试博客是否正常运行，如果你看到了这篇文章，那这个博客已经可以正常工作啦！这个博客应该主要用于分享我的生活（因为vx朋友圈有各种各样的原因使我不能愉快的畅谈）。我偶尔会写一些我的折腾历程，让大家看看我踩过的坑，帮大家排排雷。</p>
+<hr>
+<p>感谢友人<a href="https://yuuu.org/">竹月</a>，他在我建站时不费余力地解答我的疑惑。</p>
+]]></content>
+      <categories>
+        <category>杂谈</category>
+      </categories>
+      <tags>
+        <tag>杂谈</tag>
+        <tag>技术</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Root备忘录</title>
     <url>/2024/11/08/Root%E5%A4%87%E5%BF%98%E5%BD%95/</url>
     <content><![CDATA[<h1 id="root-bei-wang-lu">root备忘录</h1>
@@ -149,43 +186,6 @@ opkg install coreutils-nohup bash dnsmasq-full curl ca-certificates ipset ip-ful
       </categories>
       <tags>
         <tag>刷机</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>git连接GitHub-ssh异常</title>
-    <url>/2024/07/04/git%E8%BF%9E%E6%8E%A5GitHub-ssh%E5%BC%82%E5%B8%B8/</url>
-    <content><![CDATA[<p>事情是这样的，今天提交文章时，突然出现这样的情况</p>
-<p><img src="1.webp" alt=""><br>
-<img src="2.webp" alt=""></p>
-<p>以前也会出现这种情况，不过是连了steam++加速GitHub才会出现ssh密钥验证失败，可是今天裸连都出现这种情况了。</p>
-<p>于是采用最原始的方法：重新添加sshkey到GitHub上，顺便改一下域名。</p>
-<p>反正平时都要开steam++才能打开GitHub，干脆就开着它直接生成ssh公钥吧。</p>
-<p>hexo部署，生成，一气呵成，然后要我输入密码</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git@github&#x27;s password:</span><br><span class="line"></span><br><span class="line">permission denied please try again.</span><br></pre></td></tr></table></figure>
-<p>输半天都输不对，特意改了GitHub密码，依然输不对🤬</p>
-<p>关闭steam++生成公钥试试，然后…就成功了？？？ <code>hexo d</code> 的时候根本不要求我输入密码</p>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>ssh</tag>
-        <tag>git</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>你好，世界！</title>
-    <url>/2024/05/20/hello_world/</url>
-    <content><![CDATA[<p>这是博客建站的第一篇文章，用以测试博客是否正常运行，如果你看到了这篇文章，那这个博客已经可以正常工作啦！这个博客应该主要用于分享我的生活（因为vx朋友圈有各种各样的原因使我不能愉快的畅谈）。我偶尔会写一些我的折腾历程，让大家看看我踩过的坑，帮大家排排雷。</p>
-<hr>
-<p>感谢友人<a href="https://yuuu.org/">竹月</a>，他在我建站时不费余力地解答我的疑惑。</p>
-]]></content>
-      <categories>
-        <category>杂谈</category>
-      </categories>
-      <tags>
-        <tag>杂谈</tag>
-        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -775,13 +775,19 @@ ohhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</p>
 <img src="%E9%85%8D%E7%BD%AE1.webp" alt=""></p>
 <p>左侧WDM和MME均可选择，其中WDM延迟较低，MME对设备兼容性好。我的电脑选WDM会有电流声，于是选择了MME<br>
 <img src="%E9%85%8D%E7%BD%AE2.webp" alt=""></p>
-<p>然后映射声道，点击红框，换成所需的声道。鼠标左键切换下一个，鼠标右键切换上一个。Normal是前左和前右喇叭，MIX down A是所有前喇叭，MIX down B是所有喇叭，rear only是后喇叭，center only是前中置喇叭。如果不会选，下文还有办法。<br>
+<p>然后映射声道，点击红框，换成所需的声道。鼠标左键切换下一个，鼠标右键切换上一个。Normal是前左和前右喇叭，MIX down A、MIX down B是所有喇叭，rear only是后喇叭，center only是前中置喇叭。<br>
 <img src="%E5%A3%B0%E9%81%93.webp" alt=""></p>
-<p>在任务栏搜索框里搜索“声音”<br>
+<p>这里提供的预设似乎有些少，那么接下来就该请出另一个软件了：8x8 Output Matrix。它基于Voicemeeter Banana的声道设置运行，这里可以更自由地映射声道。<br>
+<img src="8matrix.webp" alt=""></p>
+<p>首先，在Voicemeeter Banana中设置声道映射模式为Normal mode，然后进入8x8 Output Matrix，选择设备（Bus A1、A2、A3）进行映射。In指的是电脑视频的音频信号，Out指的是音响的物理声道，数字的对应关系如图。<br>
+<img src="matrix.webp" alt=""></p>
+<p>例如，我希望我的电脑扬声器输出前左、中置、前右、低音四个信号，这时候我只需要关注Out1和Out2这两行，因为我电脑扬声器在物理上只有两个：左扬声器和右扬声器，其他行怎么调都不会有反应。前左、前右正常输出，中置、低音同时输出到电脑的两个扬声器，则需要把In3分配给Out1和Out2，In4也要分配给Out1和Out2。如下图所设定。<br>
+<img src="matrix2.webp" alt=""></p>
+<p>配置好后，在任务栏搜索框里搜索“声音”<br>
 <img src="%E6%94%B9%E5%8F%98%E5%A3%B0%E9%9F%B3.webp" alt=""></p>
 <p>点击“播放”，找到Voicemeeter Input，鼠标右键点击它，先设为默认设备，再点击配置扬声器。<br>
 <img src="%E9%85%8D%E7%BD%AE%E6%89%AC%E5%A3%B0%E5%99%A8.webp" alt=""></p>
-<p>然后选择合适的声道预设（我选的是5.1环绕），点击绿框内的喇叭，对应声道会发声，可以测试每个声道是否正确。如果之前不会选择声道映射或者选择错误，可以打开Voicemeeter Banana重新调整声道映射方法。<br>
+<p>然后选择合适的声道预设（我选的是5.1环绕），点击绿框内的喇叭，对应声道会发声，可以测试每个声道是否正确。如果之前选择错误，可以打开8x8 Output Matrix重新调整声道映射方法。<br>
 <img src="%E6%B5%8B%E8%AF%95%E5%A3%B0%E9%81%93.webp" alt=""></p>
 <p>最好不要存在无声音的声道，否则一些5.1声道的电影或游戏会失去那个声道的声音。调整好之后点下一步。如果你有低音单元，请<code>不要</code>开启全音域扬声器。<br>
 <img src="%E5%85%A8%E9%9F%B3%E5%9F%9F.webp" alt=""></p>
@@ -791,6 +797,8 @@ ohhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</p>
 打开Voicemeeter Banana，点击Menu，如图勾选。<br>
 <img src="%E8%87%AA%E5%90%AF%E5%8A%A8.webp" alt=""></p>
 <p>为什么要勾选System Tray呢？勾选上之后，叉掉Voicemeeter Banana时就不会完全退出软件了，而是龟缩到系统托盘里。</p>
+<p>同样，8x8 Output Matrix这个软件也需要保持后台运行。<br>
+<img src="matrix3.webp" alt=""></p>
 <h1 id="jiang-di-yan-chi">降低延迟</h1>
 <p>据说打游戏时声音略有延迟，此时可以以管理员身份打开Pannel<br>
 <img src="pannel.webp" alt=""></p>
@@ -809,8 +817,6 @@ ohhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</p>
 <p>刚配置好后会发现，系统的调整音量功能无法使用了！！！当然，这是有解决办法的。</p>
 <p>打开pannel，勾选上Enable Windows Volume Control，重启一下电脑就行。<br>
 <img src="Windows%E9%9F%B3%E9%87%8F.webp" alt=""></p>
-<h1 id="wei-jie-jue-bugs">未解决bugs</h1>
-<p>上文说，MIX down A模式是把所有前喇叭映射到一个设备上，但是实测发现，这个模式会把所有喇叭映射到一个设备上。但如果我选择Normal模式就会丢失前中置声道。所以现在，我电脑上后声道的声音会前后一起响。</p>
 <h1 id="can-kao-wen-xian">参考文献</h1>
 <p><a href="https://www.bilibili.com/video/BV1Hj421d7j3/">旧音响别扔，免费组建5.1环绕声，感受悔恨之泪，VoiceMeeter组多设备详细教程</a></p>
 <p><a href="https://www.bilibili.com/video/BV1vB4y1Y7MM/">使用VoiceMeeter 让电脑喇叭与蓝牙音箱同时播放音频 一招解决声音不同步</a></p>
@@ -839,37 +845,6 @@ ohhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</p>
       <tags>
         <tag>杂谈</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>网站更换域名啦</title>
-    <url>/2024/11/25/%E7%BD%91%E7%AB%99%E6%9B%B4%E6%8D%A2%E5%9F%9F%E5%90%8D%E5%95%A6/</url>
-    <content><![CDATA[<p>近期看到了个新闻，说是io域名药丸😨<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>，拖了近一个月，终于决定处理这件事了——换域名。不知道有没有用，但至少可以换个符合博客名字的域名啦🥰。</p>
-<p>首先，买个域名。奈何本人不想每年交一笔钱来运营这个没人看的博客，于是选择了免费的二级域名。我选择了cloudns提供的二级域名，如下图设置就行</p>
-<p><img src="cloudns.webp" alt=""></p>
-<p>然后去GitHub如下设置自定义域名，成功了会显示DNS check successful，然后再等十几分钟，因为证书要刷新。最后记得清除浏览器缓存再看效果！！！</p>
-<p><img src="github1.webp" alt=""></p>
-<p>（可选）加上Enforce HTTPS，成功样例如下图</p>
-<p><img src="github2.webp" alt=""></p>
-<p>但是下次hexo更新文章的时候会把根目录下的CNAME文件清除，这样会导致配置的域名失<br>
-效，所以要在souce目录下添加上CNAME文件，里面填上自己的域名。</p>
-<p><img src="%E6%9C%AC%E5%9C%B0.webp" alt=""></p>
-<hr>
-<p>参考教程<br>
-<a href="https://www.cnblogs.com/gambler/p/12051638.html">https://www.cnblogs.com/gambler/p/12051638.html</a></p>
-<p><a href="https://segmentfault.com/a/1190000011203711">https://segmentfault.com/a/1190000011203711</a></p>
-<p>域名解决方案</p>
-<p><a href="https://www.tjsky.net/tutorial/922">https://www.tjsky.net/tutorial/922</a></p>
-<hr class="footnotes-sep">
-<section class="footnotes">
-<ol class="footnotes-list">
-<li id="fn1" class="footnote-item"><p><a href="https://www.ithome.com/0/801/540.htm">https://www.ithome.com/0/801/540.htm</a> <a href="#fnref1" class="footnote-backref">↩︎</a></p>
-</li>
-</ol>
-</section>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
   </entry>
   <entry>
     <title>“能跑就行”</title>
@@ -904,6 +879,37 @@ Markdown原样显示是hexo-reference-plus（脚注插件）的问题，卸载�
         <tag>杂谈</tag>
         <tag>技术</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>网站更换域名啦</title>
+    <url>/2024/11/25/%E7%BD%91%E7%AB%99%E6%9B%B4%E6%8D%A2%E5%9F%9F%E5%90%8D%E5%95%A6/</url>
+    <content><![CDATA[<p>近期看到了个新闻，说是io域名药丸😨<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>，拖了近一个月，终于决定处理这件事了——换域名。不知道有没有用，但至少可以换个符合博客名字的域名啦🥰。</p>
+<p>首先，买个域名。奈何本人不想每年交一笔钱来运营这个没人看的博客，于是选择了免费的二级域名。我选择了cloudns提供的二级域名，如下图设置就行</p>
+<p><img src="cloudns.webp" alt=""></p>
+<p>然后去GitHub如下设置自定义域名，成功了会显示DNS check successful，然后再等十几分钟，因为证书要刷新。最后记得清除浏览器缓存再看效果！！！</p>
+<p><img src="github1.webp" alt=""></p>
+<p>（可选）加上Enforce HTTPS，成功样例如下图</p>
+<p><img src="github2.webp" alt=""></p>
+<p>但是下次hexo更新文章的时候会把根目录下的CNAME文件清除，这样会导致配置的域名失<br>
+效，所以要在souce目录下添加上CNAME文件，里面填上自己的域名。</p>
+<p><img src="%E6%9C%AC%E5%9C%B0.webp" alt=""></p>
+<hr>
+<p>参考教程<br>
+<a href="https://www.cnblogs.com/gambler/p/12051638.html">https://www.cnblogs.com/gambler/p/12051638.html</a></p>
+<p><a href="https://segmentfault.com/a/1190000011203711">https://segmentfault.com/a/1190000011203711</a></p>
+<p>域名解决方案</p>
+<p><a href="https://www.tjsky.net/tutorial/922">https://www.tjsky.net/tutorial/922</a></p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p><a href="https://www.ithome.com/0/801/540.htm">https://www.ithome.com/0/801/540.htm</a> <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
   </entry>
   <entry>
     <title>记录我的一天</title>
