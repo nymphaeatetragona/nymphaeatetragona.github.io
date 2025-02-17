@@ -23,8 +23,7 @@
 <p>如果在以下的安装过程中出现无法下载的问题，首先考虑遭遇墙，其次考虑墙中墙，更换网络环境试试。</p>
 <h2 id="an-zhuang-yi-lai" id="安装依赖">安装依赖</h2>
 <p>进入终端，输入命令</p>
-<p>opkg update<br>
-opkg install coreutils-nohup bash dnsmasq-full curl ca-certificates ipset ip-full libcap libcap-bin ruby ruby-yaml kmod-tun kmod-inet-diag unzip kmod-nft-tproxy luci-compat luci luci-base</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">opkg update #升级软件包</span><br><span class="line"></span><br><span class="line">opkg install coreutils-nohup bash dnsmasq-full curl ca-certificates ipset ip-full libcap libcap-bin ruby ruby-yaml kmod-tun kmod-inet-diag unzip kmod-nft-tproxy luci-compat luci luci-base	#安装依赖</span><br></pre></td></tr></table></figure>
 <h2 id="an-zhuang-open-clash" id="安装OpenClash">安装OpenClash</h2>
 <p>进入<a href="https://github.com/vernesong/OpenClash/releases">官方下载</a>，下载ipk包</p>
 <p><img src="%E4%B8%8B%E8%BD%BD.webp" alt=""></p>
@@ -71,6 +70,102 @@ opkg install coreutils-nohup bash dnsmasq-full curl ca-certificates ipset ip-ful
       <tags>
         <tag>Linux</tag>
         <tag>NAS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>香橙派的使用配置</title>
+    <url>/2024/05/22/orangepi-config/</url>
+    <content><![CDATA[<p>前些天购入了一个香橙派Zero3，但是时不时系统崩坏，（或许是sd卡不是香橙派官方店铺买的？）现在来捋一遍安装过程以便日后崩坏时重装系统。</p>
+<h1 id="ying-jian-zhun-bei">硬件准备</h1>
+<p>输出功率5V 2000mA以上适配器、USB Type-C数据线、USB 转 TTL 模块（串口模块）、读卡器、TF卡（Micro SD 卡）、杜邦线<br>
+<a href="https://www.wch.cn/download/CH341SER_EXE.html">串口驱动安装</a><br>
+接线：<br>
+TX——RX<br>
+RX——TX<br>
+GND——GND</p>
+<h1 id="xi-tong-gu-jian">系统固件</h1>
+<p>先<a href="http://www.orangepi.cn/html/serviceAndSupport/index.html">下载官方的固件</a></p>
+<h1 id="shao-lu-xi-tong">烧录系统</h1>
+<p>新SD卡要先格式化，我用了<a href="https://www.sdcardformatter.com/download/">SD Card Formatter</a></p>
+<p>用<a href="https://rufus.ie/zh/">refus</a>烧录进SD卡即可</p>
+<h1 id="yuan-cheng-guan-li-gong-ju">远程管理工具</h1>
+<p>可以在cmd或powershell里面输入命令来连接ssh<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh –p端口号 用户名@IP地址  #例如：ssh –p22 root@127.0.0.1</span><br></pre></td></tr></table></figure>
+<p>我使用了<a href="https://mobaxterm.mobatek.net/download.html">MobaXterm</a>来连接ssh</p>
+<h1 id="mi-ma">密码</h1>
+<h3 id="mo-ren-zhang-hu-orangepi" id="默认账户：orangepi">默认账户：orangepi</h3>
+<h3 id="mo-ren-root-zhang-hu-root" id="默认root账户：root">默认root账户：root</h3>
+<h3 id="mo-ren-mi-ma-orangepi" id="默认密码：orangepi">默认密码：orangepi</h3>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#修改密码</span><br><span class="line">sudo passwd orangepi #orangepi为要修改的用户的名字，按提示修改即可</span><br></pre></td></tr></table></figure>
+<h1 id="pei-zhi-wang-luo">配置网络</h1>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nmtui #图形界面配置网络</span><br></pre></td></tr></table></figure>
+<p>其他网络信息</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo ifconfig #查看ip信息</span><br><span class="line">route -n #查看网关信息</span><br></pre></td></tr></table></figure>
+<p>ip地址可能会跳动，ssh连接会不方便，要进入nmtui设置静态ip</p>
+<h1 id="ruan-jian-yuan">软件源</h1>
+<p>香橙派官方系统已经配置好国内源了，国产派大法好，一般不用改软件源</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo cp /etc/apt/sources.list /etc/apt/sources.list.save #备份好习惯</span><br><span class="line">sudo cp /etc/apt/sources.list.save /etc/apt/sources.list #搞炸了用这条命令恢复</span><br><span class="line">nano /etc/apt/sources.list #编辑源</span><br></pre></td></tr></table></figure>
+<h1 id="geng-xin-xi-tong">更新系统</h1>
+<p>不更新，后期装软件会有各种奇怪的问题</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo apt update</span><br><span class="line">sudo apt upgrade -y</span><br></pre></td></tr></table></figure>
+<h1 id="shi-qu">时区</h1>
+<p>香橙派连软件源都想好了，居然没调好时区（悲）<br>
+时间错误会导致某些网站证书验证问题</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">date #查看当前时间</span><br><span class="line">sudo tzselect #调整时区，看着按就行</span><br></pre></td></tr></table></figure>
+<h1 id="can-kao-wen-xian">参考文献</h1>
+<p><a href="https://zhuanlan.zhihu.com/p/658960791">OrangePi ZERO 2 新手配置教程</a></p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p><a href="https://blog.csdn.net/wm609972715/article/details/83759114">Windows 下 cmd 窗口使用 ssh 命令</a> <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>香橙派</tag>
+        <tag>单板机</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>git连接GitHub-ssh异常</title>
+    <url>/2024/07/04/git%E8%BF%9E%E6%8E%A5GitHub-ssh%E5%BC%82%E5%B8%B8/</url>
+    <content><![CDATA[<p>事情是这样的，今天提交文章时，突然出现这样的情况</p>
+<p><img src="1.webp" alt=""><br>
+<img src="2.webp" alt=""></p>
+<p>以前也会出现这种情况，不过是连了steam++加速GitHub才会出现ssh密钥验证失败，可是今天裸连都出现这种情况了。</p>
+<p>于是采用最原始的方法：重新添加sshkey到GitHub上，顺便改一下域名。</p>
+<p>反正平时都要开steam++才能打开GitHub，干脆就开着它直接生成ssh公钥吧。</p>
+<p>hexo部署，生成，一气呵成，然后要我输入密码</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git@github&#x27;s password:</span><br><span class="line"></span><br><span class="line">permission denied please try again.</span><br></pre></td></tr></table></figure>
+<p>输半天都输不对，特意改了GitHub密码，依然输不对🤬</p>
+<p>关闭steam++生成公钥试试，然后…就成功了？？？ <code>hexo d</code> 的时候根本不要求我输入密码</p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>ssh</tag>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>你好，世界！</title>
+    <url>/2024/05/20/hello_world/</url>
+    <content><![CDATA[<p>这是博客建站的第一篇文章，用以测试博客是否正常运行，如果你看到了这篇文章，那这个博客已经可以正常工作啦！这个博客应该主要用于分享我的生活（因为vx朋友圈有各种各样的原因使我不能愉快的畅谈）。我偶尔会写一些我的折腾历程，让大家看看我踩过的坑，帮大家排排雷。</p>
+<hr>
+<p>感谢友人<a href="https://yuuu.org/">竹月</a>，他在我建站时不费余力地解答我的疑惑。</p>
+]]></content>
+      <categories>
+        <category>杂谈</category>
+      </categories>
+      <tags>
+        <tag>杂谈</tag>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -149,102 +244,6 @@ opkg install coreutils-nohup bash dnsmasq-full curl ca-certificates ipset ip-ful
       </categories>
       <tags>
         <tag>刷机</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>git连接GitHub-ssh异常</title>
-    <url>/2024/07/04/git%E8%BF%9E%E6%8E%A5GitHub-ssh%E5%BC%82%E5%B8%B8/</url>
-    <content><![CDATA[<p>事情是这样的，今天提交文章时，突然出现这样的情况</p>
-<p><img src="1.webp" alt=""><br>
-<img src="2.webp" alt=""></p>
-<p>以前也会出现这种情况，不过是连了steam++加速GitHub才会出现ssh密钥验证失败，可是今天裸连都出现这种情况了。</p>
-<p>于是采用最原始的方法：重新添加sshkey到GitHub上，顺便改一下域名。</p>
-<p>反正平时都要开steam++才能打开GitHub，干脆就开着它直接生成ssh公钥吧。</p>
-<p>hexo部署，生成，一气呵成，然后要我输入密码</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git@github&#x27;s password:</span><br><span class="line"></span><br><span class="line">permission denied please try again.</span><br></pre></td></tr></table></figure>
-<p>输半天都输不对，特意改了GitHub密码，依然输不对🤬</p>
-<p>关闭steam++生成公钥试试，然后…就成功了？？？ <code>hexo d</code> 的时候根本不要求我输入密码</p>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>ssh</tag>
-        <tag>git</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>你好，世界！</title>
-    <url>/2024/05/20/hello_world/</url>
-    <content><![CDATA[<p>这是博客建站的第一篇文章，用以测试博客是否正常运行，如果你看到了这篇文章，那这个博客已经可以正常工作啦！这个博客应该主要用于分享我的生活（因为vx朋友圈有各种各样的原因使我不能愉快的畅谈）。我偶尔会写一些我的折腾历程，让大家看看我踩过的坑，帮大家排排雷。</p>
-<hr>
-<p>感谢友人<a href="https://yuuu.org/">竹月</a>，他在我建站时不费余力地解答我的疑惑。</p>
-]]></content>
-      <categories>
-        <category>杂谈</category>
-      </categories>
-      <tags>
-        <tag>杂谈</tag>
-        <tag>技术</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>香橙派的使用配置</title>
-    <url>/2024/05/22/orangepi-config/</url>
-    <content><![CDATA[<p>前些天购入了一个香橙派Zero3，但是时不时系统崩坏，（或许是sd卡不是香橙派官方店铺买的？）现在来捋一遍安装过程以便日后崩坏时重装系统。</p>
-<h1 id="ying-jian-zhun-bei">硬件准备</h1>
-<p>输出功率5V 2000mA以上适配器、USB Type-C数据线、USB 转 TTL 模块（串口模块）、读卡器、TF卡（Micro SD 卡）、杜邦线<br>
-<a href="https://www.wch.cn/download/CH341SER_EXE.html">串口驱动安装</a><br>
-接线：<br>
-TX——RX<br>
-RX——TX<br>
-GND——GND</p>
-<h1 id="xi-tong-gu-jian">系统固件</h1>
-<p>先<a href="http://www.orangepi.cn/html/serviceAndSupport/index.html">下载官方的固件</a></p>
-<h1 id="shao-lu-xi-tong">烧录系统</h1>
-<p>新SD卡要先格式化，我用了<a href="https://www.sdcardformatter.com/download/">SD Card Formatter</a></p>
-<p>用<a href="https://rufus.ie/zh/">refus</a>烧录进SD卡即可</p>
-<h1 id="yuan-cheng-guan-li-gong-ju">远程管理工具</h1>
-<p>可以在cmd或powershell里面输入命令来连接ssh<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh –p端口号 用户名@IP地址  #例如：ssh –p22 root@127.0.0.1</span><br></pre></td></tr></table></figure>
-<p>我使用了<a href="https://mobaxterm.mobatek.net/download.html">MobaXterm</a>来连接ssh</p>
-<h1 id="mi-ma">密码</h1>
-<h3 id="mo-ren-zhang-hu-orangepi" id="默认账户：orangepi">默认账户：orangepi</h3>
-<h3 id="mo-ren-root-zhang-hu-root" id="默认root账户：root">默认root账户：root</h3>
-<h3 id="mo-ren-mi-ma-orangepi" id="默认密码：orangepi">默认密码：orangepi</h3>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#修改密码</span><br><span class="line">sudo passwd orangepi #orangepi为要修改的用户的名字，按提示修改即可</span><br></pre></td></tr></table></figure>
-<h1 id="pei-zhi-wang-luo">配置网络</h1>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nmtui #图形界面配置网络</span><br></pre></td></tr></table></figure>
-<p>其他网络信息</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo ifconfig #查看ip信息</span><br><span class="line">route -n #查看网关信息</span><br></pre></td></tr></table></figure>
-<p>ip地址可能会跳动，ssh连接会不方便，要进入nmtui设置静态ip</p>
-<h1 id="ruan-jian-yuan">软件源</h1>
-<p>香橙派官方系统已经配置好国内源了，国产派大法好，一般不用改软件源</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo cp /etc/apt/sources.list /etc/apt/sources.list.save #备份好习惯</span><br><span class="line">sudo cp /etc/apt/sources.list.save /etc/apt/sources.list #搞炸了用这条命令恢复</span><br><span class="line">nano /etc/apt/sources.list #编辑源</span><br></pre></td></tr></table></figure>
-<h1 id="geng-xin-xi-tong">更新系统</h1>
-<p>不更新，后期装软件会有各种奇怪的问题</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo apt update</span><br><span class="line">sudo apt upgrade -y</span><br></pre></td></tr></table></figure>
-<h1 id="shi-qu">时区</h1>
-<p>香橙派连软件源都想好了，居然没调好时区（悲）<br>
-时间错误会导致某些网站证书验证问题</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">date #查看当前时间</span><br><span class="line">sudo tzselect #调整时区，看着按就行</span><br></pre></td></tr></table></figure>
-<h1 id="can-kao-wen-xian">参考文献</h1>
-<p><a href="https://zhuanlan.zhihu.com/p/658960791">OrangePi ZERO 2 新手配置教程</a></p>
-<hr class="footnotes-sep">
-<section class="footnotes">
-<ol class="footnotes-list">
-<li id="fn1" class="footnote-item"><p><a href="https://blog.csdn.net/wm609972715/article/details/83759114">Windows 下 cmd 窗口使用 ssh 命令</a> <a href="#fnref1" class="footnote-backref">↩︎</a></p>
-</li>
-</ol>
-</section>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-        <tag>香橙派</tag>
-        <tag>单板机</tag>
       </tags>
   </entry>
   <entry>
@@ -751,6 +750,35 @@ ohhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</p>
       </tags>
   </entry>
   <entry>
+    <title>给自己整一张万事达卡</title>
+    <url>/2025/01/04/%E7%BB%99%E8%87%AA%E5%B7%B1%E6%95%B4%E4%B8%80%E5%BC%A0%E4%B8%87%E4%BA%8B%E8%BE%BE%E5%8D%A1/</url>
+    <content><![CDATA[<h1 id="qian-yan">前言</h1>
+<p>最近偶然在网上看到一篇文章</p>
+<p><a href="https://www.techxiaofei.com/post/finance/hsbc_online/">香港汇丰银行HSBC HK线上开户教程</a></p>
+<p>居然是万事达借记卡，而且是香港银行，最最关键的是————<s>大陆仔</s>内地人可用！！！太酷啦，哪个男孩不想拥有一张HK的外币种银行卡呢🤪</p>
+<p>不过话又说回来，什么是万事达卡？万事达卡(Mastercard)和Visa是世界上最大的两家发卡组织，银行卡上带有万事达标或Visa标的卡才支持外币结算。万事达卡和Visa卡也是在境外普遍认可的支付方式。<s>简直是Steam云上润人必备卡</s></p>
+<p>当然，我还是要肉身去一次香港的，这里只是前言，以后会持续更新我的开卡过程。</p>
+<h1 id="ban-li-gang-ao-tong-xing-zheng">办理港澳通行证</h1>
+<p>本人第一次办理港澳通行证，大体分为一下几步：</p>
+<ul>
+<li>在小程序“移民局12367”里预约办理港澳通行证，点击“办理通行证和签注”</li>
+<li>按照约定时间到达指定的出入境管理局</li>
+<li>询问前台工作人员，他让我填写出入境证件申请表（貌似有些地区直接使用预约时填写的资料，不用现场填表）</li>
+<li>到自助照相机拍照</li>
+<li>问前台工作人员拿号，等待叫号</li>
+<li>到号后，按照工作人员指引即可完成办理</li>
+</ul>
+<p>总共耗时30分钟左右，还是挺快的👍。若想知道更准确的办理流程，可以尝试在某红书搜索[你所在城市]+“港澳通行证办理”。</p>
+<p>7天之后，收到了邮政快递送来的通行证。</p>
+]]></content>
+      <categories>
+        <category>杂谈</category>
+      </categories>
+      <tags>
+        <tag>杂谈</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>组一个廉价后环绕声</title>
     <url>/2025/01/13/%E7%BB%84%E4%B8%80%E4%B8%AA%E5%BB%89%E4%BB%B7%E5%90%8E%E7%8E%AF%E7%BB%95%E5%A3%B0/</url>
     <content><![CDATA[<h1 id="qian-yan">前言</h1>
@@ -828,22 +856,6 @@ ohhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</p>
       <tags>
         <tag>音响</tag>
         <tag>教程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>给自己整一张万事达卡</title>
-    <url>/2025/01/04/%E7%BB%99%E8%87%AA%E5%B7%B1%E6%95%B4%E4%B8%80%E5%BC%A0%E4%B8%87%E4%BA%8B%E8%BE%BE%E5%8D%A1/</url>
-    <content><![CDATA[<p>最近偶然在网上看到一篇文章</p>
-<p><a href="https://www.techxiaofei.com/post/finance/hsbc_online/">香港汇丰银行HSBC HK线上开户教程</a></p>
-<p>居然是万事达借记卡，而且是香港银行，最最关键的是————<s>大陆仔</s>内地人可用！！！太酷啦，哪个男孩不想拥有一张HK的外币种银行卡呢🤪</p>
-<p>不过话又说回来，什么是万事达卡？万事达卡(Mastercard)和Visa是世界上最大的两家发卡组织，银行卡上带有万事达标或Visa标的卡才支持外币结算。万事达卡和Visa卡也是在境外普遍认可的支付方式。<s>简直是Steam云上润人必备卡</s></p>
-<p>当然，我还是要肉身去一次香港的，这里只是前言，以后会持续更新我的开卡过程。</p>
-]]></content>
-      <categories>
-        <category>杂谈</category>
-      </categories>
-      <tags>
-        <tag>杂谈</tag>
       </tags>
   </entry>
   <entry>
