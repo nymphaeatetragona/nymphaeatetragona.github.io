@@ -3,14 +3,14 @@ document.getElementById('darkmode').addEventListener('click',function() { //添�
 	})
 
 if (document.documentElement.getAttribute('data-theme') === 'dark') {
-        document.querySelector('#web_bg').style.backgroundImage = 'url("/img/background_dark.webp")';
+        document.querySelector('#web_bg').style.backgroundImage = 'url("https://ooo.0x0.ooo/2025/01/22/OGnMtc.webp")';
     }   //默认深色模式则更换壁纸
 
 
 function toggleBackgroundimg() {
     var imgContainer = document.querySelector('#web_bg');
-    var lightImage = 'url("/img/background.webp")';
-    var darkImage = 'url("/img/background_dark.webp")';
+    var lightImage = 'url("https://ooo.0x0.ooo/2025/01/22/OGnO2r.webp")';
+    var darkImage = 'url("https://ooo.0x0.ooo/2025/01/22/OGnMtc.webp")';
     if (document.documentElement.getAttribute('data-theme') === 'light') {
         imgContainer.style.backgroundImage = darkImage; // 切换深色图片
     } else {
