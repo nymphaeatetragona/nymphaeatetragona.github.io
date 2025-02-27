@@ -17,6 +17,56 @@
       </tags>
   </entry>
   <entry>
+    <title>数控电源笔记</title>
+    <url>/2025/02/26/%E6%95%B0%E6%8E%A7%E7%94%B5%E6%BA%90%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h2 id="dian-yuan-zhu-hui-lu-buck-jiang-ya" id="电源主回路（buck降压）">电源主回路（buck降压）</h2>
+<p>Buck电路，降压电路，本质还是dc-dc转换器。</p>
+<h4 id="buck-dian-lu-zhong-jing-chang-hui-yong-dao-san-ji-guan-de-kai-guan-dian-lu" id="buck电路中经常会用到三级管的开关电路">buck电路中经常会用到三级管的开关电路</h4>
+<p>就是通过基极的电压高低进行控制，使得电流流动方向的改变，基极为H时三级管饱和此时c与e导通，此时电流流动方向为正，基极为L时三级管饱和此时c与e断开，此时电流流动方向为负。<br>
+如图所示：</p>
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/2fc91965fe81bbb2a3af2174c8319f15.png" alt="图片"></p>
+<h4 id="dian-yuan-zhu-hui-lu-de-gong-zuo-yuan-li" id="电源主回路的工作原理">电源主回路的工作原理</h4>
+<p>buck电路一共有三个工作模式：（开关管导通）</p>
+<ol>
+<li>ccm模式：<br>
+<img src="https://i-blog.csdnimg.cn/blog_migrate/7868001e3822f72674e7b603286d7df9.png" alt="图片"><br>
+这种模式下，输出电压为该回路的平均输入电压，</li>
+</ol>
+<h2 id="zhuo-mian-dian-yuan-zhu-hui-lu-de-she-ji-si-lu" id="桌面电源主回路的设计思路">桌面电源主回路的设计思路</h2>
+<ol>
+<li>mosfet的选择：<br>
+硬件电路中，供电控制尤其是大功率负载（多大？为什么不用三级管？）的上电和断电控制可以选择mosfet，<br>
+只要Ugs大于开启电压，mosfet就会导通，s与d端导通。<br>
+这里的场效应管的开启电压</li>
+</ol>
+<ul>
+<li>阈值电压(Vgs(th))：2.3v</li>
+<li>导通电阻(RDS(on))：3.1mΩ@4.5V,25A</li>
+<li>参考手册位置：<br>
+“F:\stm32\桌面电源\硬件资料\场效应管(MOSFET)_BSC0702LSATMA1_场效应管(MOSFET)规格书.PDF”</li>
+</ul>
+<ol start="2">
+<li>他这里的设计</li>
+</ol>
+<ul>
+<li>为了作为开关管（mos管耐压以及使用更为方便）</li>
+<li>这里的控制分别是：VIN_12_17V和L1_MOS还有H1_MOS作为上电的控制端（大于开启电压时，工作在恒流区）</li>
+<li>由于导通第一个mos管的g端和s端相连，提供一个上拉电阻以防止短路。作为下一个管的d端。</li>
+</ul>
+<h2 id="yi-wen" id="疑问？？">疑问？？</h2>
+<p>1、电感、电容的取值怎么计算？<br>
+2、这里的电阻取值也不大理解到底是为什么？<br>
+3、h1_mos和l1_mos的工作电流是多少？<br>
+4、为什么要用两个mos管？</p>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>数控电源</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>第一篇名作</title>
     <url>/2025/02/23/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%90%8D%E4%BD%9C/</url>
     <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
@@ -31,5 +81,29 @@
   </div>
 </div>
 <script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+  </entry>
+  <entry>
+    <title>项目进展</title>
+    <url>/2025/02/24/%E9%A1%B9%E7%9B%AE%E8%BF%9B%E5%B1%95/</url>
+    <content><![CDATA[<h1 id="mi-mang">迷茫</h1>
+<ul>
+<li>其实寒假没完成什么东西，电赛属于是不知道要不要打，感觉其实是一个巨大的草台班子很多东西都不需要太过于认真，不过在项目组就要做事这是一定的我也必须把那个电源的数控端给做出来，后续可以接着学长的摄像头去找找音频方面的嵌入式岗位，这是一个必要的认识<br>
+1.数控电源那个就是这个学期的重点努力方向，其次关于比赛的我们要想想自己能贡献什么<br>
+2.关于其他，目前还没有特别多的想法。数控的电源要做出来</li>
+</ul>
+<h1 id="shu-kong-na-bian">数控那边</h1>
+<ul>
+<li>一个是基础的了解，包括电路原理、PCB设计、PCB制作</li>
+<li>要做出一个完整的数控电源，包括电路设计、PCB设计、PCB制作、软件开发、测试、调试、上位机软件开发等等。</li>
+<li>软件开发方面，主要是要做一个可以控制电源的软件，包括控制电源的开关、电压、电流、频率等等。</li>
+<li>电源电路目前还没有自己画出来，需要找找相关的资料主要是数控电源的几个模块包括电源、电源控制、电源输出、电源输入、电源保护、降压和升压电路</li>
+</ul>
+]]></content>
+      <categories>
+        <category>大杂烩</category>
+      </categories>
+      <tags>
+        <tag>关于科研？（乱七八糟）</tag>
+      </tags>
   </entry>
 </search>
